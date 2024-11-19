@@ -1,0 +1,33 @@
+// Décoration des titres de sections
+
+.titreSection {
+    position: relative;
+}
+
+// faire une forme qu'on superpose sur le titre pour changer la forme générale
+.titreSection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -30px;
+    width: 2rem;
+    height: 100%;
+    background-color: var(--jaune);
+
+    clip-path: polygon(100% 0, 30% 100%, 0% 100%, 0 0);
+}
+
+// élément after qui fait les deux lignes parallèles
+.titreSection::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: .5rem;
+    height: 100%;
+    border-left: 5px solid var(--jaune);
+    border-right: 2px solid var(--jaune);
+
+    transform: translateX(2.7rem) skewX(-37deg);
+
+}

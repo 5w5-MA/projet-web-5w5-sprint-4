@@ -1,0 +1,46 @@
+/*
+Theme Name: tim3
+Theme URI: http://example.com
+Author: alek annabelle marguerite
+Author URI: https://github.com/Alek-Crepeau
+Description: theme tim
+Version: 1.0
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: theme tim
+*/
+
+@import "composant/variable";
+
+@import "pages/acceuil";
+
+@import "pages/vieEtudiante";
+
+@import "pages/projet";
+
+@import "pages/cours";
+
+@import "body";
+
+@import "composant/font";
+
+@import "composant/barreBasPage";
+
+@import "composant/formeTitreSections";
+
+@import "composant/menu";
+
+@import "composant/footer";
+
+@import "composant/bouton";
+
+@import "composant/backgroundVivant.scss";
+
+@import "pages/futur";
+
+@import "pages/lesProfs";
+
+ul {
+    margin: 0;
+}

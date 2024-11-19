@@ -1,0 +1,21 @@
+// :root {
+//     --jaune: #fcbe32;
+//     --marin-fond: #14243c;
+//     --gris: #e8e8e8;
+//     --marin: #010d1e;
+// }
+
+:root {
+  --bleu: #13243c;
+  --jaune: #fcbe32;
+  --blanc: #e8e8e8;
+  --texte: black;
+  --gris: rgba(198, 198, 198, 0.907);
+  --drop-shadow: rgba(255, 255, 255, 0.25);
+}
+
+.imagesGeneral{
+  object-fit: cover;   
+   height: 100%;   
+    width: 100%;
+}

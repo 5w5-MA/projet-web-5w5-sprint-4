@@ -1,0 +1,43 @@
+footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  align-content: first baseline;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 100px;
+  padding-bottom: 10vh;
+  flex-wrap: wrap;
+  position: relative;
+  overflow-y: hidden;
+
+  @media screen and (max-width: 900px) {
+    padding: 0;
+  }
+
+  .footerGauche {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5rem;
+    padding-bottom: 5rem;
+    flex-wrap: wrap;
+  }
+
+  .footerBas {
+    position: absolute;
+    font-size: 15vw;
+    bottom: -5rem;
+  }
+
+  p {
+    font-size: xx-small;
+  }
+
+  .footerDroite{
+    .reseaux{
+      .inconsReseaux{
+        display: flex;
+      }
+    }
+  }
+}

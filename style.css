@@ -1,0 +1,1732 @@
+@charset "UTF-8";
+/*
+Theme Name: tim3
+Theme URI: http://example.com
+Author: alek annabelle marguerite
+Author URI: https://github.com/Alek-Crepeau
+Description: theme tim
+Version: 1.0
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: theme tim
+*/
+:root {
+  --bleu: #13243c;
+  --jaune: #fcbe32;
+  --blanc: #e8e8e8;
+  --texte: black;
+  --gris: rgba(198, 198, 198, 0.907);
+  --drop-shadow: rgba(255, 255, 255, 0.25);
+}
+
+.imagesGeneral {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Lato";
+  color: var(--texte);
+}
+body main {
+  min-height: 100vh;
+  margin-top: -150px;
+  padding-bottom: 150px;
+  overflow-x: hidden;
+}
+body main .txtMain {
+  color: var(--blanc);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  top: 25rem;
+  padding-left: 3rem;
+  background-color: rgba(255, 255, 255, 0.4431372549);
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+  border: 0.5px solid #FFF;
+  width: 30rem;
+  z-index: 3;
+}
+body main .txtMain h1 {
+  padding-top: 1rem;
+  margin: 0;
+  font-size: 3rem;
+}
+body main .txtMain h2 {
+  font-family: "lato";
+  font-weight: 300;
+}
+@media screen and (max-width: 900px) {
+  body main .txtMain {
+    width: 15rem;
+    padding-left: 0;
+    margin: auto;
+    z-index: 1;
+    top: 15rem;
+  }
+  body main .txtMain h1 {
+    font-size: 1rem;
+  }
+}
+body main .img {
+  width: 70vw;
+  height: 300px;
+  background-color: var(--jaune);
+  position: relative;
+  left: 30vw;
+  clip-path: polygon(100px 0, 100% 0, 100% 100%, 0 100%);
+  color: var(--bleu);
+  text-align: center;
+  align-content: center;
+  overflow: hidden;
+}
+@media screen and (max-width: 900px) {
+  body main .img {
+    width: 90vw;
+    clip-path: none;
+    left: 0;
+    margin: auto;
+    border-radius: 10px;
+  }
+  body main .img img {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 900px) {
+  body main .img {
+    height: 50vw;
+  }
+}
+@media screen and (min-width: 1100px) {
+  body main .img {
+    height: 550px;
+    width: 60vw;
+    justify-self: flex-end;
+    left: 0vw;
+  }
+}
+@media screen and (max-width: 900px) {
+  body main .boutonCours {
+    width: 287px;
+    margin: auto;
+    left: 0;
+  }
+  body main .boutonCours .btn1 {
+    display: none;
+  }
+  body main .boutonCours .btn3 {
+    display: none;
+  }
+  body main .boutonCours .btn4 {
+    display: none;
+  }
+  body main .boutonCours .btn5 {
+    display: none;
+  }
+  body main .boutonCours .btn6 {
+    display: none;
+  }
+}
+body main .infoCegep {
+  display: flex;
+  justify-content: flex-start;
+}
+body main .infoCegep .divPolygone {
+  width: 420px;
+  height: 150px;
+  clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+  margin-bottom: 50px;
+}
+body main .infoCegep .divPolygone .div1 {
+  background-color: var(--blanc);
+  height: 100px;
+  margin-bottom: 10px;
+}
+body main .infoCegep .divPolygone .div2 {
+  background-color: var(--blanc);
+  height: 40px;
+}
+@media screen and (min-width: 900px) {
+  body main .infoCegep .divPolygone {
+    width: 50vw;
+  }
+}
+body main .infoLogiciel {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 50px;
+}
+body main .infoLogiciel .divPolygone {
+  width: 420px;
+  height: 150px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+}
+body main .infoLogiciel .divPolygone .div1 {
+  background-color: var(--jaune);
+  height: 100px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+body main .infoLogiciel .divPolygone .div2 {
+  background-color: var(--jaune);
+  height: 40px;
+}
+@media screen and (min-width: 900px) {
+  body main .infoLogiciel {
+    position: relative;
+    top: -200px;
+    margin-bottom: -150px;
+  }
+  body main .infoLogiciel .divPolygone {
+    width: 50vw;
+  }
+}
+body main .description {
+  clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+  margin-bottom: 100px;
+  width: fit-content;
+}
+body main .description .div1 {
+  background-color: var(--blanc);
+  font-size: xx-large;
+  height: fit-content;
+  margin-bottom: 20px;
+  padding: 10px;
+  padding-left: 20px;
+}
+body main .description .div2 {
+  background-color: var(--blanc);
+  font-size: small;
+  height: fit-content;
+  min-height: 150px;
+  align-content: center;
+  width: 500px;
+  padding: 20px;
+  padding-right: 100px;
+  text-align: justify;
+}
+body main .diagramme {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 50px;
+}
+body main .diagramme .divPolygone {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+}
+body main .diagramme .divPolygone .div1 {
+  background-color: var(--jaune);
+  color: var(--jaune);
+  font-size: xx-large;
+  height: fit-content;
+  margin-bottom: 20px;
+  padding: 10px;
+  padding-left: 20px;
+}
+body main .diagramme .divPolygone .div2 {
+  background-color: var(--jaune);
+  color: var(--jaune);
+  font-size: small;
+  height: fit-content;
+  min-height: 150px;
+  align-content: center;
+  width: 500px;
+  padding: 20px;
+  padding-right: 100px;
+  text-align: justify;
+}
+@media screen and (min-width: 1150px) {
+  body main .diagramme {
+    position: relative;
+    top: -366.8px;
+    margin-bottom: -200px;
+  }
+}
+body main .titreProfile {
+  display: flex;
+  justify-content: flex-start;
+}
+body main .titreProfile .divPolygone {
+  width: 420px;
+  clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+  margin-bottom: 50px;
+}
+body main .titreProfile .divPolygone .div1 {
+  background-color: var(--jaune);
+  height: fit-content;
+  padding: 10px;
+  padding-left: 20px;
+  font-size: xx-large;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 900px) {
+  body main .titreProfile .divPolygone {
+    width: 50vw;
+  }
+}
+body main .titreProfileVide {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 50px;
+}
+body main .titreProfileVide .divPolygone {
+  width: 420px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+}
+body main .titreProfileVide .divPolygone .div1 {
+  background-color: var(--blanc);
+  color: var(--blanc);
+  height: fit-content;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: xx-large;
+}
+@media screen and (min-width: 900px) {
+  body main .titreProfileVide {
+    position: relative;
+    top: -116.8px;
+    margin-bottom: 0px;
+  }
+  body main .titreProfileVide .divPolygone {
+    width: 50vw;
+  }
+}
+body main .logiciels {
+  clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+  margin-bottom: 100px;
+  width: fit-content;
+}
+body main .logiciels .div1 {
+  background-color: var(--blanc);
+  font-size: xx-large;
+  height: fit-content;
+  margin-bottom: 20px;
+  padding: 10px;
+  padding-left: 20px;
+}
+body main .logiciels .div2 {
+  background-color: var(--blanc);
+  font-size: small;
+  height: fit-content;
+  min-height: 150px;
+  align-content: center;
+  width: 500px;
+  padding: 20px;
+  padding-right: 100px;
+  text-align: justify;
+}
+body main .logicielsVide {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 50px;
+}
+body main .logicielsVide .divPolygone {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+}
+body main .logicielsVide .divPolygone .div1 {
+  background-color: var(--jaune);
+  color: var(--jaune);
+  font-size: xx-large;
+  height: fit-content;
+  margin-bottom: 20px;
+  padding: 10px;
+  padding-left: 20px;
+}
+body main .logicielsVide .divPolygone .div2 {
+  background-color: var(--jaune);
+  color: var(--jaune);
+  font-size: small;
+  height: fit-content;
+  min-height: 150px;
+  align-content: center;
+  width: 500px;
+  padding: 20px;
+  padding-right: 100px;
+  text-align: justify;
+}
+@media screen and (min-width: 1150px) {
+  body main .logicielsVide {
+    position: relative;
+    top: -366.8px;
+    margin-bottom: -200px;
+  }
+}
+body main .photo {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  margin-bottom: 100px;
+}
+body main .photo div {
+  height: 300px;
+  width: 200px;
+  background-color: var(--jaune);
+  text-align: center;
+  align-content: center;
+}
+body main .barreBasPage {
+  display: flex;
+  justify-content: space-between;
+}
+body main .barreBasPage .div1 {
+  height: 20px;
+  width: 20vw;
+  background-color: var(--jaune);
+}
+body main .barreBasPage .div2 {
+  height: 20px;
+  width: 70vw;
+  background-color: var(--jaune);
+}
+
+/*******ZONE DE TITRE DE LA PAGE*******/
+.titrePage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 25vh;
+  z-index: 1;
+  padding-top: 10rem;
+  color: var(--blanc);
+}
+
+.titrePage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../images/entete.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0;
+  filter: blur(5px);
+  z-index: -1;
+}
+
+.imageVieEntete {
+  display: none;
+}
+
+/*********TITRE DES SECTIONS**********/
+.titreSection h2 {
+  background-color: var(--jaune);
+  height: max-content;
+  width: max-content;
+  padding: 0 2rem;
+  --width: max-content;
+}
+
+.titreSection {
+  position: relative;
+  width: max-content;
+}
+
+.locaux .titreSection {
+  align-self: self-end;
+}
+
+.vieEtudiante .imageVie img {
+  width: 100vw;
+  height: 40vh;
+  object-fit: cover;
+}
+
+.informations {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.texte {
+  margin: 10% 0;
+  padding: 2rem;
+  background-color: var(--blanc);
+}
+
+/*******************************MÉDIA QUERRY**************************/
+/****************MÉDIA QUERRY TABLETTE*****************/
+/****************MÉDIA QUERRY ordinateur*****************/
+@media screen and (min-width: 1100px) {
+  .vieEtudiante .titreSection::before {
+    display: none;
+  }
+  /***************HAUT DE LA PAGE***************/
+  .titrePage {
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--blanc);
+    position: relative;
+  }
+  .titrePage h1 {
+    padding: 2rem;
+  }
+  .titrePage::before {
+    content: none;
+  }
+  .imageVieEntete {
+    display: flex;
+    width: 50vw;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50%;
+  }
+  .imgEnteteDiv {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  .imgEnteteDiv::before {
+    content: "";
+    position: absolute;
+    background-image: none;
+    top: 0;
+    left: 0px;
+    width: 4rem;
+    height: 100%;
+    background-color: var(--bleu);
+    z-index: 3;
+    clip-path: polygon(100% 0, 0% 100%, 0% 100%, 0 0);
+  }
+  .imgEnteteDiv::after {
+    content: "";
+    position: absolute;
+    background-image: none;
+    top: 0;
+    left: 90px;
+    width: 8rem;
+    height: 100%;
+    border: 2px solid var(--bleu);
+    background-color: var(--bleu);
+    z-index: 3;
+    clip-path: polygon(50% 0%, 100% 0%, 50% 100%, 0% 100%);
+  }
+  /*************CONTENU DE LA PAGE*************/
+  /**********TITRES**********/
+  .vieEtudiante .titreSection {
+    width: 100vw;
+    margin: 5% 0;
+    display: flex;
+    gap: 0 4rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .vieEtudiante .titreSection h2 {
+    position: relative;
+    margin: 0;
+  }
+  .vieEtudiante .titreSection > h2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -30px;
+    width: 2rem;
+    height: 100%;
+    background-color: var(--jaune);
+    clip-path: polygon(100% 0, 50% 100%, 0% 100%, 0 0);
+  }
+  .decoTitre {
+    position: relative;
+    background-color: var(--blanc);
+    height: 29px;
+    flex-grow: 1;
+  }
+  .decoTitre::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -30px;
+    width: 2rem;
+    height: 100%;
+    z-index: 3;
+    background-color: var(--blanc);
+    clip-path: polygon(100% 0, 100% 100%, 0% 100%, 50% 0);
+  }
+  /***********INFORMATIONS ET IMAGES***************/
+  .informations {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .informations .texte {
+    width: 60vw;
+    height: 100%;
+    margin: 0;
+    padding-right: 4rem;
+    z-index: 1;
+    background-color: var(--bleu);
+    color: var(--blanc);
+  }
+  .vieEtudiante .imageVie {
+    width: 40vw;
+    height: 100%;
+    clip-path: polygon(100% 0, 100% 100%, 0% 100%, 15% 0);
+    transform: translateX(-50%) scale(0.5);
+    transition: transform 1s ease, opacity 0.5s ease;
+  }
+  .locaux .imageVie {
+    transform: translateX(50%) scale(0.5);
+  }
+  .vieEtudiante .imageVie.apparitionImg {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+  .cetim .imageVie img {
+    object-position: 90% 70%;
+  }
+  .locaux .informations {
+    flex-direction: row-reverse;
+  }
+  .locaux .texte {
+    clip-path: polygon(100% 0, 100% 100%, 0% 100%, 3% 0);
+  }
+  .locaux .imageVie {
+    clip-path: polygon(100% 0, 90% 100%, 0% 100%, 0 0);
+  }
+  .texte {
+    width: 50%;
+    clip-path: polygon(100% 0, 90% 100%, 0% 100%, 0 0);
+  }
+  .materiel .imageVie img {
+    object-position: 0 50%;
+  }
+}
+body {
+  /* ************************* Version Mobile ******************************* */
+  /* ************************* Version Tablette ******************************* */
+  /* ************************* Version Desktop ******************************* */
+}
+body .MaxProjetMain {
+  /* ******************** Section Arcade *********************** */
+  /* ***************** Section Projet ************************** */
+}
+body .MaxProjetMain .SectionArcade {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* ****************** Arcade *********************** */
+}
+body .MaxProjetMain .SectionArcade .ListeArcade {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 40px;
+  width: 80vw;
+  padding: 5vh 0px;
+  margin: 0px auto;
+}
+body .MaxProjetMain .SectionArcade .ListeArcade .jeu {
+  margin: 0px auto;
+  width: clamp(350px, 100%, 900px);
+  height: clamp(230px, 14vw, 700px);
+  background-color: white;
+}
+body .MaxProjetMain .SectionProjet {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* *************** Titre section ******************** */
+  /*******************GALERIE*****************/
+}
+body .MaxProjetMain .SectionProjet .Rangee1 {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /**************************FILTRE*************************/
+}
+body .MaxProjetMain .SectionProjet .Rangee1 .TitreSectionProjet {
+  width: 50vw;
+  display: flex;
+  flex-direction: row-reverse;
+}
+body .MaxProjetMain .SectionProjet .Rangee1 .TitreSectionProjet .Partie1 {
+  /* control the shape (can be percentage) */
+  height: 30px;
+  min-width: 10rem;
+  margin-right: 1rem;
+  clip-path: polygon(14% 0%, 100% 0%, 86% 100%, 0% 100%);
+  background-color: var(--jaune);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .MaxProjetMain .SectionProjet .Rangee1 .TitreSectionProjet .Partie1 .boutonFiltreProjet {
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 25%;
+  background-color: #fada90;
+  text-align: center;
+}
+body .MaxProjetMain .SectionProjet .Rangee1 .TitreSectionProjet .Partie1 .boutonFiltreProjet:hover {
+  cursor: pointer;
+}
+body .MaxProjetMain .SectionProjet .menuDeroulant {
+  transition: 1s;
+  height: 0px;
+  padding: 0 5rem;
+  margin-left: auto;
+  background-color: #bfd3ef;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 1rem;
+}
+body .MaxProjetMain .SectionProjet .Rangee2 {
+  max-width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+body .MaxProjetMain .SectionProjet .Rangee2 #galerieProjets {
+  background-color: #bfd3ef;
+  height: 40vh;
+  flex-grow: 1;
+}
+body .MaxProjetMain .SectionProjet .Rangee2 #galerieProjets img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+@media screen and (min-width: 430px) {
+  body .MaxProjetMain {
+    /* ***************** Section Projet ************************** */
+  }
+  body .MaxProjetMain .SectionProjet {
+    /* *************** Titre section ******************** */
+  }
+  body .MaxProjetMain .SectionProjet .Rangee1 .FiltreSectionProjet {
+    width: 35vw;
+  }
+  body .MaxProjetMain .SectionProjet .Rangee1 .FiltreSectionProjet .Partie1 {
+    justify-content: flex-start;
+  }
+  body .MaxProjetMain .SectionProjet .Rangee1 .FiltreSectionProjet .Partie1 h2 {
+    margin-left: 2.5vw;
+  }
+  body .MaxProjetMain .SectionProjet .Rangee1 .TitreSectionProjet .Partie1 {
+    margin-right: 5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body .MaxProjetMain {
+    /* ***************** Section Projet ************************** */
+  }
+}
+
+.pageCours .coursPrincipale h1 {
+  color: var(--blanc);
+  padding-left: 2vw;
+  position: relative;
+}
+.pageCours .coursPrincipale button {
+  position: relative;
+}
+.pageCours .coursPrincipale .imgCours {
+  height: 200px;
+  margin-bottom: 20px;
+  width: 60vw;
+  left: 40vw;
+  position: relative;
+  clip-path: polygon(7vw 0, 100% 0, 100% 100%, 0 100%);
+  background-color: var(--jaune);
+}
+.pageCours .coursPrincipale .txt {
+  height: 200px;
+  width: 60vw;
+  background-color: var(--blanc);
+  clip-path: polygon(0 0, 53vw 0, 100% 100%, 0 100%);
+}
+.pageCours .coursMenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  row-gap: 40px;
+  flex-wrap: wrap;
+}
+.pageCours .coursMenu input {
+  display: none;
+}
+.pageCours .coursMenu .displayFlexBtn1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 40px;
+  flex-wrap: nowrap;
+}
+.pageCours .coursMenu .displayFlexBtn1 .btnSession1Wrap {
+  transition: scale 0.2s;
+}
+.pageCours .coursMenu .displayFlexBtn1 .btnSession1Wrap:hover {
+  scale: 1.2;
+}
+.pageCours .coursMenu .displayFlexBtn1 .btnSession1Wrap .btnSession1 {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: var(--jaune);
+  clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
+}
+.pageCours .coursMenu .displayFlexBtn1 .btnSession1Wrap .actif {
+  background-color: var(--bleu);
+  color: var(--blanc);
+}
+.pageCours .coursMenu .displayFlexBtn1 .btnSession2Wrap {
+  transition: scale 0.2s;
+}
+.pageCours .coursMenu .displayFlexBtn1 .btnSession2Wrap:hover {
+  scale: 1.2;
+}
+.pageCours .coursMenu .displayFlexBtn1 .btnSession2Wrap .btnSession2 {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: var(--jaune);
+  clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
+  transition: scale 0.2s;
+}
+.pageCours .coursMenu .displayFlexBtn1 .btnSession2Wrap .btnSession2:hover {
+  scale: 1.2;
+}
+.pageCours .coursMenu .displayFlexBtn1 .btnSession2Wrap .actif {
+  background-color: var(--bleu);
+  color: var(--blanc);
+}
+.pageCours .coursMenu .displayFlexBtn1 .btnSession3Wrap {
+  transition: scale 0.2s;
+}
+.pageCours .coursMenu .displayFlexBtn1 .btnSession3Wrap:hover {
+  scale: 1.2;
+}
+.pageCours .coursMenu .displayFlexBtn1 .btnSession3Wrap .btnSession3 {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: var(--jaune);
+  clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
+  transition: scale 0.2s;
+}
+.pageCours .coursMenu .displayFlexBtn1 .btnSession3Wrap .btnSession3:hover {
+  scale: 1.2;
+}
+.pageCours .coursMenu .displayFlexBtn1 .btnSession3Wrap .actif {
+  background-color: var(--bleu);
+  color: var(--blanc);
+}
+.pageCours .coursMenu .displayFlexBtn2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 40px;
+  flex-wrap: nowrap;
+}
+.pageCours .coursMenu .displayFlexBtn2 .btnSession4Wrap {
+  transition: scale 0.2s;
+}
+.pageCours .coursMenu .displayFlexBtn2 .btnSession4Wrap:hover {
+  scale: 1.2;
+}
+.pageCours .coursMenu .displayFlexBtn2 .btnSession4Wrap .btnSession4 {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: var(--jaune);
+  clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
+  transition: scale 0.2s;
+}
+.pageCours .coursMenu .displayFlexBtn2 .btnSession4Wrap .btnSession4:hover {
+  scale: 1.2;
+}
+.pageCours .coursMenu .displayFlexBtn2 .btnSession4Wrap .actif {
+  background-color: var(--bleu);
+  color: var(--blanc);
+}
+.pageCours .coursMenu .displayFlexBtn2 .btnSession5Wrap {
+  transition: scale 0.2s;
+}
+.pageCours .coursMenu .displayFlexBtn2 .btnSession5Wrap:hover {
+  scale: 1.2;
+}
+.pageCours .coursMenu .displayFlexBtn2 .btnSession5Wrap .btnSession5 {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: var(--jaune);
+  clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
+  transition: scale 0.2s;
+}
+.pageCours .coursMenu .displayFlexBtn2 .btnSession5Wrap .btnSession5:hover {
+  scale: 1.2;
+}
+.pageCours .coursMenu .displayFlexBtn2 .btnSession5Wrap .actif {
+  background-color: var(--bleu);
+  color: var(--blanc);
+}
+.pageCours .coursMenu .displayFlexBtn2 .btnSession6Wrap {
+  transition: scale 0.2s;
+}
+.pageCours .coursMenu .displayFlexBtn2 .btnSession6Wrap:hover {
+  scale: 1.2;
+}
+.pageCours .coursMenu .displayFlexBtn2 .btnSession6Wrap .btnSession6 {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: var(--jaune);
+  clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
+  transition: scale 0.2s;
+}
+.pageCours .coursMenu .displayFlexBtn2 .btnSession6Wrap .btnSession6:hover {
+  scale: 1.2;
+}
+.pageCours .coursMenu .displayFlexBtn2 .btnSession6Wrap .actif {
+  background-color: var(--bleu);
+  color: var(--blanc);
+}
+.pageCours .coursMenu .wrapActif {
+  filter: drop-shadow(5px 5px 3px var(--drop-shadow)) drop-shadow(-5px -5px 3px var(--drop-shadow));
+}
+.pageCours .listeCours {
+  min-height: 450px;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 75px;
+  row-gap: 50px;
+}
+.pageCours .listeCours .coursImg {
+  width: 75px;
+  height: 100px;
+  background-color: var(--bleu);
+}
+.pageCours .listeCours div {
+  z-index: 1;
+}
+.pageCours .listeCours .cours1 {
+  width: 300px;
+  height: 200px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: var(--blanc);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pageCours .listeCours .cours1 .infoCours {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.pageCours .listeCours .cours1 .infoCours .boutonCours {
+  position: unset;
+}
+.pageCours .listeCours .cours2 {
+  width: 300px;
+  height: 200px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: var(--blanc);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pageCours .listeCours .cours2 .infoCours {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.pageCours .listeCours .cours2 .infoCours .boutonCours {
+  position: unset;
+}
+.pageCours .listeCours .cours3 {
+  width: 300px;
+  height: 200px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: var(--blanc);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pageCours .listeCours .cours3 .infoCours {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.pageCours .listeCours .cours3 .infoCours .boutonCours {
+  position: unset;
+}
+.pageCours .listeCours .cours4 {
+  width: 300px;
+  height: 200px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: var(--blanc);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pageCours .listeCours .cours4 .infoCours {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.pageCours .listeCours .cours4 .infoCours .boutonCours {
+  position: unset;
+}
+
+html {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bleu);
+}
+
+h1 {
+  color: #FFF;
+  font-family: "lato";
+  font-weight: bold;
+}
+
+.barreBasPage {
+  display: flex;
+  justify-content: space-between;
+}
+.barreBasPage .div1 {
+  height: 20px;
+  width: 20vw;
+  background-color: var(--jaune);
+}
+.barreBasPage .div2 {
+  height: 20px;
+  width: 70vw;
+  background-color: var(--jaune);
+}
+
+.titreSection {
+  position: relative;
+}
+
+.titreSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -30px;
+  width: 2rem;
+  height: 100%;
+  background-color: var(--jaune);
+  clip-path: polygon(100% 0, 30% 100%, 0% 100%, 0 0);
+}
+
+.titreSection::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0.5rem;
+  height: 100%;
+  border-left: 5px solid var(--jaune);
+  border-right: 2px solid var(--jaune);
+  transform: translateX(2.7rem) skewX(-37deg);
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.548);
+  color: #fcbe32;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  z-index: 11;
+  border-bottom: 0.5px solid #393939;
+}
+header .custom-logo {
+  width: 80px;
+  height: 80px;
+  transition: 0.5s linear;
+}
+header .custom-logo:hover {
+  width: 90px;
+  height: 90px;
+}
+header .menuCache {
+  position: fixed;
+  width: 100%;
+  height: 700px;
+  background-color: rgba(0, 0, 0, 0.85);
+  top: 0vh;
+  right: 0vw;
+  overflow-x: hidden;
+  transform: translateX(100%);
+  transition: transform 0.5s, padding-bottom 2s;
+  z-index: 10;
+}
+header .menuCache .optionMenu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  height: 600px;
+}
+header .menuCache .optionMenu .menu-menuprincipal-container {
+  text-align: center;
+}
+header .menuCache .optionMenu .menu-menuprincipal-container ul {
+  list-style: none;
+  margin: none;
+}
+header .menuCache .optionMenu .menu-menuprincipal-container ul a {
+  text-decoration: none;
+  color: white;
+  font-size: larger;
+}
+@media screen and (min-width: 900px) {
+  header .menuCache {
+    position: absolute;
+    width: auto;
+    height: auto;
+    transform: translateX(0%);
+    background-color: rgba(0, 0, 0, 0);
+  }
+  header .menuCache .optionMenu {
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 5vw;
+    height: auto;
+    padding-right: 2vw;
+    right: 10vw;
+  }
+  header .menuCache .menu {
+    display: flex;
+    width: clamp(700px, 60vw, 800px);
+    font-size: clamp(16px, 1.06vw, 21px);
+    padding: 25px 10px;
+    justify-content: space-between;
+  }
+}
+header input {
+  display: none;
+}
+header .menuBurger {
+  width: 50px;
+  height: 50px;
+  background-color: #fcbe32;
+  border-radius: 5px 5px 5px 5px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  z-index: 11;
+}
+header .menuBurger .burger1 {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  border-radius: 2px 2px 2px 2px;
+}
+header .menuBurger .burger2 {
+  display: flex;
+  justify-content: space-between;
+}
+header .menuBurger .burger2 .div1 {
+  width: 10px;
+  transition: width 0.5s;
+}
+header .menuBurger .burger2 .div2 {
+  width: 25px;
+  height: 5px;
+  background-color: black;
+  border-radius: 2px 2px 2px 2px;
+  transition: width 0.5s;
+}
+header .menuBurger .burger3 {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  border-radius: 2px 2px 2px 2px;
+}
+@media screen and (min-width: 900px) {
+  header .menuBurger {
+    display: none;
+  }
+}
+header #chkBurger:checked ~ .menuCache {
+  transform: translateX(0px);
+  padding-bottom: 1000px;
+}
+header #chkBurger:checked ~ .menuBurger .burger2 .div1 {
+  width: 0px;
+}
+header #chkBurger:checked ~ .menuBurger .burger2 .div2 {
+  width: 35px;
+}
+
+.pasDeScroll {
+  overflow-y: hidden;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  align-content: first baseline;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 100px;
+  padding-bottom: 10vh;
+  flex-wrap: wrap;
+  position: relative;
+  overflow-y: hidden;
+}
+@media screen and (max-width: 900px) {
+  footer {
+    padding: 0;
+  }
+}
+footer .footerGauche {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5rem;
+  padding-bottom: 5rem;
+  flex-wrap: wrap;
+}
+footer .footerBas {
+  position: absolute;
+  font-size: 15vw;
+  bottom: -5rem;
+}
+footer p {
+  font-size: xx-small;
+}
+footer .footerDroite .reseaux .inconsReseaux {
+  display: flex;
+}
+
+.boutonCours {
+  position: relative;
+  top: -7vh;
+  left: 3vw;
+  transition: scale 0.5s, transform 0.5s;
+  width: 150px;
+  scale: 80%;
+}
+.boutonCours .btn1 {
+  height: 5px;
+  width: 90px;
+  background-color: var(--jaune);
+  margin-bottom: 5px;
+  position: relative;
+  left: 60px;
+  transition: color 0.5s, background-color 0.1s;
+}
+.boutonCours a {
+  text-decoration: none;
+}
+.boutonCours .btn2 {
+  width: 18rem;
+  height: 2.5rem;
+  background-color: var(--jaune);
+  text-align: center;
+  align-content: center;
+  font-size: x-large;
+  color: #14243c;
+  transition: color 0.5s, background-color 0.1s;
+  font-family: "lato";
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+}
+.boutonCours .btn3 {
+  width: 90px;
+  height: 5px;
+  background-color: var(--jaune);
+  margin-top: 5px;
+  transition: color 0.5s, background-color 0.1s;
+}
+.boutonCours .btn4 {
+  width: 25px;
+  height: 5px;
+  background-color: var(--jaune);
+  position: relative;
+  top: -5px;
+  left: 92px;
+  transition: color 0.5s, background-color 0.1s;
+}
+.boutonCours .btn5 {
+  width: 10px;
+  height: 5px;
+  background-color: var(--jaune);
+  position: relative;
+  top: -10px;
+  left: 119px;
+  transition: color 0.5s, background-color 0.1s;
+}
+.boutonCours .btn6 {
+  width: 65px;
+  height: 5px;
+  background-color: var(--jaune);
+  position: relative;
+  top: -8px;
+  transition: color 0.5s, background-color 0.1s;
+}
+.boutonCours:hover .btn1 {
+  background-color: var(--jaune);
+  box-shadow: 0px 0px 10px 2px var(--jaune);
+}
+.boutonCours:hover .btn2 {
+  background-color: rgba(0, 0, 0, 0.634);
+  backdrop-filter: blur(3px);
+  color: var(--jaune);
+  text-shadow: var(--jaune) 1px 0 10px;
+  box-shadow: 0px 0px 10px 2px var(--jaune);
+  transition: 0.3s linear;
+  letter-spacing: 0.4rem;
+}
+.boutonCours:hover .btn3 {
+  background-color: var(--jaune);
+  box-shadow: 0px 0px 10px 2px var(--jaune);
+}
+.boutonCours:hover .btn4 {
+  background-color: var(--jaune);
+  box-shadow: 0px 0px 10px 2px var(--jaune);
+}
+.boutonCours:hover .btn5 {
+  background-color: var(--jaune);
+  box-shadow: 0px 0px 10px 2px var(--jaune);
+}
+.boutonCours:hover .btn6 {
+  background-color: var(--jaune);
+  box-shadow: 0px 0px 10px 2px var(--jaune);
+}
+
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+#bg canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bodyFutur {
+  margin: 0;
+  padding: 0;
+}
+
+.mainFutur {
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  /*-----------------HAUTE DE PAGE---------------------*/
+  /*------------------FIN HAUTE DE PAGE--------------------*/
+  /*------------------BOUTONS D'OPTIONS--------------------*/
+  /*-----------------FIN BOUTONS OPTIONS---------------------*/
+  /*------------------FIN INFO OPTIONS--------------------*/
+  /*------------------DIAGRAMME POUR INFO OPTIONS--------------------*/
+  /*----------------MEDIA QUERY----------------------*/
+  /*----------------FIN MEDIA QUERY----------------------*/
+}
+.mainFutur .intro_dessus {
+  display: flex;
+  padding-bottom: 30px;
+  justify-content: space-between;
+}
+.mainFutur .intro_dessus .TitreSectionFutur .Partie1 {
+  background-color: #ffc107;
+  clip-path: polygon(0 0, 100% 0%, 73% 100%, 0% 100%);
+}
+.mainFutur .intro_dessus .TitreSectionFutur .Partie1 .TitreFutur {
+  padding: 10px;
+}
+.mainFutur .intro_dessus .image_titre {
+  clip-path: polygon(55% 0, 100% 0, 100% 100%, 0 100%);
+  overflow: hidden;
+  /*height: 200vw;*/
+  width: 200px;
+  position: static;
+  right: 0;
+}
+.mainFutur .intro {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 40px;
+  margin-bottom: 20px;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
+  overflow: hidden;
+}
+.mainFutur .intro .ExplicationFutur {
+  width: 60vw;
+}
+.mainFutur .options {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 20px 0;
+  align-items: center;
+  /* Styles de bouton sélectionné */
+}
+.mainFutur .options .option1 {
+  background-color: #ffc107;
+  margin-left: -100px;
+  color: #ffffff;
+  padding: 10px 20px;
+  width: 200px;
+  cursor: pointer;
+  text-align: center;
+  clip-path: polygon(0 16%, 89% 15%, 100% 78%, 15% 78%);
+  transition: background-color 0.3s, filter 0.3s;
+  position: relative;
+}
+.mainFutur .options .option2 {
+  background-color: #cfcfcf;
+  left: 10px;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  width: 200px;
+  cursor: pointer;
+  text-align: center;
+  clip-path: polygon(0 16%, 89% 15%, 100% 78%, 15% 78%);
+  transition: background-color 0.3s, filter 0.3s;
+  position: relative;
+}
+.mainFutur .options .option3 {
+  background-color: #ffc107;
+  margin-left: 100px;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  width: 200px;
+  cursor: pointer;
+  text-align: center;
+  clip-path: polygon(0 16%, 89% 15%, 100% 78%, 15% 78%);
+  transition: background-color 0.3s, filter 0.3s;
+  position: relative;
+}
+.mainFutur .options .selected-button {
+  background-color: #1f2a44;
+}
+.mainFutur .options .selected-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.235); /* Couleur de l'ombre */
+  clip-path: inherit; /* Utilise le même clip-path que le bouton */
+  filter: drop-shadow(12px 15px 23px white); /* Applique un flou */
+  z-index: -1; /* Place le contour flou derrière le bouton */
+}
+.mainFutur .container {
+  /*--------------CARRE INFO OPTIONS------------------------*/
+}
+.mainFutur .container .vide {
+  background-color: #ffc107;
+  width: 100px;
+  height: 300px;
+  margin: auto;
+  padding: 100px;
+  text-align: center;
+  position: relative;
+  z-index: 9;
+  transition: background-color 0.5s ease; /* Transition douce pour changement de couleur */
+}
+.mainFutur .container .content {
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+  width: 200px;
+  height: 100px;
+  margin-top: 20px;
+  left: 15vw;
+  bottom: 10%;
+  clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+  margin-top: -150px;
+  margin-left: -20px;
+}
+.mainFutur .container .content .img_content {
+  padding: 10px;
+  margin: 10px;
+  width: 30vw;
+  height: 10vh;
+}
+@media screen and (min-width: 430px) {
+  .mainFutur .intro_dessus .Partie1 {
+    background-color: #ffc107;
+    clip-path: polygon(0 0, 100% 0%, 72% 100%, 0% 100%);
+    padding: 10px;
+    width: 285px;
+  }
+  .mainFutur .intro_dessus .image_titre {
+    width: 300px;
+    height: 150px;
+  }
+  .mainFutur .options .option1 {
+    width: 400px;
+  }
+  .mainFutur .options .option2 {
+    width: 400px;
+  }
+  .mainFutur .options .option3 {
+    width: 400px;
+  }
+  .mainFutur .container { /* Ajoute un conteneur englobant */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mainFutur .container .vide {
+    width: 50vw;
+    clip-path: polygon(0 0, 74% 0, 100% 100%, 0% 100%);
+    z-index: 1;
+    right: 11vw;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .mainFutur .container .content {
+    width: 400px;
+    height: 200px;
+    z-index: 0;
+    left: 20vw;
+    bottom: 0;
+    margin-top: 0;
+    margin-left: 0;
+    padding-bottom: 40px;
+  }
+  .mainFutur .container .content .img_content {
+    width: 30vw;
+    height: 20vh;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .mainFutur .intro_dessus .Partie1 {
+    background-color: #ffc107;
+    clip-path: polygon(0 0, 100% 0%, 60% 100%, 0% 100%);
+    padding: 30px;
+    width: 305px;
+  }
+  .mainFutur .intro_dessus .image_titre {
+    width: 500px;
+    height: 250px;
+  }
+  .mainFutur .options {
+    flex-direction: row;
+    padding: 10px;
+  }
+  .mainFutur .options .option1 {
+    margin-left: 0px;
+  }
+  .mainFutur .options .option3 {
+    margin-left: 0px;
+  }
+  .mainFutur .container .vide {
+    width: 50vw;
+    right: 17vw;
+  }
+  .mainFutur .container .content {
+    left: 24vw;
+    right: 0;
+    width: 40vw;
+  }
+  .mainFutur .container .content .img_content {
+    width: 20vw;
+    height: 240px;
+    padding: 80px;
+  }
+}
+
+/*****************************décor de la page**********************/
+#bodyProfs {
+  position: relative;
+  z-index: 5;
+}
+
+.pageProfs {
+  position: relative;
+  padding-top: 10rem;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.pageProfs::before {
+  content: "";
+  position: absolute;
+  bottom: -9rem;
+  border-left: 10rem solid var(--gris);
+  border-right: 5rem solid var(--gris);
+  width: 15rem;
+  height: 100%;
+  transform: skewX(-45deg);
+  z-index: 2;
+}
+
+.pageProfs::after {
+  content: "";
+  position: absolute;
+  opacity: 0.5;
+  bottom: -19rem;
+  border-left: 3rem solid rgba(198, 198, 198, 0.7176470588);
+  border-right: 8rem solid rgba(198, 198, 198, 0.7176470588);
+  width: 19rem;
+  height: 100%;
+  transform: skewX(-45deg);
+  z-index: 2;
+}
+
+/**********************Éléments de la page*******************/
+.conteneurCentre {
+  position: relative;
+  margin: auto 3rem;
+  z-index: 3;
+}
+
+.conteneurProfs {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  z-index: 3;
+}
+
+/************carte des professeurs************/
+.carteProf {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--gris);
+  box-shadow: 1px 1px 15px 1px rgba(54, 54, 54, 0.5647058824);
+  width: 30vw;
+  height: 15rem;
+  z-index: 3;
+  border-radius: 5px;
+  border: 0.5px solid #FFF;
+}
+.carteProf p {
+  padding-top: 1rem;
+}
+
+.imageProf {
+  width: 25vw;
+  height: 10rem;
+}
+
+.imageProf img {
+  object-fit: cover;
+  object-position: 50%;
+  width: 10rem;
+  height: 15rem;
+  border-radius: 5px;
+}
+
+/*******************************MÉDIA QUERRY**************************/
+/****************MÉDIA QUERRY TABLETTE*****************/
+@media screen and (min-width: 500px) {
+  .pageProfs::before {
+    top: 0;
+    right: -8rem;
+    border-left: 16rem solid rgba(198, 198, 198, 0.7176470588);
+    border-right: 8rem solid rgba(198, 198, 198, 0.7176470588);
+    width: 18rem;
+  }
+  .pageProfs::after {
+    top: 0;
+    right: -22rem;
+    border-left: 2rem solid rgba(198, 198, 198, 0.7176470588);
+    border-right: 12rem solid rgba(198, 198, 198, 0.7176470588);
+    width: 23rem;
+  }
+  .conteneurProfs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .carteProf {
+    width: 23vw;
+    height: 19rem;
+  }
+  .imageProf {
+    width: 18vw;
+    height: 14rem;
+  }
+}
+/****************MÉDIA QUERRY ordinateur*****************/
+@media screen and (min-width: 1100px) {
+  .pageProfs::before {
+    top: 0;
+    right: -8rem;
+    border-left: 17rem solid rgba(198, 198, 198, 0.7176470588);
+    width: 18rem;
+    transform: skewX(-55deg);
+  }
+  .pageProfs::after {
+    top: 0;
+    right: -27rem;
+    border-left: 4rem solid var(--gris);
+    border-right: 14rem solid var(--gris);
+    width: 25rem;
+    transform: skewX(-55deg);
+  }
+  .conteneurProfs {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .carteProf {
+    width: 14rem;
+  }
+  .imageProf {
+    width: 12rem;
+  }
+}
+ul {
+  margin: 0;
+}/*# sourceMappingURL=style.css.map */

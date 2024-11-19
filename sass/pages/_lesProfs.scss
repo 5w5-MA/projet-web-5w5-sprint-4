@@ -1,0 +1,183 @@
+/*****************************décor de la page**********************/
+
+#bodyProfs {
+    //mettre le bodu derrière le main
+    position: relative;
+    z-index: 5;
+}
+
+
+.pageProfs {
+    position: relative;
+    padding-top: 10rem;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.pageProfs::before {
+    content: "";
+
+    position: absolute;
+    bottom: -9rem;
+
+    border-left: 10rem solid var(--gris);
+    border-right: 5rem solid var(--gris);
+    width: 15rem;
+    height: 100%;
+
+    transform: skewX(-45deg);
+
+    z-index: 2;
+   
+}
+.pageProfs::after {
+    content: "";
+
+    position: absolute;
+    opacity: 0.5;
+    bottom: -19rem;
+
+    border-left: 3rem solid #c6c6c6b7;
+    border-right: 8rem solid #c6c6c6b7;
+    width: 19rem;
+    height: 100%;
+
+    transform: skewX(-45deg);
+
+    z-index: 2;
+  
+}
+
+/**********************Éléments de la page*******************/
+.conteneurCentre {
+    position: relative;
+    margin: auto 3rem;
+    z-index: 3;
+}
+
+.conteneurProfs {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    z-index: 3;
+
+}
+
+/************carte des professeurs************/
+.carteProf {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--gris);
+    box-shadow: 1px 1px 15px 1px #36363690;
+    width: 30vw;
+    height: 15rem;
+    z-index: 3;
+    border-radius: 5px;
+    border: 0.5px solid #FFF;
+
+    p{
+        padding-top: 1rem;
+    }
+}
+
+.imageProf {
+    width: 25vw;
+    height: 10rem;
+}
+
+.imageProf img {
+    object-fit: cover;
+    object-position: 50%;
+    width: 10rem;
+    height: 15rem;
+    border-radius: 5px;
+}
+
+
+/*******************************MÉDIA QUERRY**************************/
+/****************MÉDIA QUERRY TABLETTE*****************/
+@media screen and (min-width: 500px) {
+    // changer la taille des cartes et du décor
+
+    .pageProfs::before {
+        top: 0;
+        right: -8rem;
+        border-left: 16rem solid #c6c6c6b7;
+        border-right: 8rem solid #c6c6c6b7;
+        width: 18rem;
+    }
+
+    .pageProfs::after {
+        top: 0;
+        right: -22rem;
+        border-left: 2rem solid #c6c6c6b7;
+        border-right: 12rem solid #c6c6c6b7;
+        width: 23rem;
+
+    }
+
+    .conteneurProfs {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .carteProf {
+        width: 23vw;
+        height: 19rem;
+        
+    }
+
+    .imageProf {
+        width: 18vw;
+        height: 14rem;
+    }
+
+}
+
+/****************MÉDIA QUERRY ordinateur*****************/
+@media screen and (min-width: 1100px) {
+
+    // changer la taille des cartes et du décor
+    .pageProfs::before {
+        top: 0;
+        right: -8rem;
+        border-left: 17rem solid #c6c6c6b7;
+
+        width: 18rem;
+
+        transform: skewX(-55deg);
+    }
+
+    .pageProfs::after {
+        top: 0;
+        right: -27rem;
+
+        border-left: 4rem solid var(--gris);
+        border-right: 14rem solid var(--gris);
+        width: 25rem;
+        transform: skewX(-55deg);
+
+    }
+
+    .conteneurProfs {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .carteProf {
+        width: 14rem;
+
+    }
+
+    .imageProf {
+        width: 12rem;
+
+    }
+
+}

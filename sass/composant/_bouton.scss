@@ -1,0 +1,110 @@
+.boutonCours {
+  position: relative;
+  top: -7vh;
+  left: 3vw;
+  transition: scale 0.5s, transform 0.5s;
+  width: 150px;
+  scale: 80%;
+
+  .btn1 {
+    height: 5px;
+    width: 90px;
+    background-color: var(--jaune);
+    margin-bottom: 5px;
+    position: relative;
+    left: 60px;
+    transition: color 0.5s, background-color 0.1s;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .btn2 {
+    width: 18rem;
+    height: 2.5rem;
+    background-color: var(--jaune);
+    text-align: center;
+    align-content: center;
+    font-size: x-large;
+    color: #14243c;
+    transition: color 0.5s, background-color 0.1s;
+    font-family: "lato";
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+  }
+
+  .btn3 {
+    width: 90px;
+    height: 5px;
+    background-color: var(--jaune);
+    margin-top: 5px;
+    transition: color 0.5s, background-color 0.1s;
+  }
+
+  .btn4 {
+    width: 25px;
+    height: 5px;
+    background-color: var(--jaune);
+    position: relative;
+    top: -5px;
+    left: 92px;
+    transition: color 0.5s, background-color 0.1s;
+  }
+
+  .btn5 {
+    width: 10px;
+    height: 5px;
+    background-color: var(--jaune);
+    position: relative;
+    top: -10px;
+    left: 119px;
+    transition: color 0.5s, background-color 0.1s;
+  }
+
+  .btn6 {
+    width: 65px;
+    height: 5px;
+    background-color: var(--jaune);
+    position: relative;
+    top: -8px;
+    transition: color 0.5s, background-color 0.1s;
+  }
+
+  &:hover {
+    .btn1 {
+      background-color: var(--jaune);
+      box-shadow: 0px 0px 10px 2px var(--jaune);
+    }
+
+    .btn2 {
+      background-color: rgba(0, 0, 0, 0.634);
+      backdrop-filter: blur(3px);
+      color: var(--jaune);
+      text-shadow: var(--jaune) 1px 0 10px;
+      box-shadow: 0px 0px 10px 2px var(--jaune);
+      transition: 0.3s linear;
+      letter-spacing: 0.4rem;
+    }
+
+    .btn3 {
+      background-color: var(--jaune);
+      box-shadow: 0px 0px 10px 2px var(--jaune);
+    }
+
+    .btn4 {
+      background-color: var(--jaune);
+      box-shadow: 0px 0px 10px 2px var(--jaune);
+    }
+
+    .btn5 {
+      background-color: var(--jaune);
+      box-shadow: 0px 0px 10px 2px var(--jaune);
+    }
+
+    .btn6 {
+      background-color: var(--jaune);
+      box-shadow: 0px 0px 10px 2px var(--jaune);
+    }
+  }
+}

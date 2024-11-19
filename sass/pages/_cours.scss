@@ -1,0 +1,419 @@
+.pageCours {
+  .coursPrincipale {
+    h1 {
+      color: var(--blanc);
+      padding-left: 2vw;
+      position: relative;
+    }
+
+    button {
+      position: relative;
+    }
+
+    .imgCours {
+      height: 200px;
+      margin-bottom: 20px;
+      width: 60vw;
+      left: 40vw;
+      position: relative;
+      clip-path: polygon(7vw 0, 100% 0, 100% 100%, 0 100%);
+      background-color: var(--jaune);
+    }
+
+    .txt {
+      height: 200px;
+      width: 60vw;
+      background-color: var(--blanc);
+      clip-path: polygon(0 0, 53vw 0, 100% 100%, 0 100%);
+    }
+  }
+
+  .coursMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    row-gap: 40px;
+    flex-wrap: wrap;
+
+    input {
+      display: none;
+    }
+    .displayFlexBtn1 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      row-gap: 40px;
+      flex-wrap: nowrap;
+
+      .btnSession1Wrap {
+        transition: scale 0.2s;
+
+        &:hover {
+          scale: 1.2;
+        }
+
+        .btnSession1 {
+          padding-left: 30px;
+          padding-right: 30px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          background-color: var(--jaune);
+          clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
+
+          // @media screen and (min-width: 501px) {
+          //   padding-left: 3vw;
+          //   padding-right: 3vw;
+          // }
+
+          // @media screen and (min-width: 700px) {
+          //   padding-left: 4vw;
+          //   padding-right: 4vw;
+          // }
+
+          // @media screen and (min-width: 1000px) {
+          //   padding-left: 5vw;
+          //   padding-right: 5vw;
+          // }
+        }
+
+        .actif {
+          background-color: var(--bleu);
+          color: var(--blanc);
+        }
+      }
+
+      .btnSession2Wrap {
+        transition: scale 0.2s;
+
+        &:hover {
+          scale: 1.2;
+        }
+
+        .btnSession2 {
+          padding-left: 30px;
+          padding-right: 30px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          background-color: var(--jaune);
+          clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
+          transition: scale 0.2s;
+
+          &:hover {
+            scale: 1.2;
+          }
+
+          // @media screen and (min-width: 501px) {
+          //   padding-left: 3vw;
+          //   padding-right: 3vw;
+          // }
+
+          // @media screen and (min-width: 700px) {
+          //   padding-left: 4vw;
+          //   padding-right: 4vw;
+          // }
+
+          // @media screen and (min-width: 1000px) {
+          //   padding-left: 5vw;
+          //   padding-right: 5vw;
+          // }
+        }
+
+        .actif {
+          background-color: var(--bleu);
+          color: var(--blanc);
+        }
+      }
+
+      .btnSession3Wrap {
+        transition: scale 0.2s;
+
+        &:hover {
+          scale: 1.2;
+        }
+
+        .btnSession3 {
+          padding-left: 30px;
+          padding-right: 30px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          background-color: var(--jaune);
+          clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
+          transition: scale 0.2s;
+
+          &:hover {
+            scale: 1.2;
+          }
+
+          // @media screen and (min-width: 501px) {
+          //   padding-left: 3vw;
+          //   padding-right: 3vw;
+          // }
+
+          // @media screen and (min-width: 700px) {
+          //   padding-left: 4vw;
+          //   padding-right: 4vw;
+          // }
+
+          // @media screen and (min-width: 1000px) {
+          //   padding-left: 5vw;
+          //   padding-right: 5vw;
+          // }
+        }
+
+        .actif {
+          background-color: var(--bleu);
+          color: var(--blanc);
+        }
+      }
+    }
+
+    .displayFlexBtn2 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      row-gap: 40px;
+      flex-wrap: nowrap;
+
+      .btnSession4Wrap {
+        transition: scale 0.2s;
+
+        &:hover {
+          scale: 1.2;
+        }
+
+        .btnSession4 {
+          padding-left: 30px;
+          padding-right: 30px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          background-color: var(--jaune);
+          clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
+          transition: scale 0.2s;
+
+          &:hover {
+            scale: 1.2;
+          }
+
+          // @media screen and (min-width: 501px) {
+          //   padding-left: 3vw;
+          //   padding-right: 3vw;
+          // }
+
+          // @media screen and (min-width: 700px) {
+          //   padding-left: 4vw;
+          //   padding-right: 4vw;
+          // }
+
+          // @media screen and (min-width: 1000px) {
+          //   padding-left: 5vw;
+          //   padding-right: 5vw;
+          // }
+        }
+
+        .actif {
+          background-color: var(--bleu);
+          color: var(--blanc);
+        }
+      }
+
+      .btnSession5Wrap {
+        transition: scale 0.2s;
+
+        &:hover {
+          scale: 1.2;
+        }
+
+        .btnSession5 {
+          padding-left: 30px;
+          padding-right: 30px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          background-color: var(--jaune);
+          clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
+          transition: scale 0.2s;
+
+          &:hover {
+            scale: 1.2;
+          }
+
+          // @media screen and (min-width: 501px) {
+          //   padding-left: 3vw;
+          //   padding-right: 3vw;
+          // }
+
+          // @media screen and (min-width: 700px) {
+          //   padding-left: 4vw;
+          //   padding-right: 4vw;
+          // }
+
+          // @media screen and (min-width: 1000px) {
+          //   padding-left: 5vw;
+          //   padding-right: 5vw;
+          // }
+        }
+
+        .actif {
+          background-color: var(--bleu);
+          color: var(--blanc);
+        }
+      }
+
+      .btnSession6Wrap {
+        transition: scale 0.2s;
+
+        &:hover {
+          scale: 1.2;
+        }
+
+        .btnSession6 {
+          padding-left: 30px;
+          padding-right: 30px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          background-color: var(--jaune);
+          clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
+          transition: scale 0.2s;
+
+          &:hover {
+            scale: 1.2;
+          }
+
+          // @media screen and (min-width: 501px) {
+          //   padding-left: 3vw;
+          //   padding-right: 3vw;
+          // }
+
+          // @media screen and (min-width: 700px) {
+          //   padding-left: 4vw;
+          //   padding-right: 4vw;
+          // }
+
+          // @media screen and (min-width: 1000px) {
+          //   padding-left: 5vw;
+          //   padding-right: 5vw;
+          // }
+        }
+
+        .actif {
+          background-color: var(--bleu);
+          color: var(--blanc);
+        }
+      }
+    }
+
+    .wrapActif {
+      filter: drop-shadow(5px 5px 3px var(--drop-shadow))
+        drop-shadow(-5px -5px 3px var(--drop-shadow));
+    }
+  }
+
+  .listeCours {
+    min-height: 450px;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 75px;
+    row-gap: 50px;
+
+    .coursImg {
+      width: 75px;
+      height: 100px;
+      background-color: var(--bleu);
+    }
+
+    div {
+      z-index: 1;
+    }
+
+    .cours1 {
+      width: 300px;
+      height: 200px;
+      padding-left: 25px;
+      padding-right: 25px;
+      background-color: var(--blanc);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .infoCours {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        .boutonCours {
+          position: unset;
+        }
+      }
+    }
+
+    .cours2 {
+      width: 300px;
+      height: 200px;
+      padding-left: 25px;
+      padding-right: 25px;
+      background-color: var(--blanc);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .infoCours {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        .boutonCours {
+          position: unset;
+        }
+      }
+    }
+
+    .cours3 {
+      width: 300px;
+      height: 200px;
+      padding-left: 25px;
+      padding-right: 25px;
+      background-color: var(--blanc);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .infoCours {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        .boutonCours {
+          position: unset;
+        }
+      }
+    }
+
+    .cours4 {
+      width: 300px;
+      height: 200px;
+      padding-left: 25px;
+      padding-right: 25px;
+      background-color: var(--blanc);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .infoCours {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        .boutonCours {
+          position: unset;
+        }
+      }
+    }
+  }
+}
