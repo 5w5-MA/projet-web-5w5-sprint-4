@@ -700,7 +700,18 @@ body .MaxProjetMain .SectionProjet .Rangee2 #galerieProjets {
   height: 40vh;
   flex-grow: 1;
 }
+body .MaxProjetMain .SectionProjet .Rangee2 #galerieProjets p {
+  position: absolute;
+  z-index: 2;
+  margin: 0;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.4431372549);
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+  border: 0.5px solid #FFF;
+}
 body .MaxProjetMain .SectionProjet .Rangee2 #galerieProjets img {
+  position: relative;
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -1019,6 +1030,10 @@ h1 {
   color: #FFF;
   font-family: "lato";
   font-weight: bold;
+}
+
+p {
+  font-size: clamp(1rem, 0.2rem + 1.6vw, 1.7rem);
 }
 
 .barreBasPage {

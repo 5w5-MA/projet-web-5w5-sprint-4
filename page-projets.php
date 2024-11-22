@@ -30,7 +30,8 @@
             ?>
                 <section class="jeu">
                     <div>
-                        <?php the_title(); ?>
+                        <?php the_title();
+                        ?>
                     </div>
                 </section>
             <?php }; ?>
@@ -70,7 +71,10 @@
                     $postDesign->the_post();
                 ?>
                     <div class="design" id="galerieProjets">
-                        <?php the_title(); ?>
+                        <p><?php the_title(); ?></p>
+                        <?php if (has_post_thumbnail()) {
+                            the_post_thumbnail('full'); // You can change 'full' to another size if needed (like 'medium' or 'large')
+                        } ?>
                     </div>
                 <?
                 }
@@ -83,7 +87,10 @@
                     $postProgrammation->the_post();
                 ?>
                     <div class="programmation" id="galerieProjets">
-                        <?php the_title(); ?>
+                        <p><?php the_title(); ?></p>
+                        <?php if (has_post_thumbnail()) {
+                            the_post_thumbnail('full'); // You can change 'full' to another size if needed (like 'medium' or 'large')
+                        } ?>
                     </div>
                 <?
                 }
@@ -95,7 +102,10 @@
                     $postJeu->the_post();
                 ?>
                     <div class="jeu" id="galerieProjets">
-                        <?php the_title(); ?>
+                        <p><?php the_title(); ?></p>
+                        <?php if (has_post_thumbnail()) {
+                            the_post_thumbnail('full'); // You can change 'full' to another size if needed (like 'medium' or 'large')
+                        } ?>
                     </div>
                 <?
                 }
@@ -107,7 +117,10 @@
                     $postModelisation->the_post();
                 ?>
                     <div class="modélisation" id="galerieProjets">
-                        <?php the_title(); ?>
+                        <p><?php the_title(); ?></p>
+                        <?php if (has_post_thumbnail()) {
+                            the_post_thumbnail('full'); // You can change 'full' to another size if needed (like 'medium' or 'large')
+                        } ?>
                     </div>
                 <?
                 }

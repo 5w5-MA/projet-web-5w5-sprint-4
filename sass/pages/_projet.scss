@@ -110,7 +110,21 @@ body {
                     height: 40vh;
                     flex-grow: 1;
 
+                    //placer le texte sur les images
+                    p {
+                        position: absolute;
+                        z-index: 2;
+                        margin: 0;
+                        padding: 1rem;
+                        background-color: #ffffff71;
+                        backdrop-filter: blur(5px);
+                        border-radius: 5px;
+                        border: 0.5px solid #FFF;
+
+                    }
+
                     img {
+                        position: relative;
                         height: 100%;
                         width: 100%;
                         object-fit: cover;
