@@ -1033,7 +1033,7 @@ h1 {
 }
 
 p {
-  font-size: clamp(1rem, 0.2rem + 1.6vw, 1.7rem);
+  font-size: clamp(1rem, 0.2rem + 1.6vw, 1.3rem);
 }
 
 .barreBasPage {
