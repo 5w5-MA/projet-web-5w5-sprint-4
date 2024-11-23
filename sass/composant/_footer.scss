@@ -21,6 +21,7 @@ footer {
     gap: 5rem;
     padding-bottom: 5rem;
     flex-wrap: wrap;
+    z-index: 10;
   }
 
   .footerBas {
@@ -33,9 +34,9 @@ footer {
     font-size: xx-small;
   }
 
-  .footerDroite{
-    .reseaux{
-      .inconsReseaux{
+  .footerDroite {
+    .reseaux {
+      .inconsReseaux {
         display: flex;
       }
     }

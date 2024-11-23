@@ -13,13 +13,12 @@ header {
   .custom-logo {
     width: 80px;
     height: 80px;
-    transition: 0.5s  linear;
+    transition: 0.5s linear;
   }
 
-  .custom-logo:hover{
+  .custom-logo:hover {
     width: 90px;
     height: 90px;
-    
   }
 
   .menuCache {
@@ -65,13 +64,27 @@ header {
 
       .menu-menuprincipal-container {
         text-align: center;
+
         ul {
           list-style: none;
-          margin: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          align-items: center;
+          height: 84.67px;
+
           a {
             text-decoration: none;
             color: white;
             font-size: larger;
+          }
+
+          @media screen and (max-width: 900px) {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
+            height: 500px;
           }
         }
       }
