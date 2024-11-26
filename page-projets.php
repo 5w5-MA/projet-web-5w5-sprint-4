@@ -72,7 +72,9 @@
                 ?>
                     <div class="design" id="galerieProjets">
                         <p><?php the_title(); ?></p>
-                        <p class="infoProjet"><?php the_content(); ?></p>
+                        <div class="infoProjet">
+                            <?php the_content(); ?>
+                        </div>
                         <?php if (has_post_thumbnail()) {
                             the_post_thumbnail('full'); // You can change 'full' to another size if needed (like 'medium' or 'large')
                         }
@@ -90,7 +92,9 @@
                 ?>
                     <div class="programmation" id="galerieProjets">
                         <p><?php the_title(); ?></p>
-                        <p class="infoProjet"><?php the_content(); ?></p>
+                        <div class="infoProjet">
+                            <?php the_content(); ?>
+                        </div>
                         <?php if (has_post_thumbnail()) {
                             the_post_thumbnail('full'); // You can change 'full' to another size if needed (like 'medium' or 'large')
                         } ?>
@@ -106,7 +110,9 @@
                 ?>
                     <div class="jeu" id="galerieProjets">
                         <p><?php the_title(); ?></p>
-                        <p class="infoProjet"><?php the_content(); ?></p>
+                        <div class="infoProjet">
+                            <?php the_content(); ?>
+                        </div>
                         <?php if (has_post_thumbnail()) {
                             the_post_thumbnail('full'); // You can change 'full' to another size if needed (like 'medium' or 'large')
                         } ?>
@@ -122,7 +128,9 @@
                 ?>
                     <div class="modélisation" id="galerieProjets">
                         <p><?php the_title(); ?></p>
-                        <p class="infoProjet"><?php the_content(); ?></p>
+                        <div class="infoProjet">
+                            <?php the_content(); ?>
+                        </div>
                         <?php if (has_post_thumbnail()) {
                             the_post_thumbnail('full'); // You can change 'full' to another size if needed (like 'medium' or 'large')
                         } ?>

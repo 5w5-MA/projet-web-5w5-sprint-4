@@ -710,6 +710,9 @@ body .MaxProjetMain .SectionProjet .Rangee2 #galerieProjets p {
   border-radius: 5px;
   border: 0.5px solid #FFF;
 }
+body .MaxProjetMain .SectionProjet .Rangee2 #galerieProjets .infoProjet {
+  display: none;
+}
 body .MaxProjetMain .SectionProjet .Rangee2 #galerieProjets img {
   position: relative;
   height: 100%;
