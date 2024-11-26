@@ -71,6 +71,7 @@
                     $postDesign->the_post();
                 ?>
                     <div class="design" id="galerieProjets">
+                        <button class="afficherInfoProjet">1</button>
                         <p><?php the_title(); ?></p>
                         <div class="infoProjet">
                             <?php the_content(); ?>

@@ -110,6 +110,9 @@ body {
                     height: 40vh;
                     flex-grow: 1;
 
+                    //bouton
+                    .afficherInfoProjet {}
+
                     //placer le texte sur les images
                     p {
                         position: absolute;
@@ -124,7 +127,13 @@ body {
                     }
 
                     .infoProjet {
-                        display: none;
+
+                        p {
+                            padding: 0;
+                            height: 0;
+                            overflow: hidden;
+                            border: 0px solid #FFF;
+                        }
                     }
 
                     img {
