@@ -19,7 +19,6 @@
 
         <?php
         $arcadePost = new WP_Query(array(
-            'posts_per_page' => 6,
             'category_name' => 'arcade'
         )); ?>
 
