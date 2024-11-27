@@ -3,6 +3,7 @@
 ////////////////////// Pour ajouter des files ou des url /////////////////////
 function files()
 {
+    wp_enqueue_script('boiteBlancheAccueil', get_theme_file_uri('/js/boiteAccueil.js'),NULL,true);
     wp_enqueue_script('scriptFutur', get_theme_file_uri('/js/futur.js'), array(), NULl, true);
     wp_enqueue_script('burgerScript', get_theme_file_uri('/js/burger.js'), array(), NULL, true);
     //wp_enqueue_script('coursScript', get_theme_file_uri('/js/cours.js'), array(), NULL, true);
