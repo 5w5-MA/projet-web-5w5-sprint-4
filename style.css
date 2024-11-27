@@ -27,6 +27,9 @@ Text Domain: theme tim
   width: 100%;
 }
 
+main {
+  overflow: hidden;
+}
 main .hautDePage {
   background-color: black;
   width: 100%;
@@ -51,6 +54,7 @@ main .hautDePage .txtMain {
 main .hautDePage .txtMain h1 {
   text-shadow: rgb(7, 34, 101) -4px -3px;
   margin-bottom: 0px;
+  margin-top: 0px;
 }
 main .hautDePage .txtMain h2 {
   font-family: "lato";
@@ -84,11 +88,9 @@ main .hautDePage img {
 main .description {
   margin-bottom: 3rem;
   color: var(--texteBlanc);
-  display: flex;
-  flex-direction: column;
 }
 main .description .titre_APropos {
-  background-color: rgb(165, 157, 208);
+  background-color: rgb(141, 125, 125);
   width: 50%;
   height: 2rem;
   padding-left: 1rem;
@@ -109,7 +111,56 @@ main .description .descriptionTim {
 main .description .descriptionTim p {
   font-family: "lato";
 }
-main .description .graphisme {
+main .infoLangProg {
+  width: 100%;
+}
+main .infoLangProg .titreLangProg {
+  background-color: rgb(141, 125, 125);
+  clip-path: inherit;
+  width: 70%;
+  clip-path: polygon(0 1%, 90% 0, 100% 100%, 0% 100%);
+}
+main .infoLangProg .titreLangProg h2 {
+  padding-left: 1rem;
+}
+main .infoLangProg .LangProg {
+  background-color: #EFEFEF;
+  height: 25vh;
+  position: relative;
+  transition: right 1s ease-in-out; /* Animation fluide */
+}
+main .infoLogiciel {
+  width: 100%;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+main .infoLogiciel .titreInfoLogiciel {
+  background-color: rgb(141, 125, 125);
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1rem;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+}
+main .infoLogiciel .infoLog {
+  height: 25vh;
+  background-color: #efefef;
+  position: relative;
+  transition: left 1s ease-in-out;
+}
+main .infoLangProg h2, main .infoLogiciel h2 {
+  color: var(--texteBlanc);
+  font-family: "lato";
+}
+main .infoLangProg p, main .infoLogiciel p {
+  padding-top: 0.5rem;
+  font-family: "lato";
+  color: #a39f9f;
+  text-align: center;
+}
+main .graphisme {
   width: 80%;
   height: 23rem;
   margin: auto;
@@ -117,8 +168,9 @@ main .description .graphisme {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2rem;
 }
-main .description .graphisme .boite {
+main .graphisme .boite {
   border-radius: 20px;
   width: 60px; /* Largeur initiale */
   height: 60px; /* Hauteur initiale */
@@ -131,28 +183,28 @@ main .description .graphisme .boite {
   font-family: "lato";
   color: black;
 }
-main .description .graphisme .boite .imgGraph,
-main .description .graphisme .boite .infoGraph {
+main .graphisme .boite .imgGraph,
+main .graphisme .boite .infoGraph {
   opacity: 0;
   visibility: hidden;
   transition: opacity 1s ease, visibility 0s 1s; /* Gradual fade-in with delay */
 }
-main .description .graphisme .boite .openedImgGraph,
-main .description .graphisme .boite .openedInfoGraph {
+main .graphisme .boite .openedImgGraph,
+main .graphisme .boite .openedInfoGraph {
   padding: 2rem;
   opacity: 1;
   visibility: visible;
-  transition: opacity 1s ease, visibility 0s 0s; /* Immediate visibility after fade-in */
+  transition: opacity 0.3s ease, visibility 0s 0s; /* Immediate visibility after fade-in */
 }
-main .description .graphisme .boite .openedImgGraph ul,
-main .description .graphisme .boite .openedInfoGraph ul {
+main .graphisme .boite .openedImgGraph ul,
+main .graphisme .boite .openedInfoGraph ul {
   padding: 0px;
 }
-main .description .graphisme .boite .openedImgGraph ul li,
-main .description .graphisme .boite .openedInfoGraph ul li {
+main .graphisme .boite .openedImgGraph ul li,
+main .graphisme .boite .openedInfoGraph ul li {
   list-style: none;
 }
-main .description .graphisme .boite.inactive {
+main .graphisme .boite.inactive {
   animation: none; /* Pas d'animation si inactive */
 }
 @keyframes opening {
@@ -181,41 +233,168 @@ main .description .graphisme .boite.inactive {
     box-shadow: 12px 12px 16px rgba(204, 204, 204, 0.3), -8px -8px 16px rgba(255, 255, 255, 0.4), 1px 1px 3px rgba(204, 204, 204, 0.1) inset, -1px -1px 3px rgba(255, 255, 255, 0.2) inset;
   }
 }
-main .infoLangProg {
-  width: 100%;
-}
-main .infoLangProg .titreLangProg {
-  background-color: rgb(141, 125, 125);
-  clip-path: polygon(0 1%, 90% 0, 100% 100%, 0% 100%);
-  width: 70%;
-}
-main .infoLangProg .titreLangProg h2 {
-  padding-left: 1rem;
-  color: var(--texteBlanc);
-}
-main .infoLangProg .LangProg {
-  background-color: #f8f8f8;
-  height: 25vh;
-}
-main .infoLogiciel {
-  width: 100%;
-  margin-bottom: 3rem;
+main .boutton-inscription {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-main .infoLogiciel .titreInfoLogiciel {
-  background-color: rgb(141, 125, 125);
-  width: 70%;
-  display: flex;
+  flex-direction: row;
   justify-content: flex-end;
-  padding-right: 1rem;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
-  color: var(--texteBlanc);
+  margin-bottom: 2rem;
 }
-main .infoLogiciel .infoLogiciel {
-  height: 25vh;
-  background-color: #f8f8f8;
+main .boutton-inscription .cybr-btn {
+  --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 1%));
+  --shadow-primary: hsl(var(--shadow-primary-hue), 90%, 50%);
+  --primary-hue: 0;
+  --primary-lightness: 50;
+  --color: hsl(0, 0%, 100%);
+  --font-size: 1.5rem;
+  --shadow-primary-hue: 180;
+  --label-size: 9px;
+  --shadow-secondary:hsl(359.66deg 100% 50%);
+  --clip: polygon(0 0, 100% 0, 100% 100%, 95% 100%, 95% 90%, 85% 90%, 85% 100%, 8% 100%, 0 70%);
+  --border: 4px;
+  --shimmy-distance: 5;
+  --clip-one: polygon(0 2%, 100% 2%, 100% 95%, 95% 95%, 95% 90%, 85% 90%, 85% 95%, 8% 95%, 0 70%);
+  --clip-two: polygon(0 78%, 100% 78%, 100% 100%, 95% 100%, 95% 90%, 85% 90%, 85% 100%, 8% 100%, 0 78%);
+  --clip-three: polygon(0 44%, 100% 44%, 100% 54%, 95% 54%, 95% 54%, 85% 54%, 85% 54%, 8% 54%, 0 54%);
+  --clip-four: polygon(0 0, 100% 0, 100% 0, 95% 0, 95% 0, 85% 0, 85% 0, 8% 0, 0 0);
+  --clip-five: polygon(0 0, 100% 0, 100% 0, 95% 0, 95% 0, 85% 0, 85% 0, 8% 0, 0 0);
+  --clip-six: polygon(0 40%, 100% 40%, 100% 85%, 95% 85%, 95% 85%, 85% 85%, 85% 85%, 8% 85%, 0 70%);
+  --clip-seven: polygon(0 63%, 100% 63%, 100% 80%, 95% 80%, 95% 80%, 85% 80%, 85% 80%, 8% 80%, 0 70%);
+  font-family: "Blender Pro Bold", sans-serif;
+  color: var(--color);
+  cursor: pointer;
+  background: transparent;
+  text-transform: uppercase;
+  font-size: var(--font-size);
+  outline: transparent;
+  letter-spacing: 2px;
+  position: relative;
+  font-weight: 700;
+  border: 0;
+  min-width: 300px;
+  height: 55px;
+  line-height: 75px;
+  transition: background 0.2s;
+}
+main .boutton-inscription .cybr-btn:hover {
+  --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 0.8%));
+}
+main .boutton-inscription .cybr-btn:active {
+  --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 0.6%));
+}
+main .boutton-inscription .cybr-btn:after,
+main .boutton-inscription .cybr-btn:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  clip-path: var(--clip);
+  z-index: -1;
+}
+main .boutton-inscription .cybr-btn:before {
+  background: var(--shadow-primary);
+  transform: translate(var(--border), 0);
+}
+main .boutton-inscription .cybr-btn:after {
+  background: var(--primary);
+}
+main .boutton-inscription .cybr-btn__tag {
+  position: absolute;
+  padding: 1px 4px;
+  letter-spacing: 1px;
+  line-height: 1;
+  bottom: -15%;
+  right: 5%;
+  font-weight: normal;
+  color: hsl(0, 0%, 100%);
+  font-size: var(--label-size);
+}
+main .boutton-inscription .cybr-btn__glitch {
+  position: absolute;
+  top: calc(var(--border) * -1);
+  left: calc(var(--border) * -1);
+  right: calc(var(--border) * -1);
+  bottom: calc(var(--border) * -1);
+  background: var(--shadow-primary);
+  text-shadow: 2px 2px var(--shadow-primary), -2px -2px var(--shadow-secondary);
+  clip-path: var(--clip);
+  animation: glitch 2s infinite;
+  display: none;
+}
+main .boutton-inscription .cybr-btn:hover .cybr-btn__glitch {
+  display: block;
+}
+main .boutton-inscription .cybr-btn__glitch:before {
+  content: "";
+  position: absolute;
+  top: calc(var(--border) * 1);
+  right: calc(var(--border) * 1);
+  bottom: calc(var(--border) * 1);
+  left: calc(var(--border) * 1);
+  clip-path: var(--clip);
+  background: var(--primary);
+  z-index: -1;
+}
+@keyframes glitch {
+  0% {
+    clip-path: var(--clip-one);
+  }
+  2%, 8% {
+    clip-path: var(--clip-two);
+    transform: translate(calc(var(--shimmy-distance) * -1%), 0);
+  }
+  6% {
+    clip-path: var(--clip-two);
+    transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+  }
+  9% {
+    clip-path: var(--clip-two);
+    transform: translate(0, 0);
+  }
+  10% {
+    clip-path: var(--clip-three);
+    transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+  }
+  13% {
+    clip-path: var(--clip-three);
+    transform: translate(0, 0);
+  }
+  14%, 21% {
+    clip-path: var(--clip-four);
+    transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+  }
+  25% {
+    clip-path: var(--clip-five);
+    transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+  }
+  30% {
+    clip-path: var(--clip-five);
+    transform: translate(calc(var(--shimmy-distance) * -1%), 0);
+  }
+  35%, 45% {
+    clip-path: var(--clip-six);
+    transform: translate(calc(var(--shimmy-distance) * -1%));
+  }
+  40% {
+    clip-path: var(--clip-six);
+    transform: translate(calc(var(--shimmy-distance) * 1%));
+  }
+  50% {
+    clip-path: var(--clip-six);
+    transform: translate(0, 0);
+  }
+  55% {
+    clip-path: var(--clip-seven);
+    transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+  }
+  60% {
+    clip-path: var(--clip-seven);
+    transform: translate(0, 0);
+  }
+  31%, 61%, 100% {
+    clip-path: var(--clip-four);
+  }
 }
 
 /*******ZONE DE TITRE DE LA PAGE*******/

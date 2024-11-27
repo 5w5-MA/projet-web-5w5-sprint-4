@@ -37,7 +37,7 @@ get_header();
     <div class="description">
 
           <div class="titre_APropos">
-              <h2>title</h2>
+              <h2>Title</h2>
           </div>
 
           <div class="descriptionTim">
@@ -46,42 +46,10 @@ get_header();
        
         </div>
 
-          <div class="graphisme">
-            <div class="boite">
-                <div class="imgGraph"></div>
-                <div class="infoGraph">
-                <ul>
-                    <li>25%</li>
-                    <li>30%</li>
-                </ul>
-                </div>
-            </div>
-          </div>
-
     </div>
+
+    <!-- carrousel-->
     
-    <div class="infoLangProg">
-       <div class="titreLangProg"><h2>titre</h2></div>
-       <div class="LangProg">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi rem officia repellendus id! Quae possimus corporis optio totam libero molestiae, animi aliquid provident beatae eligendi. Laboriosam ducimus at hic est!</p>
-       </div>
-    </div>
-    <div class="infoLogiciel">
-       <div class="titreInfoLogiciel"><h2>titre</h2></div>
-       <div class="infoLogiciel">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi rem officia repellendus id! Quae possimus corporis optio totam libero molestiae, animi aliquid provident beatae eligendi. Laboriosam ducimus at hic est!</p>
-       </div>
-    </div>
-    
-    <div class="titreProfile">
-        <div class="divPolygone">
-            <div class="div1">Le profile d'un étudiant</div>
-            <div></div>
-        </div>
-    </div>
-
-
-
     <?php
     $carrousel = new WP_Query(array(
         'category_name' => 'carrousel'
@@ -98,6 +66,41 @@ get_header();
             </div>
         </section>
     <?php }; ?>
+
+
+    <div class="infoLangProg">
+       <div class="titreLangProg"><h2>titre</h2></div>
+       <div class="LangProg">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi rem officia repellendus id! Quae possimus corporis optio totam libero molestiae, animi aliquid provident beatae eligendi. Laboriosam ducimus at hic est!</p>
+       </div>
+    </div>
+    <div class="infoLogiciel">
+       <div class="titreInfoLogiciel"><h2>titre</h2></div>
+       <div class="infoLog">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi rem officia repellendus id! Quae possimus corporis optio totam libero molestiae, animi aliquid provident beatae eligendi. Laboriosam ducimus at hic est!</p>
+       </div>
+    </div>
+    
+    <div class="graphisme">
+            <div class="boite">
+                <div class="imgGraph"></div>
+                <div class="infoGraph">
+                <ul>
+                    <li>25%</li>
+                    <li>30%</li>
+                </ul>
+                </div>
+            </div>
+    </div>
+    <div class="boutton-inscription">
+            <button class="cybr-btn">Buttons
+            <span aria-hidden>_</span>
+            <span aria-hidden class="cybr-btn__glitch">Buttons_</span>
+            <span aria-hidden class="cybr-btn__tag">R25</span>
+            </button>
+    </div>
+
+
 
     <?php get_template_part("componants-php/barreBasPage"); ?>
 
