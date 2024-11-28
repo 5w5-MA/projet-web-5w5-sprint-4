@@ -154,15 +154,39 @@ main .infoLangProg .titreLangProg {
   clip-path: inherit;
   width: 70%;
   clip-path: polygon(0 1%, 90% 0, 100% 100%, 0% 100%);
+  display: flex;
+  align-items: center;
 }
 main .infoLangProg .titreLangProg h2 {
   padding-left: 1rem;
 }
 main .infoLangProg .LangProg {
   background-color: #EFEFEF;
-  height: 25vh;
+  min-height: 25vh;
   position: relative;
   transition: right 1s ease-in-out; /* Animation fluide */
+}
+main .infoLangProg .LangProg p {
+  color: #a39f9f;
+  font-family: "lato";
+  text-align: center;
+  padding: 0.5rem;
+}
+@media screen and (min-width: 767px) {
+  main .infoLangProg {
+    width: 80%;
+  }
+  main .infoLangProg .titreLangProg {
+    width: 100%;
+    min-height: 3rem;
+  }
+  main .infoLangProg .titreLangProg h2 {
+    font-size: 2rem;
+  }
+  main .infoLangProg .LangProg p {
+    text-align: left;
+    font-size: 1.5rem;
+  }
 }
 main .infoLogiciel {
   width: 100%;
@@ -173,27 +197,43 @@ main .infoLogiciel {
 }
 main .infoLogiciel .titreInfoLogiciel {
   background-color: rgb(141, 125, 125);
-  width: 70%;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
   padding-right: 1rem;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+  align-items: center;
 }
 main .infoLogiciel .infoLog {
-  height: 25vh;
+  min-height: 25vh;
   background-color: #efefef;
   position: relative;
   transition: left 1s ease-in-out;
 }
+main .infoLogiciel .infoLog p {
+  text-align: center;
+  font-family: "lato";
+  color: #a39f9f;
+  padding: 0.5rem;
+}
+@media screen and (min-width: 767px) {
+  main .infoLogiciel .titreInfoLogiciel {
+    width: 80%;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+    height: 3rem;
+    font-size: 1.3rem;
+  }
+  main .infoLogiciel .infoLog {
+    width: 82%;
+  }
+  main .infoLogiciel .infoLog p {
+    text-align: right;
+    font-size: 1.5rem;
+  }
+}
 main .infoLangProg h2, main .infoLogiciel h2 {
   color: var(--texteBlanc);
   font-family: "lato";
-}
-main .infoLangProg p, main .infoLogiciel p {
-  padding-top: 0.5rem;
-  font-family: "lato";
-  color: #a39f9f;
-  text-align: center;
 }
 main .graphisme {
   width: 80%;
