@@ -1,19 +1,28 @@
+const couleurLigne = JSON.parse(localStorage.getItem("couleurLigne"));
+
+if (couleurLigne == null) {
+  localStorage.setItem("couleurLigne", JSON.stringify([0, 0, 0]));
+}
+
+console.log(couleurLigne);
+
 (function ($) {
   var canvas = $("#bg").children("canvas"),
     background = canvas[0],
     foreground1 = canvas[1],
     foreground2 = canvas[2],
     config = {
-      circle: {
+      square: {
+        // Remplacer "circle" par "square"
         amount: 18,
         layer: 3,
-        color: [157, 97, 207],
+        color: [137, 174, 255],
         alpha: 0.3,
       },
       line: {
         amount: 12,
         layer: 3,
-        color: [255, 255, 255],
+        color: couleurLigne,
         alpha: 0.3,
       },
       speed: 0.5,
@@ -26,7 +35,7 @@
       fctx2 = foreground2.getContext("2d"),
       M = window.Math, // Cached Math
       degree = (config.angle / 360) * M.PI * 2,
-      circles = [],
+      squares = [], // Remplacer "circles" par "squares"
       lines = [],
       wWidth,
       wHeight,
@@ -59,8 +68,18 @@
         });
     };
 
-    var drawCircle = function (x, y, radius, color, alpha) {
-      var gradient = fctx1.createRadialGradient(x, y, radius, x, y, 0);
+    // Fonction pour dessiner un carrÃ©
+    var drawSquare = function (x, y, size, color, alpha) {
+      fctx1.beginPath();
+      fctx1.rect(x - size / 2, y - size / 2, size, size); // Dessiner un carrÃ© centrÃ©
+      fctx1.closePath();
+
+      var gradient = fctx1.createLinearGradient(
+        x - size / 2,
+        y - size / 2,
+        x + size / 2,
+        y + size / 2
+      );
       gradient.addColorStop(
         0,
         "rgba(" + color[0] + "," + color[1] + "," + color[2] + "," + alpha + ")"
@@ -78,8 +97,6 @@
           ")"
       );
 
-      fctx1.beginPath();
-      fctx1.arc(x, y, radius, 0, M.PI * 2, true);
       fctx1.fillStyle = gradient;
       fctx1.fill();
     };
@@ -127,7 +144,7 @@
         wHeight * 0.1,
         wWidth * 0.9
       );
-      gradient[0].addColorStop(0, "rgb(0, 26, 77)");
+      gradient[0].addColorStop(0, "rgb(56, 56, 56)");
       gradient[0].addColorStop(1, "transparent");
 
       bctx.translate(wWidth, 0);
@@ -144,7 +161,7 @@
         wHeight * 0.1,
         wWidth
       );
-      gradient[1].addColorStop(0, "rgb(0, 150, 240)");
+      gradient[1].addColorStop(0, "rgb(56, 56, 56)");
       gradient[1].addColorStop(0.8, "transparent");
 
       bctx.translate(wWidth, 0);
@@ -161,7 +178,7 @@
         wHeight * 0.5,
         wWidth * 0.5
       );
-      gradient[2].addColorStop(0, "rgb(40, 20, 105)");
+      gradient[2].addColorStop(0, "rgb(56, 56, 56)");
       gradient[2].addColorStop(1, "transparent");
 
       bctx.beginPath();
@@ -173,34 +190,34 @@
       var sin = M.sin(degree),
         cos = M.cos(degree);
 
-      if (config.circle.amount > 0 && config.circle.layer > 0) {
+      if (config.square.amount > 0 && config.square.layer > 0) {
         fctx1.clearRect(0, 0, wWidth, wHeight);
-        for (var i = 0, len = circles.length; i < len; i++) {
-          var item = circles[i],
+        for (var i = 0, len = squares.length; i < len; i++) {
+          var item = squares[i],
             x = item.x,
             y = item.y,
-            radius = item.radius,
+            size = item.size,
             speed = item.speed;
 
-          if (x > wWidth + radius) {
-            x = -radius;
-          } else if (x < -radius) {
-            x = wWidth + radius;
+          if (x > wWidth + size) {
+            x = -size;
+          } else if (x < -size) {
+            x = wWidth + size;
           } else {
             x += sin * speed;
           }
 
-          if (y > wHeight + radius) {
-            y = -radius;
-          } else if (y < -radius) {
-            y = wHeight + radius;
+          if (y > wHeight + size) {
+            y = -size;
+          } else if (y < -size) {
+            y = wHeight + size;
           } else {
             y -= cos * speed;
           }
 
           item.x = x;
           item.y = y;
-          drawCircle(x, y, radius, item.color, item.alpha);
+          drawSquare(x, y, size, item.color, item.alpha); // Appeler drawSquare
         }
       }
 
@@ -239,18 +256,18 @@
     };
 
     var createItem = function () {
-      circles = [];
+      squares = []; // Initialiser le tableau des carrÃ©s
       lines = [];
 
-      if (config.circle.amount > 0 && config.circle.layer > 0) {
-        for (var i = 0; i < config.circle.amount / config.circle.layer; i++) {
-          for (var j = 0; j < config.circle.layer; j++) {
-            circles.push({
+      if (config.square.amount > 0 && config.square.layer > 0) {
+        for (var i = 0; i < config.square.amount / config.square.layer; i++) {
+          for (var j = 0; j < config.square.layer; j++) {
+            squares.push({
               x: M.random() * wWidth,
               y: M.random() * wHeight,
-              radius: M.random() * (20 + j * 5) + (20 + j * 5),
-              color: config.circle.color,
-              alpha: M.random() * 0.2 + (config.circle.alpha - j * 0.1),
+              size: M.random() * (30 + j * 5) + (30 + j * 5), // Taille ajustÃ©e pour les carrÃ©s
+              color: config.square.color,
+              alpha: M.random() * 0.2 + (config.square.alpha - j * 0.1),
               speed: config.speed * (1 + j * 0.5),
             });
           }
@@ -281,6 +298,7 @@
       setCanvasHeight();
       createItem();
     });
+
     $(window).resize(function () {
       setCanvasHeight();
       createItem();
