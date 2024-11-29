@@ -1129,12 +1129,25 @@ header .menuCache .optionMenu .menu-menuprincipal-container {
 }
 header .menuCache .optionMenu .menu-menuprincipal-container ul {
   list-style: none;
-  margin: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  height: 84.67px;
 }
 header .menuCache .optionMenu .menu-menuprincipal-container ul a {
   text-decoration: none;
   color: white;
   font-size: larger;
+}
+@media screen and (max-width: 900px) {
+  header .menuCache .optionMenu .menu-menuprincipal-container ul {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+  }
 }
 @media screen and (min-width: 900px) {
   header .menuCache {
@@ -1245,6 +1258,7 @@ footer .footerGauche {
   gap: 5rem;
   padding-bottom: 5rem;
   flex-wrap: wrap;
+  z-index: 10;
 }
 footer .footerBas {
   position: absolute;
