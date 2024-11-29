@@ -1,6 +1,5 @@
-let lesDivProjet = document.querySelectorAll("#galerieProjets");
-let lesTextes = document.querySelectorAll(".infoProjet");
-
+let lesDivProjet = document.querySelectorAll(".galerieProjets");
+console.log(lesDivProjet.length);
 
 lesDivProjet.forEach(unProjet => {
     unProjet.querySelector(".infoProjet").querySelector("p").style.height = "0px";

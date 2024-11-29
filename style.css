@@ -785,13 +785,19 @@ body .MaxProjetMain .SectionProjet .Rangee2 {
   flex-wrap: wrap;
   gap: 2rem;
 }
-body .MaxProjetMain .SectionProjet .Rangee2 #galerieProjets {
+body .MaxProjetMain .SectionProjet .Rangee2 .galerieProjets {
   background-color: #bfd3ef;
   height: 40vh;
   flex-grow: 1;
 }
-body .MaxProjetMain .SectionProjet .Rangee2 #galerieProjets p {
+body .MaxProjetMain .SectionProjet .Rangee2 .galerieProjets .textesProjet {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 20rem;
+}
+body .MaxProjetMain .SectionProjet .Rangee2 .galerieProjets p {
   z-index: 2;
   margin: 0;
   padding: 1rem;
@@ -800,14 +806,12 @@ body .MaxProjetMain .SectionProjet .Rangee2 #galerieProjets p {
   border-radius: 5px;
   border: 0.5px solid #FFF;
 }
-body .MaxProjetMain .SectionProjet .Rangee2 #galerieProjets .infoProjet p {
+body .MaxProjetMain .SectionProjet .Rangee2 .galerieProjets .infoProjet p {
   padding: 0;
-  height: 0px;
   overflow: hidden;
   border: 0px solid #FFF;
 }
-body .MaxProjetMain .SectionProjet .Rangee2 #galerieProjets img {
-  position: relative;
+body .MaxProjetMain .SectionProjet .Rangee2 .galerieProjets img {
   height: 100%;
   width: 100%;
   object-fit: cover;

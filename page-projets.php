@@ -69,11 +69,12 @@
                 while ($postDesign->have_posts()) {
                     $postDesign->the_post();
                 ?>
-                    <div class="design" id="galerieProjets">
-                        <button class="afficherInfoProjet">1</button>
-                        <p><?php the_title(); ?></p>
-                        <div class="infoProjet">
-                            <?php the_content(); ?>
+                    <div class="design galerieProjets">
+                        <div class="textesProjet">
+                            <p><?php the_title(); ?></p>
+                            <div class="infoProjet">
+                                <?php the_content(); ?>
+                            </div>
                         </div>
                         <?php if (has_post_thumbnail()) {
                             the_post_thumbnail('full'); // You can change 'full' to another size if needed (like 'medium' or 'large')
@@ -90,7 +91,7 @@
                 while ($postProgrammation->have_posts()) {
                     $postProgrammation->the_post();
                 ?>
-                    <div class="programmation" id="galerieProjets">
+                    <div class="programmation galerieProjets">
                         <p><?php the_title(); ?></p>
                         <div class="infoProjet">
                             <?php the_content(); ?>
@@ -108,7 +109,7 @@
                 while ($postJeu->have_posts()) {
                     $postJeu->the_post();
                 ?>
-                    <div class="jeu" id="galerieProjets">
+                    <div class="jeu galerieProjets">
                         <p><?php the_title(); ?></p>
                         <div class="infoProjet">
                             <?php the_content(); ?>
@@ -126,7 +127,26 @@
                 while ($postModelisation->have_posts()) {
                     $postModelisation->the_post();
                 ?>
-                    <div class="modélisation" id="galerieProjets">
+                    <div class="modélisation galerieProjets">
+                        <p><?php the_title(); ?></p>
+                        <div class="infoProjet">
+                            <?php the_content(); ?>
+                        </div>
+                        <?php if (has_post_thumbnail()) {
+                            the_post_thumbnail('full'); // You can change 'full' to another size if needed (like 'medium' or 'large')
+                        } ?>
+                    </div>
+                <?
+                }
+
+                $postModelisation = new WP_Query(array(
+                    'category_name' => 'video'
+                ));
+
+                while ($postModelisation->have_posts()) {
+                    $postModelisation->the_post();
+                ?>
+                    <div class="video galerieProjets">
                         <p><?php the_title(); ?></p>
                         <div class="infoProjet">
                             <?php the_content(); ?>
