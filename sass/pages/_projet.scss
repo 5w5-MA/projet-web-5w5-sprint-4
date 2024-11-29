@@ -74,9 +74,7 @@ body {
                         .boutonFiltreProjet:hover {
                             cursor: pointer;
                         }
-
                     }
-
                 }
             }
 
@@ -105,14 +103,22 @@ body {
                 gap: 2rem;
 
 
-                #galerieProjets {
+                .galerieProjets {
                     background-color: #bfd3ef;
                     height: 40vh;
                     flex-grow: 1;
 
+                    .textesProjet {
+                        position: absolute;
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        max-width: 20rem;
+                    }
+
                     //placer le texte sur les images
                     p {
-                        position: absolute;
+
                         z-index: 2;
                         margin: 0;
                         padding: 1rem;
@@ -123,8 +129,18 @@ body {
 
                     }
 
+                    .infoProjet {
+
+                        p {
+                            padding: 0;
+
+                            overflow: hidden;
+                            border: 0px solid #FFF;
+                        }
+                    }
+
                     img {
-                        position: relative;
+
                         height: 100%;
                         width: 100%;
                         object-fit: cover;
@@ -173,7 +189,6 @@ body {
         .MaxProjetMain {
 
             /* ***************** Section Projet ************************** */
-
 
         }
     }

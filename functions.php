@@ -3,8 +3,8 @@
 ////////////////////// Pour ajouter des files ou des url /////////////////////
 function files()
 {
-    wp_enqueue_script('boiteBlancheAccueil', get_theme_file_uri('/js/boiteAccueil.js'),NULL,true);
-    wp_enqueue_script('animationAccueil',get_theme_file_uri('/js/animationAccueil.js'),NULL,true);
+    wp_enqueue_script('boiteBlancheAccueil', get_theme_file_uri('/js/boiteAccueil.js'), NULL, true);
+    wp_enqueue_script('animationAccueil', get_theme_file_uri('/js/animationAccueil.js'), NULL, true);
     wp_enqueue_script('scriptFutur', get_theme_file_uri('/js/futur.js'), array(), NULl, true);
     wp_enqueue_script('burgerScript', get_theme_file_uri('/js/burger.js'), array(), NULL, true);
     //wp_enqueue_script('coursScript', get_theme_file_uri('/js/cours.js'), array(), NULL, true);
@@ -12,9 +12,10 @@ function files()
     wp_enqueue_script('animationScrollVieEtudiante', get_theme_file_uri('js/animationScroll.js'), array(), NULL, true);
     wp_enqueue_script('filtreProjet', get_theme_file_uri('/js/filtreProjet.js'), array(), NULL, true);
     wp_enqueue_script('animationBackground', get_theme_file_uri('/js/animationBackground.js'), array(), NULL, true);
+    wp_enqueue_script('apparitionTexteProjets', get_theme_file_uri('/js/apparitionTexteProjet.js'), array(), NULL, true);
 
     wp_enqueue_media('lato', '//fonts.googleapis.com/css2?family=Lato');
-    wp_enqueue_media('fontCyber','//db.onlinewebfonts.com/c/a082fd3df68a0b54e0d4d794bc38d268?family=Blender+Pro+Bold');
+    wp_enqueue_media('fontCyber', '//db.onlinewebfonts.com/c/a082fd3df68a0b54e0d4d794bc38d268?family=Blender+Pro+Bold');
 
     wp_enqueue_style('style', get_stylesheet_uri());
 }
@@ -40,7 +41,6 @@ function features()
 
 
     add_image_size('imagesVieEtude', 1000, 800, true);
-   
 }
 add_action('after_setup_theme',  'features');
 
