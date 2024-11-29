@@ -16,7 +16,7 @@ console.log(couleurLigne);
         // Remplacer "circle" par "square"
         amount: 18,
         layer: 3,
-        color: [157, 97, 207],
+        color: [137, 174, 255],
         alpha: 0.3,
       },
       line: {
