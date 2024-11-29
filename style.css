@@ -153,7 +153,7 @@ main .infoLangProg .titreLangProg {
   background-color: rgb(141, 125, 125);
   clip-path: inherit;
   width: 70%;
-  clip-path: polygon(0 1%, 90% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
   display: flex;
   align-items: center;
 }
@@ -174,6 +174,7 @@ main .infoLangProg .LangProg p {
 }
 @media screen and (min-width: 767px) {
   main .infoLangProg {
+    padding-top: 6rem;
     width: 80%;
   }
   main .infoLangProg .titreLangProg {
@@ -197,11 +198,11 @@ main .infoLogiciel {
 }
 main .infoLogiciel .titreInfoLogiciel {
   background-color: rgb(141, 125, 125);
-  width: 100%;
+  width: 80%;
   display: flex;
   justify-content: flex-end;
   padding-right: 1rem;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
   align-items: center;
 }
 main .infoLogiciel .infoLog {
@@ -219,7 +220,6 @@ main .infoLogiciel .infoLog p {
 @media screen and (min-width: 767px) {
   main .infoLogiciel .titreInfoLogiciel {
     width: 80%;
-    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
     height: 3rem;
     font-size: 1.3rem;
   }
@@ -236,8 +236,6 @@ main .infoLangProg h2, main .infoLogiciel h2 {
   font-family: "lato";
 }
 main .graphisme {
-  width: 80%;
-  height: 23rem;
   margin: auto;
   box-sizing: border-box;
   display: flex;
@@ -252,32 +250,89 @@ main .graphisme .boite {
   background: #f0f0f0;
   box-shadow: 0px 0px 0px rgba(204, 204, 204, 0.3), 0px 0px 0px rgba(255, 255, 255, 0.3), 4px 4px 8px rgba(204, 204, 204, 0.4) inset, -4px -4px 8px rgba(255, 255, 255, 0.5) inset;
   transition: none; /* Pas de transition au début */
+  font-family: "lato";
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  font-family: "lato";
-  color: black;
+  align-items: center;
 }
-main .graphisme .boite .imgGraph,
+@media screen and (min-width: 767px) {
+  main .graphisme .boite {
+    justify-content: center;
+  }
+}
 main .graphisme .boite .infoGraph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
   opacity: 0;
   visibility: hidden;
   transition: opacity 1s ease, visibility 0s 1s; /* Gradual fade-in with delay */
+  /* The donut chart */
+  /* The inner circle to create the "hole" in the donut */
+  /* Animation for the donut chart */
+}
+main .graphisme .boite .infoGraph .donut-chart {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: conic-gradient(#4265a2 0deg 108deg, #264281 108deg 216deg, #8c9fc5 216deg 306deg, #4478a9 306deg 342deg, #a3c1db 342deg 360deg);
+  position: relative;
+  animation: chartAnimation 4s ease-in-out forwards;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+main .graphisme .boite .infoGraph .donut-chart .label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+main .graphisme .boite .infoGraph .donut-chart::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  background-color: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+@keyframes chartAnimation {
+  0% {
+    background: conic-gradient(#ffffff 0deg 0deg, #ffffff 0deg 0deg, #ffffff 0deg 0deg, #ffffff 0deg 0deg);
+  }
+  100% {
+    background: conic-gradient(#4265a2 0deg 110deg, #264281 110deg 218deg, #8c9fc5 218deg 298deg, #4478a9 298deg 342deg, #a3c1db 342deg 360deg);
+  }
+}
+@media screen and (min-width: 767px) {
+  main .graphisme .boite .infoGraph {
+    flex-direction: row;
+    padding-top: 0px;
+    gap: 8rem;
+  }
 }
 main .graphisme .boite .openedImgGraph,
 main .graphisme .boite .openedInfoGraph {
-  padding: 2rem;
   opacity: 1;
   visibility: visible;
-  transition: opacity 0.3s ease, visibility 0s 0s; /* Immediate visibility after fade-in */
+  transition: opacity 0.1s ease, visibility 0s 0s; /* Immediate visibility after fade-in */
 }
 main .graphisme .boite .openedImgGraph ul,
 main .graphisme .boite .openedInfoGraph ul {
   padding: 0px;
+  padding-top: 0.1rem;
 }
 main .graphisme .boite .openedImgGraph ul li,
 main .graphisme .boite .openedInfoGraph ul li {
+  font-family: "lato";
+  color: #7c7575;
   list-style: none;
+  padding-top: 1rem;
 }
 main .graphisme .boite.inactive {
   animation: none; /* Pas d'animation si inactive */
@@ -310,6 +365,41 @@ main .graphisme .boite.inactive {
     height: 400px; /* Hauteur légèrement plus grande */
     background: #fafafa;
     box-shadow: 12px 12px 16px rgba(204, 204, 204, 0.3), -8px -8px 16px rgba(255, 255, 255, 0.4), 1px 1px 3px rgba(204, 204, 204, 0.1) inset, -1px -1px 3px rgba(255, 255, 255, 0.2) inset;
+  }
+}
+@media screen and (min-width: 767px) {
+  main .graphisme {
+    padding-top: 5rem;
+  }
+  @keyframes opening {
+    0% {
+      border-radius: 20px;
+      width: 60px; /* Largeur initiale */
+      height: 60px; /* Hauteur initiale */
+      background: #f0f0f0;
+      box-shadow: 0px 0px 0px rgba(204, 204, 204, 0.3), 0px 0px 0px rgba(255, 255, 255, 0.3), 4px 4px 8px rgba(204, 204, 204, 0.4) inset, -4px -4px 8px rgba(255, 255, 255, 0.5) inset;
+    }
+    25% {
+      border-radius: 15px;
+      width: 60px; /* aucune augmentation */
+      height: 450px; /* Augmentation importante de la hauteur */
+      background: rgba(255, 255, 255, 0.8941176471);
+      box-shadow: 4px 4px 8px rgba(204, 204, 204, 0.4), 4px 4px 8px rgba(255, 255, 255, 0.4), 0px 0px 0px rgba(204, 204, 204, 0.2) inset, 0px 0px 0px rgba(255, 255, 255, 0.2) inset;
+    }
+    50% {
+      border-radius: 5px;
+      width: 650px; /* Largeur intermédiaire */
+      height: 450px; /* Hauteur intermédiaire */
+      background: rgba(248, 248, 248, 0.7137254902);
+      box-shadow: 4px 4px 8px rgba(204, 204, 204, 0.4), 4px 4px 8px rgba(255, 255, 255, 0.4), 0px 0px 0px rgba(204, 204, 204, 0.2) inset, 0px 0px 0px rgba(255, 255, 255, 0.2) inset;
+    }
+    100% {
+      border-radius: 0px;
+      width: 650px; /* Largeur finale */
+      height: 450px; /* Hauteur légèrement plus grande */
+      background: rgba(248, 248, 248, 0.8156862745);
+      box-shadow: 12px 12px 16px rgba(204, 204, 204, 0.3), -8px -8px 16px rgba(255, 255, 255, 0.4), 1px 1px 3px rgba(204, 204, 204, 0.1) inset, -1px -1px 3px rgba(255, 255, 255, 0.2) inset;
+    }
   }
 }
 main .boutton-inscription {

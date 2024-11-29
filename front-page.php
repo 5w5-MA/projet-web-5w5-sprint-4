@@ -82,20 +82,32 @@ get_header();
     </div>
     
     <div class="graphisme">
+        
             <div class="boite">
                 <div class="imgGraph"></div>
                 <div class="infoGraph">
-                <ul>
-                    <li>25%</li>
-                    <li>30%</li>
-                </ul>
+                   
+                    <div class="donut-chart">
+                        <div class="label"><h2>Tim</h2></div>
+                     </div>
+
+                     <ul>
+                        <li>30% - Programmation Web</li>
+                        <li>30% - Création de Jeu</li>
+                        <li>15% - Design</li>
+                        <li>10% - Autres Médias</li>
+                        <li>5% - Modélisation 3D</li>
+                     </ul>
                 </div>
+                
             </div>
+            
     </div>
+
     <div class="boutton-inscription">
-            <button class="cybr-btn">Buttons
+            <button class="cybr-btn">Inscription
             <span aria-hidden>_</span>
-            <span aria-hidden class="cybr-btn__glitch">Buttons_</span>
+            <span aria-hidden class="cybr-btn__glitch">Inscription_</span>
             <span aria-hidden class="cybr-btn__tag">R25</span>
             </button>
     </div>
