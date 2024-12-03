@@ -1,10 +1,9 @@
 const couleurLigne = JSON.parse(localStorage.getItem("couleurLigne"));
 
 if (couleurLigne == null) {
-  localStorage.setItem("couleurLigne", JSON.stringify([0, 0, 0]));
+  localStorage.setItem("couleurLigne", JSON.stringify([255, 255, 255]));
+  window.location.reload();
 }
-
-console.log(couleurLigne);
 
 (function ($) {
   var canvas = $("#bg").children("canvas"),
