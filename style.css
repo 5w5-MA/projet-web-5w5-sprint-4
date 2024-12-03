@@ -18,7 +18,7 @@ Text Domain: theme tim
   --texte: black;
   --gris: rgba(198, 198, 198, 0.907);
   --drop-shadow: rgba(255, 255, 255, 0.25);
-  --texteBlanc:#FFF;
+  --texteBlanc: #fff;
 }
 
 .imagesGeneral {
