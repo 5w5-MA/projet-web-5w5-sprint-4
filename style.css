@@ -879,13 +879,13 @@ body .MaxProjetMain .SectionProjet .Rangee2 .galerieProjets {
   background-color: #bfd3ef;
   height: 40vh;
   flex-grow: 1;
+  position: relative;
 }
 body .MaxProjetMain .SectionProjet .Rangee2 .galerieProjets .textesProjet {
   position: absolute;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  max-width: 20rem;
 }
 body .MaxProjetMain .SectionProjet .Rangee2 .galerieProjets p {
   z-index: 2;

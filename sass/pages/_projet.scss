@@ -107,13 +107,14 @@ body {
                     background-color: #bfd3ef;
                     height: 40vh;
                     flex-grow: 1;
+                    position: relative;
 
                     .textesProjet {
                         position: absolute;
                         display: flex;
                         flex-direction: column;
                         flex-wrap: wrap;
-                        max-width: 20rem;
+
                     }
 
                     //placer le texte sur les images
@@ -144,6 +145,7 @@ body {
                         height: 100%;
                         width: 100%;
                         object-fit: cover;
+
                     }
                 }
             }
