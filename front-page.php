@@ -84,20 +84,22 @@ get_header();
     <div class="graphisme">
         
             <div class="boite">
-                <div class="imgGraph"></div>
+               <h2 class="titreBoite">programme TIM</h2>
                 <div class="infoGraph">
                    
                     <div class="donut-chart">
                         <div class="label"><h2>Tim</h2></div>
                      </div>
-
-                     <ul>
-                        <li>30% - Programmation Web</li>
-                        <li>30% - Création de Jeu</li>
-                        <li>15% - Design</li>
-                        <li>10% - Autres Médias</li>
-                        <li>5% - Modélisation 3D</li>
-                     </ul>
+                    <div>
+                        <ul class="pourcentage">
+                            <li>30% - Programmation Web</li>
+                            <li>30% - Création de Jeu</li>
+                            <li>15% - Design</li>
+                            <li>10% - Autres Médias</li>
+                            <li>5% - Modélisation 3D</li>
+                        </ul>
+                     </div>
+                     
                 </div>
                 
             </div>
