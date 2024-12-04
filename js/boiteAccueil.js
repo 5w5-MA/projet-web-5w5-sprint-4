@@ -27,10 +27,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // Ajouter l'écouteur pour l'animation finie
     boite.addEventListener("animationend", () => {
       // Une fois l'animation terminée, afficher le contenu progressivement
-      const imgGraph = boite.querySelector(".imgGraph");
+      const imgGraph = boite.querySelector(".titreBoite");
       const infoGraph = boite.querySelector(".infoGraph");
 
-      imgGraph.classList.add("openedImgGraph");
+      imgGraph.classList.add("titreBoiteOuverte");
       infoGraph.classList.add("openedInfoGraph");
     });
 });
+
+
+

@@ -19,6 +19,20 @@ Text Domain: theme tim
   --gris: rgba(198, 198, 198, 0.907);
   --drop-shadow: rgba(255, 255, 255, 0.25);
   --texteBlanc: #fff;
+<<<<<<< HEAD
+  --web:#4265a2 ;
+  --jeu:#264281 ;
+  --design:#6e82aa;
+  --autres-medias:#4478a9;
+  --modelisation-3D:#7b93a8;
+  --webDesk:#c16c23 ;
+  --jeuDesk:#bd871b ;
+  --designDesk:#d49d2f;
+  --autres-medias-Desk:#ddb421;
+  --modelisation-3D-Desk:#e0c582;
+  --bleu-graph:rgba(31, 84, 145, 0.812);
+=======
+>>>>>>> 145c795aeae791b290f13b7b9b7965f8b33e390d
 }
 
 .imagesGeneral {
@@ -40,12 +54,12 @@ main .hautDePage {
   margin-bottom: 2rem;
 }
 main .hautDePage .txtMain {
-  width: 75%;
+  width: 80%;
   background-color: rgba(255, 255, 255, 0.564);
   backdrop-filter: blur(5px);
   margin-top: 25rem;
   padding: 2rem;
-  border-radius: 5px;
+  border-radius: 4px;
   display: flex;
   flex-direction: column;
   padding-bottom: 0.5rem;
@@ -101,6 +115,14 @@ main .hautDePage img {
     font-size: 1.5rem;
   }
 }
+@media screen and (min-width: 991px) {
+  main .hautDePage {
+    align-items: flex-start;
+  }
+  main .hautDePage .txtMain {
+    width: 30rem;
+  }
+}
 main .description {
   margin-bottom: 3rem;
   color: var(--texteBlanc);
@@ -121,7 +143,7 @@ main .description .titre_APropos h2 {
 main .description .descriptionTim {
   background-color: #E8E8E8;
   backdrop-filter: blur(2px);
-  width: 22rem;
+  width: 95%;
   min-height: 15rem;
   padding: 0.6rem;
   margin-bottom: 2rem;
@@ -144,6 +166,23 @@ main .description .descriptionTim p {
   }
   main .description .descriptionTim p {
     font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 991px) {
+  main .description .titre_APropos {
+    padding-left: 3rem;
+    background-color: rgba(247, 236, 236, 0.85);
+  }
+  main .description .titre_APropos h2 {
+    color: #7c7575;
+  }
+  main .description .descriptionTim {
+    background-color: transparent;
+    padding-left: 3rem;
+  }
+  main .description .descriptionTim p {
+    color: #e9e9e9;
+    word-spacing: 0.3rem;
   }
 }
 main .infoLangProg {
@@ -190,6 +229,7 @@ main .infoLangProg .LangProg p {
   }
 }
 main .infoLogiciel {
+  padding-top: 1rem;
   width: 100%;
   margin-bottom: 3rem;
   display: flex;
@@ -219,12 +259,13 @@ main .infoLogiciel .infoLog p {
 }
 @media screen and (min-width: 767px) {
   main .infoLogiciel .titreInfoLogiciel {
-    width: 80%;
+    width: 70%;
     height: 3rem;
     font-size: 1.3rem;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
   }
   main .infoLogiciel .infoLog {
-    width: 82%;
+    width: 89%;
   }
   main .infoLogiciel .infoLog p {
     text-align: right;
@@ -234,173 +275,6 @@ main .infoLogiciel .infoLog p {
 main .infoLangProg h2, main .infoLogiciel h2 {
   color: var(--texteBlanc);
   font-family: "lato";
-}
-main .graphisme {
-  margin: auto;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-main .graphisme .boite {
-  border-radius: 20px;
-  width: 60px; /* Largeur initiale */
-  height: 60px; /* Hauteur initiale */
-  background: #f0f0f0;
-  box-shadow: 0px 0px 0px rgba(204, 204, 204, 0.3), 0px 0px 0px rgba(255, 255, 255, 0.3), 4px 4px 8px rgba(204, 204, 204, 0.4) inset, -4px -4px 8px rgba(255, 255, 255, 0.5) inset;
-  transition: none; /* Pas de transition au début */
-  font-family: "lato";
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-@media screen and (min-width: 767px) {
-  main .graphisme .boite {
-    justify-content: center;
-  }
-}
-main .graphisme .boite .infoGraph {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 1rem;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 1s ease, visibility 0s 1s; /* Gradual fade-in with delay */
-  /* The donut chart */
-  /* The inner circle to create the "hole" in the donut */
-  /* Animation for the donut chart */
-}
-main .graphisme .boite .infoGraph .donut-chart {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: conic-gradient(#4265a2 0deg 108deg, #264281 108deg 216deg, #8c9fc5 216deg 306deg, #4478a9 306deg 342deg, #a3c1db 342deg 360deg);
-  position: relative;
-  animation: chartAnimation 4s ease-in-out forwards;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-main .graphisme .boite .infoGraph .donut-chart .label {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 18px;
-  font-weight: bold;
-  color: #333;
-}
-main .graphisme .boite .infoGraph .donut-chart::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 120px;
-  height: 120px;
-  background-color: white;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-}
-@keyframes chartAnimation {
-  0% {
-    background: conic-gradient(#ffffff 0deg 0deg, #ffffff 0deg 0deg, #ffffff 0deg 0deg, #ffffff 0deg 0deg);
-  }
-  100% {
-    background: conic-gradient(#4265a2 0deg 110deg, #264281 110deg 218deg, #8c9fc5 218deg 298deg, #4478a9 298deg 342deg, #a3c1db 342deg 360deg);
-  }
-}
-@media screen and (min-width: 767px) {
-  main .graphisme .boite .infoGraph {
-    flex-direction: row;
-    padding-top: 0px;
-    gap: 8rem;
-  }
-}
-main .graphisme .boite .openedImgGraph,
-main .graphisme .boite .openedInfoGraph {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 0.1s ease, visibility 0s 0s; /* Immediate visibility after fade-in */
-}
-main .graphisme .boite .openedImgGraph ul,
-main .graphisme .boite .openedInfoGraph ul {
-  padding: 0px;
-  padding-top: 0.1rem;
-}
-main .graphisme .boite .openedImgGraph ul li,
-main .graphisme .boite .openedInfoGraph ul li {
-  font-family: "lato";
-  color: #7c7575;
-  list-style: none;
-  padding-top: 1rem;
-}
-main .graphisme .boite.inactive {
-  animation: none; /* Pas d'animation si inactive */
-}
-@keyframes opening {
-  0% {
-    border-radius: 20px;
-    width: 60px; /* Largeur initiale */
-    height: 60px; /* Hauteur initiale */
-    background: #f0f0f0;
-    box-shadow: 0px 0px 0px rgba(204, 204, 204, 0.3), 0px 0px 0px rgba(255, 255, 255, 0.3), 4px 4px 8px rgba(204, 204, 204, 0.4) inset, -4px -4px 8px rgba(255, 255, 255, 0.5) inset;
-  }
-  25% {
-    border-radius: 15px;
-    width: 60px; /* aucune augmentation */
-    height: 400px; /* Augmentation importante de la hauteur */
-    background: #f8f8f8;
-    box-shadow: 4px 4px 8px rgba(204, 204, 204, 0.4), 4px 4px 8px rgba(255, 255, 255, 0.4), 0px 0px 0px rgba(204, 204, 204, 0.2) inset, 0px 0px 0px rgba(255, 255, 255, 0.2) inset;
-  }
-  50% {
-    border-radius: 2px;
-    width: 300px; /* Largeur intermédiaire */
-    height: 400px; /* Hauteur intermédiaire */
-    background: #f8f8f8;
-    box-shadow: 4px 4px 8px rgba(204, 204, 204, 0.4), 4px 4px 8px rgba(255, 255, 255, 0.4), 0px 0px 0px rgba(204, 204, 204, 0.2) inset, 0px 0px 0px rgba(255, 255, 255, 0.2) inset;
-  }
-  100% {
-    border-radius: 0px;
-    width: 300px; /* Largeur finale */
-    height: 400px; /* Hauteur légèrement plus grande */
-    background: #fafafa;
-    box-shadow: 12px 12px 16px rgba(204, 204, 204, 0.3), -8px -8px 16px rgba(255, 255, 255, 0.4), 1px 1px 3px rgba(204, 204, 204, 0.1) inset, -1px -1px 3px rgba(255, 255, 255, 0.2) inset;
-  }
-}
-@media screen and (min-width: 767px) {
-  main .graphisme {
-    padding-top: 5rem;
-  }
-  @keyframes opening {
-    0% {
-      border-radius: 20px;
-      width: 60px; /* Largeur initiale */
-      height: 60px; /* Hauteur initiale */
-      background: #f0f0f0;
-      box-shadow: 0px 0px 0px rgba(204, 204, 204, 0.3), 0px 0px 0px rgba(255, 255, 255, 0.3), 4px 4px 8px rgba(204, 204, 204, 0.4) inset, -4px -4px 8px rgba(255, 255, 255, 0.5) inset;
-    }
-    25% {
-      border-radius: 15px;
-      width: 60px; /* aucune augmentation */
-      height: 450px; /* Augmentation importante de la hauteur */
-      background: rgba(255, 255, 255, 0.8941176471);
-      box-shadow: 4px 4px 8px rgba(204, 204, 204, 0.4), 4px 4px 8px rgba(255, 255, 255, 0.4), 0px 0px 0px rgba(204, 204, 204, 0.2) inset, 0px 0px 0px rgba(255, 255, 255, 0.2) inset;
-    }
-    50% {
-      border-radius: 5px;
-      width: 650px; /* Largeur intermédiaire */
-      height: 450px; /* Hauteur intermédiaire */
-      background: rgba(248, 248, 248, 0.7137254902);
-      box-shadow: 4px 4px 8px rgba(204, 204, 204, 0.4), 4px 4px 8px rgba(255, 255, 255, 0.4), 0px 0px 0px rgba(204, 204, 204, 0.2) inset, 0px 0px 0px rgba(255, 255, 255, 0.2) inset;
-    }
-    100% {
-      border-radius: 0px;
-      width: 650px; /* Largeur finale */
-      height: 450px; /* Hauteur légèrement plus grande */
-      background: rgba(248, 248, 248, 0.8156862745);
-      box-shadow: 12px 12px 16px rgba(204, 204, 204, 0.3), -8px -8px 16px rgba(255, 255, 255, 0.4), 1px 1px 3px rgba(204, 204, 204, 0.1) inset, -1px -1px 3px rgba(255, 255, 255, 0.2) inset;
-    }
-  }
 }
 main .boutton-inscription {
   display: flex;
@@ -1866,6 +1740,273 @@ footer .footerDroite .reseaux .inconsReseaux {
 .boutonCours:hover .btn6 {
   background-color: var(--jaune);
   box-shadow: 0px 0px 10px 2px var(--jaune);
+}
+
+.graphisme {
+  margin: auto;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.graphisme .boite {
+  border-radius: 20px;
+  width: 60px; /* Largeur initiale */
+  height: 60px; /* Hauteur initiale */
+  background: #f0f0f0;
+  box-shadow: 0px 0px 0px rgba(204, 204, 204, 0.3), 0px 0px 0px rgba(255, 255, 255, 0.3), 4px 4px 8px rgba(204, 204, 204, 0.4) inset, -4px -4px 8px rgba(255, 255, 255, 0.5) inset;
+  transition: none; /* Pas de transition au début */
+  font-family: "lato";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.graphisme .boite .titreBoite {
+  display: flex;
+  opacity: 0;
+}
+.graphisme .boite .infoGraph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease, visibility 0s 1s; /* Gradual fade-in with delay */
+  /* The donut chart */
+  /* The inner circle to create the "hole" in the donut */
+  /* Animation for the donut chart */
+}
+.graphisme .boite .infoGraph .donut-chart {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: conic-gradient(var(--web) 0deg 108deg, var(--jeu) 108deg 216deg, var(--design) 216deg 306deg, var(--autres-medias) 306deg 342deg, var(--modelisation-3D) 342deg 360deg);
+  position: relative;
+  animation: chartAnimation 4s ease-in-out forwards;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.graphisme .boite .infoGraph .donut-chart .label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+.graphisme .boite .infoGraph .donut-chart::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  background-color: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+@keyframes chartAnimation {
+  0% {
+    background: conic-gradient(#ffffff 0deg 0deg, #ffffff 0deg 0deg, #ffffff 0deg 0deg, #ffffff 0deg 0deg);
+  }
+  100% {
+    background: conic-gradient(var(--web) 0deg 108deg, var(--jeu) 108deg 216deg, var(--design) 216deg 306deg, var(--autres-medias) 306deg 342deg, var(--modelisation-3D) 342deg 360deg);
+  }
+}
+.graphisme .boite .titreBoiteOuverte,
+.graphisme .boite .openedInfoGraph {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.1s ease, visibility 0s 0s; /* Immediate visibility after fade-in */
+}
+.graphisme .boite .titreBoiteOuverte ul,
+.graphisme .boite .openedInfoGraph ul {
+  padding: 0px;
+  padding-top: 0.1rem;
+}
+.graphisme .boite .titreBoiteOuverte ul li,
+.graphisme .boite .openedInfoGraph ul li {
+  font-family: "lato";
+  list-style: none;
+  padding-top: 0.5rem;
+}
+.graphisme .boite .titreBoiteOuverte ul li:nth-child(1),
+.graphisme .boite .openedInfoGraph ul li:nth-child(1) {
+  color: var(--web);
+}
+.graphisme .boite .titreBoiteOuverte ul li:nth-child(2),
+.graphisme .boite .openedInfoGraph ul li:nth-child(2) {
+  color: var(--jeu);
+}
+.graphisme .boite .titreBoiteOuverte ul li:nth-child(3),
+.graphisme .boite .openedInfoGraph ul li:nth-child(3) {
+  color: var(--design);
+}
+.graphisme .boite .titreBoiteOuverte ul li:nth-child(4),
+.graphisme .boite .openedInfoGraph ul li:nth-child(4) {
+  color: var(--autres-medias);
+}
+.graphisme .boite .titreBoiteOuverte ul li:nth-child(5),
+.graphisme .boite .openedInfoGraph ul li:nth-child(5) {
+  color: var(--modelisation-3D);
+}
+.graphisme .boite.inactive {
+  animation: none; /* Pas d'animation si inactive */
+}
+@keyframes opening {
+  0% {
+    border-radius: 20px;
+    width: 60px; /* Largeur initiale */
+    height: 60px; /* Hauteur initiale */
+    background: #f0f0f0;
+    box-shadow: 0px 0px 0px rgba(204, 204, 204, 0.3), 0px 0px 0px rgba(255, 255, 255, 0.3), 4px 4px 8px rgba(204, 204, 204, 0.4) inset, -4px -4px 8px rgba(255, 255, 255, 0.5) inset;
+  }
+  25% {
+    border-radius: 15px;
+    width: 60px; /* aucune augmentation */
+    height: 400px; /* Augmentation importante de la hauteur */
+    background: #f8f8f8;
+    box-shadow: 4px 4px 8px rgba(204, 204, 204, 0.4), 4px 4px 8px rgba(255, 255, 255, 0.4), 0px 0px 0px rgba(204, 204, 204, 0.2) inset, 0px 0px 0px rgba(255, 255, 255, 0.2) inset;
+  }
+  50% {
+    border-radius: 2px;
+    width: 300px; /* Largeur intermédiaire */
+    height: 400px; /* Hauteur intermédiaire */
+    background: #f8f8f8;
+    box-shadow: 4px 4px 8px rgba(204, 204, 204, 0.4), 4px 4px 8px rgba(255, 255, 255, 0.4), 0px 0px 0px rgba(204, 204, 204, 0.2) inset, 0px 0px 0px rgba(255, 255, 255, 0.2) inset;
+  }
+  100% {
+    border-radius: 0px;
+    width: 300px; /* Largeur finale */
+    height: 400px; /* Hauteur légèrement plus grande */
+    background: #fafafa;
+    box-shadow: 12px 12px 16px rgba(204, 204, 204, 0.3), -8px -8px 16px rgba(255, 255, 255, 0.4), 1px 1px 3px rgba(204, 204, 204, 0.1) inset, -1px -1px 3px rgba(255, 255, 255, 0.2) inset;
+  }
+}
+@media screen and (min-width: 767px) {
+  .graphisme {
+    padding-top: 5rem;
+  }
+  .graphisme .boite .infoGraph {
+    flex-direction: row;
+    padding-top: 0px;
+    gap: 8rem;
+  }
+  .graphisme .boite .titreBoiteOuverte ul,
+  .graphisme .boite .openedInfoGraph ul {
+    padding-top: 0.1rem;
+  }
+  .graphisme .boite .titreBoiteOuverte ul li,
+  .graphisme .boite .openedInfoGraph ul li {
+    font-size: 1.5rem;
+    padding-top: 1rem;
+  }
+  @keyframes opening {
+    0% {
+      border-radius: 20px;
+      width: 60px; /* Largeur initiale */
+      height: 60px; /* Hauteur initiale */
+      background: #f0f0f0;
+      box-shadow: 0px 0px 0px rgba(204, 204, 204, 0.3), 0px 0px 0px rgba(255, 255, 255, 0.3), 4px 4px 8px rgba(204, 204, 204, 0.4) inset, -4px -4px 8px rgba(255, 255, 255, 0.5) inset;
+    }
+    25% {
+      border-radius: 15px;
+      width: 60px; /* aucune augmentation */
+      height: 450px; /* Augmentation importante de la hauteur */
+      background: rgba(255, 255, 255, 0.8941176471);
+      box-shadow: 4px 4px 8px rgba(204, 204, 204, 0.4), 4px 4px 8px rgba(255, 255, 255, 0.4), 0px 0px 0px rgba(204, 204, 204, 0.2) inset, 0px 0px 0px rgba(255, 255, 255, 0.2) inset;
+    }
+    50% {
+      border-radius: 5px;
+      width: 700px; /* Largeur intermédiaire */
+      height: 450px; /* Hauteur intermédiaire */
+      background: rgba(248, 248, 248, 0.7137254902);
+      box-shadow: 4px 4px 8px rgba(204, 204, 204, 0.4), 4px 4px 8px rgba(255, 255, 255, 0.4), 0px 0px 0px rgba(204, 204, 204, 0.2) inset, 0px 0px 0px rgba(255, 255, 255, 0.2) inset;
+    }
+    100% {
+      border-radius: 0px;
+      width: 700px; /* Largeur finale */
+      height: 450px; /* Hauteur légèrement plus grande */
+      background: rgba(248, 248, 248, 0.8156862745);
+      box-shadow: 12px 12px 16px rgba(204, 204, 204, 0.3), -8px -8px 16px rgba(255, 255, 255, 0.4), 1px 1px 3px rgba(204, 204, 204, 0.1) inset, -1px -1px 3px rgba(255, 255, 255, 0.2) inset;
+    }
+  }
+}
+@media screen and (min-width: 991px) {
+  .graphisme .boite {
+    width: 100vw;
+    background-color: rgba(9, 43, 81, 0.897);
+  }
+  .graphisme .boite .titreBoiteOuverte {
+    color: #f0f0f0;
+    padding-bottom: 5rem;
+    font-size: 2rem;
+  }
+  .graphisme .boite .infoGraph .donut-chart {
+    background: conic-gradient(var(--webDesk) 0deg 108deg, var(--jeuDesk) 108deg 216deg, var(--designDesk) 216deg 306deg, var(--autres-medias-Desk) 306deg 342deg, var(--modelisation-3D-Desk) 342deg 360deg);
+  }
+  @keyframes chartAnimation {
+    0% {
+      background: conic-gradient(#ffffff 0deg 0deg, #ffffff 0deg 0deg, #ffffff 0deg 0deg, #ffffff 0deg 0deg);
+    }
+    100% {
+      background: conic-gradient(var(--webDesk) 0deg 108deg, var(--jeuDesk) 108deg 216deg, var(--designDesk) 216deg 306deg, var(--autres-medias-Desk) 306deg 342deg, var(--modelisation-3D-Desk) 342deg 360deg);
+    }
+  }
+  .graphisme .boite .titreBoiteOuverte ul li:nth-child(1),
+  .graphisme .boite .openedInfoGraph ul li:nth-child(1) {
+    color: var(--webDesk);
+  }
+  .graphisme .boite .titreBoiteOuverte ul li:nth-child(2),
+  .graphisme .boite .openedInfoGraph ul li:nth-child(2) {
+    color: var(--jeuDesk);
+  }
+  .graphisme .boite .titreBoiteOuverte ul li:nth-child(3),
+  .graphisme .boite .openedInfoGraph ul li:nth-child(3) {
+    color: var(--designDesk);
+  }
+  .graphisme .boite .titreBoiteOuverte ul li:nth-child(4),
+  .graphisme .boite .openedInfoGraph ul li:nth-child(4) {
+    color: var(--autres-medias-Desk);
+  }
+  .graphisme .boite .titreBoiteOuverte ul li:nth-child(5),
+  .graphisme .boite .openedInfoGraph ul li:nth-child(5) {
+    color: var(--modelisation-3D-Desk);
+  }
+  @keyframes opening {
+    0% {
+      border-radius: 15px;
+      width: 60px; /* Largeur initiale */
+      height: 60px; /* Hauteur initiale */
+      background: rgba(9, 43, 81, 0.842);
+      box-shadow: none;
+    }
+    25% {
+      border-radius: 10px;
+      width: 60px; /* aucune augmentation */
+      height: 400px; /* Augmentation importante de la hauteur */
+      background: rgba(20, 61, 108, 0.897);
+      box-shadow: none;
+    }
+    50% {
+      border-radius: 2px;
+      width: 100vw; /* Largeur intermédiaire */
+      height: 500px; /* Hauteur intermédiaire */
+      background: rgba(31, 84, 145, 0.897);
+      box-shadow: none;
+    }
+    100% {
+      border-radius: 0px;
+      width: 100vw; /* Largeur finale */
+      height: 500px; /* Hauteur légèrement plus grande */
+      background: var(--bleu-graph);
+      box-shadow: 0px 0px 15px 3px #FFF;
+    }
+  }
 }
 
 #bg {
