@@ -29,7 +29,12 @@ lesBoutons.forEach(element => {
         else {
             boutonMenu.innerHTML = element.innerHTML;
             enfants.forEach(enfant => {
-                if (enfant.className != element.innerHTML.toLowerCase()) {
+                console.log(enfant.className);
+
+                //diviser les classes
+                let tableauClasses = enfant.className.split(" ");
+
+                if (tableauClasses[0] != element.innerHTML.toLowerCase()) {
                     enfant.style.display = 'none';
                 }
                 else {
