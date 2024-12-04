@@ -71,8 +71,8 @@
                 ?>
                     <div class="design galerieProjets">
                         <div class="textesProjet">
-                            <p><?php the_title(); ?></p>
                             <div class="infoProjet">
+                                <p><?php the_title(); ?></p>
                                 <?php the_content(); ?>
                             </div>
                         </div>
@@ -93,8 +93,8 @@
                 ?>
                     <div class="programmation galerieProjets">
                         <div class="textesProjet">
-                            <p><?php the_title(); ?></p>
                             <div class="infoProjet">
+                                <p><?php the_title(); ?></p>
                                 <?php the_content(); ?>
                             </div>
                         </div>
@@ -114,8 +114,8 @@
                 ?>
                     <div class="jeu galerieProjets">
                         <div class="textesProjet">
-                            <p><?php the_title(); ?></p>
                             <div class="infoProjet">
+                                <p><?php the_title(); ?></p>
                                 <?php the_content(); ?>
                             </div>
                         </div>
@@ -135,8 +135,8 @@
                 ?>
                     <div class="modélisation galerieProjets">
                         <div class="textesProjet">
-                            <p><?php the_title(); ?></p>
                             <div class="infoProjet">
+                                <p><?php the_title(); ?></p>
                                 <?php the_content(); ?>
                             </div>
                         </div>
@@ -157,8 +157,8 @@
                 ?>
                     <div class="video galerieProjets">
                         <div class="textesProjet">
-                            <p><?php the_title(); ?></p>
                             <div class="infoProjet">
+                                <p><?php the_title(); ?></p>
                                 <?php the_content(); ?>
                             </div>
                         </div>
