@@ -5,34 +5,34 @@ let enfants = document.querySelectorAll('.Rangee2 div');
 
 let menuVisible = false;
 
-boutonMenu.addEventListener('click',()=>{
+boutonMenu.addEventListener('click', () => {
 
-    if(menuVisible == false){
+    if (menuVisible == false) {
         menuDeroulant.style.height = 'auto';
-        menuVisible  = true;
-    }else{
+        menuVisible = true;
+    } else {
         menuDeroulant.style.height = '0px';
         menuVisible = false;
     }
-    
+
 })
 
 lesBoutons.forEach(element => {
     element.addEventListener('click', () => {
-     
-        if(element.innerHTML=='Tout'){
-            boutonMenu.innerHTML= "-";
+
+        if (element.innerHTML == 'Tout') {
+            boutonMenu.innerHTML = "&#x2193;";
             enfants.forEach(enfant => {
                 enfant.style.display = 'flex';
-            })  
+            })
         }
-        else{
-            boutonMenu.innerHTML= element.innerHTML;
+        else {
+            boutonMenu.innerHTML = element.innerHTML;
             enfants.forEach(enfant => {
-                if(enfant.className != element.innerHTML.toLowerCase()){
+                if (enfant.className != element.innerHTML.toLowerCase()) {
                     enfant.style.display = 'none';
                 }
-                else{
+                else {
                     enfant.style.display = 'flex';
                 }
             })

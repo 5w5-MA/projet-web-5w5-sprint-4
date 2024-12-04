@@ -19,7 +19,6 @@ Text Domain: theme tim
   --gris: rgba(198, 198, 198, 0.907);
   --drop-shadow: rgba(255, 255, 255, 0.25);
   --texteBlanc: #fff;
-<<<<<<< HEAD
   --web:#4265a2 ;
   --jeu:#264281 ;
   --design:#6e82aa;
@@ -31,8 +30,6 @@ Text Domain: theme tim
   --autres-medias-Desk:#ddb421;
   --modelisation-3D-Desk:#e0c582;
   --bleu-graph:rgba(31, 84, 145, 0.812);
-=======
->>>>>>> 145c795aeae791b290f13b7b9b7965f8b33e390d
 }
 
 .imagesGeneral {
@@ -716,7 +713,9 @@ body .MaxProjetMain .SectionProjet .Rangee1 .TitreSectionProjet .Partie1 {
   background-color: var(--jaune);
   display: flex;
   align-items: center;
+  gap: 1rem;
   justify-content: center;
+  user-select: none;
 }
 body .MaxProjetMain .SectionProjet .Rangee1 .TitreSectionProjet .Partie1 .boutonFiltreProjet {
   margin-left: 10px;
@@ -727,6 +726,16 @@ body .MaxProjetMain .SectionProjet .Rangee1 .TitreSectionProjet .Partie1 .bouton
   text-align: center;
 }
 body .MaxProjetMain .SectionProjet .Rangee1 .TitreSectionProjet .Partie1 .boutonFiltreProjet:hover {
+  cursor: pointer;
+}
+body .MaxProjetMain .SectionProjet .Rangee1 .TitreSectionProjet .Partie1 .boutonMenuProjet {
+  font-size: 1rem;
+  border-color: 1px solid var(--bleu);
+  padding: 2px 5px;
+  border-radius: 5px;
+  box-shadow: -2px -1px 30px 3px white;
+}
+body .MaxProjetMain .SectionProjet .Rangee1 .TitreSectionProjet .Partie1 .boutonMenuProjet:hover {
   cursor: pointer;
 }
 body .MaxProjetMain .SectionProjet .menuDeroulant {
@@ -744,7 +753,7 @@ body .MaxProjetMain .SectionProjet .menuDeroulant {
 }
 body .MaxProjetMain .SectionProjet .Rangee2 {
   max-width: 80vw;
-  margin: 0 auto;
+  margin: 2rem auto;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;

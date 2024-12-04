@@ -47,7 +47,7 @@
                 <div class="TitreSectionProjet">
                     <div class="Partie1">
                         <h2>Filtre</h2>
-                        <div class="boutonMenuProjet"> - </div>
+                        <div class="boutonMenuProjet"> &#x2193; </div>
                     </div>
                 </div>
             </section>
