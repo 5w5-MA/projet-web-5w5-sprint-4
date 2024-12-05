@@ -752,6 +752,10 @@ body .MaxProjetMain .SectionProjet .menuDeroulant {
   height: 0px;
   padding: 0 5rem;
   margin-left: auto;
+  position: absolute;
+  right: 1.5rem;
+  top: 46.5rem;
+  z-index: 5;
   overflow-y: hidden;
   background-color: rgba(255, 255, 255, 0.674);
   backdrop-filter: blur(5px);
@@ -779,6 +783,7 @@ body .MaxProjetMain .SectionProjet .Rangee2 {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+  z-index: 2;
 }
 body .MaxProjetMain .SectionProjet .Rangee2 .galerieProjets {
   background-color: #bfd3ef;

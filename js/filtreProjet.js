@@ -1,7 +1,7 @@
 let boutonMenu = document.querySelector('.boutonMenuProjet');
 let menuDeroulant = document.querySelector('.menuDeroulant');
 let lesBoutons = document.querySelectorAll('.boutonFiltreProjet');
-let enfants = document.querySelectorAll('.Rangee2 div');
+let enfants = document.querySelectorAll('.Rangee2 .galerieProjets');
 
 let menuVisible = false;
 
@@ -36,6 +36,7 @@ lesBoutons.forEach(element => {
 
                 if (tableauClasses[0] != element.innerHTML.toLowerCase()) {
                     enfant.style.display = 'none';
+
                 }
                 else {
                     enfant.style.display = 'flex';

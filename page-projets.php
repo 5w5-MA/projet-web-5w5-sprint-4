@@ -29,7 +29,8 @@
             ?>
                 <section class="jeu">
                     <div>
-                        <?php the_title();
+                        <?php
+                        the_title();
                         ?>
                     </div>
                 </section>
