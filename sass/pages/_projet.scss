@@ -76,7 +76,7 @@ body {
                             height: 100%;
                             background-color: var(--jaune);
 
-                            clip-path: polygon(100% 0, 30% 100%, 0% 100%, 0 0);
+                            clip-path: polygon(95% 0, 30% 100%, 0% 100%, 0 0);
                         }
 
                         &::after {
@@ -88,7 +88,7 @@ body {
                             height: 100%;
                             background-color: var(--jaune);
 
-                            clip-path: polygon(100% 0, 0% 100%, 100% 100%, 100% 100%);
+                            clip-path: polygon(100% 0, 30% 100%, 100% 100%, 100% 100%);
                         }
 
 
@@ -112,25 +112,17 @@ body {
                 transition: 1s;
                 height: 0px;
                 padding: 0 5rem;
-                margin-left: auto;
-
+                /* margin-left: auto; */
                 position: absolute;
-                right: 1.5rem;
-                top: 46.5rem;
+                /* right: 1.5rem; */
+                top: 2.5rem;
                 z-index: 5;
-
                 overflow-y: hidden;
-
                 background-color: rgba(255, 255, 255, 0.674);
                 backdrop-filter: blur(5px);
                 border-radius: 4px;
-
-
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
-                align-items: center;
-                margin-right: 1rem;
 
                 .boutonFiltreProjet {
                     margin-left: 10px;

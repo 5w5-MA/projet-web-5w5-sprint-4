@@ -725,7 +725,7 @@ body .MaxProjetMain .SectionProjet .Rangee1 .TitreSectionProjet .Partie1::before
   width: 2rem;
   height: 100%;
   background-color: var(--jaune);
-  clip-path: polygon(100% 0, 30% 100%, 0% 100%, 0 0);
+  clip-path: polygon(95% 0, 30% 100%, 0% 100%, 0 0);
 }
 body .MaxProjetMain .SectionProjet .Rangee1 .TitreSectionProjet .Partie1::after {
   content: "";
@@ -735,7 +735,7 @@ body .MaxProjetMain .SectionProjet .Rangee1 .TitreSectionProjet .Partie1::after 
   width: 2rem;
   height: 100%;
   background-color: var(--jaune);
-  clip-path: polygon(100% 0, 0% 100%, 100% 100%, 100% 100%);
+  clip-path: polygon(100% 0, 30% 100%, 100% 100%, 100% 100%);
 }
 body .MaxProjetMain .SectionProjet .Rangee1 .TitreSectionProjet .Partie1 .boutonMenuProjet {
   font-size: 1rem;
@@ -751,10 +751,10 @@ body .MaxProjetMain .SectionProjet .menuDeroulant {
   transition: 1s;
   height: 0px;
   padding: 0 5rem;
-  margin-left: auto;
+  /* margin-left: auto; */
   position: absolute;
-  right: 1.5rem;
-  top: 46.5rem;
+  /* right: 1.5rem; */
+  top: 2.5rem;
   z-index: 5;
   overflow-y: hidden;
   background-color: rgba(255, 255, 255, 0.674);
@@ -762,9 +762,6 @@ body .MaxProjetMain .SectionProjet .menuDeroulant {
   border-radius: 4px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin-right: 1rem;
 }
 body .MaxProjetMain .SectionProjet .menuDeroulant .boutonFiltreProjet {
   margin-left: 10px;

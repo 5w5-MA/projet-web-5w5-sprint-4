@@ -49,17 +49,19 @@
                     <div class="Partie1">
                         <h2>Filtre</h2>
                         <div class="boutonMenuProjet"> &#x2193; </div>
+                        <div class="menuDeroulant">
+                            <div class="boutonFiltreProjet">Tout</div>
+                            <div class="boutonFiltreProjet">Design</div>
+                            <div class="boutonFiltreProjet">Programmation</div>
+                            <div class="boutonFiltreProjet">Jeu</div>
+                            <div class="boutonFiltreProjet">Modélisation</div>
+                        </div>
                     </div>
+
                 </div>
             </section>
 
-            <div class="menuDeroulant">
-                <div class="boutonFiltreProjet">Tout</div>
-                <div class="boutonFiltreProjet">Design</div>
-                <div class="boutonFiltreProjet">Programmation</div>
-                <div class="boutonFiltreProjet">Jeu</div>
-                <div class="boutonFiltreProjet">Modélisation</div>
-            </div>
+
 
             <div class="Rangee2">
                 <?php
