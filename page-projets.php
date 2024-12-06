@@ -27,7 +27,7 @@
             while ($arcadePost->have_posts()) {
                 $arcadePost->the_post();
             ?>
-                <a href="https://itch.io/">
+                <a href="<?php the_field('lienjeu'); ?>" target="_blank">
                     <div class="jeu">
 
                         <?php
