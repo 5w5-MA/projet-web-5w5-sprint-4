@@ -13,7 +13,7 @@
     <header>
 
         <?php the_custom_logo(); ?>
-      
+
 
 
         <input type="checkbox" id="chkBurger" />
@@ -29,7 +29,7 @@
                 )); ?>
             </div>
         </div>
-        <label for="chkBurger" class="menuBurger">
+        <label for="chkBurger" class="menuBurger" id="menuBurger">
             <div class="burger1"></div>
             <div class="burger2">
                 <div class="div1"></div>

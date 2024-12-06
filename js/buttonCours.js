@@ -10,6 +10,11 @@ window.addEventListener("load", () => {
   if (main.id === "acceuil") {
     // Sélectionner l'élément avec la classe "custom-logo"
     var logo = document.querySelector(".custom-logo");
+    let menuBurger = document.getElementById("menuBurger");
+
+    menuBurger.style.position = "absolute";
+    menuBurger.style.top = "0.5vh";
+    menuBurger.style.right = "1vw";
 
     // Vérifier si l'élément existe avant de modifier la propriété
     if (logo) {
