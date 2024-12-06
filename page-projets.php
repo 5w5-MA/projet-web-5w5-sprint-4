@@ -27,13 +27,15 @@
             while ($arcadePost->have_posts()) {
                 $arcadePost->the_post();
             ?>
-                <div class="jeu">
+                <a href="https://itch.io/">
+                    <div class="jeu">
 
-                    <?php
-                    the_post_thumbnail('full');
-                    ?>
+                        <?php
+                        the_post_thumbnail('full');
+                        ?>
 
-                </div>
+                    </div>
+                </a>
             <?php }; ?>
         </section>
 

@@ -25,22 +25,23 @@ lesBoutons.forEach(element => {
             enfants.forEach(enfant => {
                 enfant.style.display = 'flex';
             })
+            menuDeroulant.style.height = '0px';
+            menuVisible = false;
         }
         else {
             boutonMenu.innerHTML = element.innerHTML;
             enfants.forEach(enfant => {
-                console.log(enfant.className);
-
                 //diviser les classes
                 let tableauClasses = enfant.className.split(" ");
 
                 if (tableauClasses[0] != element.innerHTML.toLowerCase()) {
                     enfant.style.display = 'none';
-
                 }
                 else {
                     enfant.style.display = 'flex';
                 }
+                menuDeroulant.style.height = '0px';
+                menuVisible = false;
             })
         }
     })
