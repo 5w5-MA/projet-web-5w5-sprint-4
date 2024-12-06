@@ -9,7 +9,7 @@ get_header();
     <canvas></canvas>
 </div>
 
-<main>
+<main id="acceuil">
     <div class="hautDePage">
         <div class="txtMain">
             <h1><?php echo get_bloginfo('name'); ?></h1>
@@ -17,8 +17,8 @@ get_header();
             <p>bienvenu au tim maisonneuve, Lorem ipsum dolor sit, amet consectetur adipisicing els aliquid.</p>
 
             <a href="<?php echo site_url('/liste-de-cours'); ?>">
-            <div class="btn2">cours</div>
-        </a>
+                <div class="btn2">cours</div>
+            </a>
         </div>
 
         <div class="img">
@@ -31,25 +31,25 @@ get_header();
 
         </div>
 
-        
+
     </div>
 
     <div class="description">
 
-          <div class="titre_APropos">
-              <h2>Title</h2>
-          </div>
+        <div class="titre_APropos">
+            <h2>Title</h2>
+        </div>
 
-          <div class="descriptionTim">
-           
+        <div class="descriptionTim">
+
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi dolorem, commodi quas dignissimos voluptatem obcaecati eos expedita nulla earum nobis, tenetur ut nostrum quia cupiditate accusamus pariatur neque illum minus.</p>
-       
+
         </div>
 
     </div>
 
     <!-- carrousel-->
-    
+
     <?php
     $carrousel = new WP_Query(array(
         'category_name' => 'carrousel'
@@ -69,49 +69,55 @@ get_header();
 
 
     <div class="infoLangProg">
-       <div class="titreLangProg"><h2>titre</h2></div>
-       <div class="LangProg">
+        <div class="titreLangProg">
+            <h2>titre</h2>
+        </div>
+        <div class="LangProg">
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi rem officia repellendus id! Quae possimus corporis optio totam libero molestiae, animi aliquid provident beatae eligendi. Laboriosam ducimus at hic est!</p>
-       </div>
+        </div>
     </div>
     <div class="infoLogiciel">
-       <div class="titreInfoLogiciel"><h2>titre</h2></div>
-       <div class="infoLog">
+        <div class="titreInfoLogiciel">
+            <h2>titre</h2>
+        </div>
+        <div class="infoLog">
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi rem officia repellendus id! Quae possimus corporis optio totam libero molestiae, animi aliquid provident beatae eligendi. Laboriosam ducimus at hic est!</p>
-       </div>
+        </div>
     </div>
-    
+
     <div class="graphisme">
-        
-            <div class="boite">
-               <h2 class="titreBoite">programme TIM</h2>
-                <div class="infoGraph">
-                   
-                    <div class="donut-chart">
-                        <div class="label"><h2>Tim</h2></div>
-                     </div>
-                    <div>
-                        <ul class="pourcentage">
-                            <li>30% - Programmation Web</li>
-                            <li>30% - Création de Jeu</li>
-                            <li>15% - Design</li>
-                            <li>10% - Autres Médias</li>
-                            <li>5% - Modélisation 3D</li>
-                        </ul>
-                     </div>
-                     
+
+        <div class="boite">
+            <h2 class="titreBoite">programme TIM</h2>
+            <div class="infoGraph">
+
+                <div class="donut-chart">
+                    <div class="label">
+                        <h2>Tim</h2>
+                    </div>
                 </div>
-                
+                <div>
+                    <ul class="pourcentage">
+                        <li>30% - Programmation Web</li>
+                        <li>30% - Création de Jeu</li>
+                        <li>15% - Design</li>
+                        <li>10% - Autres Médias</li>
+                        <li>5% - Modélisation 3D</li>
+                    </ul>
+                </div>
+
             </div>
-            
+
+        </div>
+
     </div>
 
     <div class="boutton-inscription">
-            <button class="cybr-btn">Inscription
+        <button class="cybr-btn">Inscription
             <span aria-hidden>_</span>
             <span aria-hidden class="cybr-btn__glitch">Inscription_</span>
             <span aria-hidden class="cybr-btn__tag">R25</span>
-            </button>
+        </button>
     </div>
 
 

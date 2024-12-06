@@ -29,7 +29,8 @@
             ?>
                 <section class="jeu">
                     <div>
-                        <?php the_title();
+                        <?php
+                        the_title();
                         ?>
                     </div>
                 </section>
@@ -47,7 +48,7 @@
                 <div class="TitreSectionProjet">
                     <div class="Partie1">
                         <h2>Filtre</h2>
-                        <div class="boutonMenuProjet"> - </div>
+                        <div class="boutonMenuProjet"> &#x2193; </div>
                     </div>
                 </div>
             </section>
@@ -71,8 +72,8 @@
                 ?>
                     <div class="design galerieProjets">
                         <div class="textesProjet">
-                            <p><?php the_title(); ?></p>
                             <div class="infoProjet">
+                                <p><?php the_title(); ?></p>
                                 <?php the_content(); ?>
                             </div>
                         </div>
@@ -92,13 +93,16 @@
                     $postProgrammation->the_post();
                 ?>
                     <div class="programmation galerieProjets">
-                        <p><?php the_title(); ?></p>
-                        <div class="infoProjet">
-                            <?php the_content(); ?>
+                        <div class="textesProjet">
+                            <div class="infoProjet">
+                                <p><?php the_title(); ?></p>
+                                <?php the_content(); ?>
+                            </div>
                         </div>
                         <?php if (has_post_thumbnail()) {
                             the_post_thumbnail('full'); // You can change 'full' to another size if needed (like 'medium' or 'large')
-                        } ?>
+                        }
+                        ?>
                     </div>
                 <?
                 }
@@ -110,13 +114,16 @@
                     $postJeu->the_post();
                 ?>
                     <div class="jeu galerieProjets">
-                        <p><?php the_title(); ?></p>
-                        <div class="infoProjet">
-                            <?php the_content(); ?>
+                        <div class="textesProjet">
+                            <div class="infoProjet">
+                                <p><?php the_title(); ?></p>
+                                <?php the_content(); ?>
+                            </div>
                         </div>
                         <?php if (has_post_thumbnail()) {
                             the_post_thumbnail('full'); // You can change 'full' to another size if needed (like 'medium' or 'large')
-                        } ?>
+                        }
+                        ?>
                     </div>
                 <?
                 }
@@ -128,13 +135,16 @@
                     $postModelisation->the_post();
                 ?>
                     <div class="modélisation galerieProjets">
-                        <p><?php the_title(); ?></p>
-                        <div class="infoProjet">
-                            <?php the_content(); ?>
+                        <div class="textesProjet">
+                            <div class="infoProjet">
+                                <p><?php the_title(); ?></p>
+                                <?php the_content(); ?>
+                            </div>
                         </div>
                         <?php if (has_post_thumbnail()) {
                             the_post_thumbnail('full'); // You can change 'full' to another size if needed (like 'medium' or 'large')
-                        } ?>
+                        }
+                        ?>
                     </div>
                 <?
                 }
@@ -147,13 +157,16 @@
                     $postModelisation->the_post();
                 ?>
                     <div class="video galerieProjets">
-                        <p><?php the_title(); ?></p>
-                        <div class="infoProjet">
-                            <?php the_content(); ?>
+                        <div class="textesProjet">
+                            <div class="infoProjet">
+                                <p><?php the_title(); ?></p>
+                                <?php the_content(); ?>
+                            </div>
                         </div>
                         <?php if (has_post_thumbnail()) {
                             the_post_thumbnail('full'); // You can change 'full' to another size if needed (like 'medium' or 'large')
-                        } ?>
+                        }
+                        ?>
                     </div>
                 <?
                 }
