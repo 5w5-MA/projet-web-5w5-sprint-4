@@ -9,7 +9,7 @@ get_header(); ?>
     <canvas></canvas>
     <canvas></canvas>
 </div>
-<main class="pageCours">
+<main id="cours" class="pageCours">
     <section class="coursPrincipale">
         <h1><?php the_title(); ?></h1>
         <div class="imgCours">
