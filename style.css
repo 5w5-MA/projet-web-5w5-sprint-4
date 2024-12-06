@@ -19,7 +19,6 @@ Text Domain: theme tim
   --gris: rgba(198, 198, 198, 0.907);
   --drop-shadow: rgba(255, 255, 255, 0.25);
   --texteBlanc: #fff;
-<<<<<<< HEAD
   --web:#4265a2 ;
   --jeu:#264281 ;
   --design:#6e82aa;
@@ -31,8 +30,6 @@ Text Domain: theme tim
   --autres-medias-Desk:#ddb421;
   --modelisation-3D-Desk:#e0c582;
   --bleu-graph:rgba(31, 84, 145, 0.812);
-=======
->>>>>>> 145c795aeae791b290f13b7b9b7965f8b33e390d
 }
 
 .imagesGeneral {
@@ -217,7 +214,7 @@ main .infoLangProg .LangProg p {
     width: 80%;
   }
   main .infoLangProg .titreLangProg {
-    width: 100%;
+    width: 80%;
     min-height: 3rem;
   }
   main .infoLangProg .titreLangProg h2 {
