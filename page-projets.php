@@ -27,13 +27,13 @@
             while ($arcadePost->have_posts()) {
                 $arcadePost->the_post();
             ?>
-                <section class="jeu">
-                    <div>
-                        <?php
-                        the_title();
-                        ?>
-                    </div>
-                </section>
+                <div class="jeu">
+
+                    <?php
+                    the_post_thumbnail('full');
+                    ?>
+
+                </div>
             <?php }; ?>
         </section>
 
