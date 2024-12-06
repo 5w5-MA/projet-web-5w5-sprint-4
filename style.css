@@ -19,7 +19,6 @@ Text Domain: theme tim
   --gris: rgba(198, 198, 198, 0.907);
   --drop-shadow: rgba(255, 255, 255, 0.25);
   --texteBlanc: #fff;
-<<<<<<< HEAD
   --web:#4265a2 ;
   --jeu:#264281 ;
   --design:#6e82aa;
@@ -31,8 +30,6 @@ Text Domain: theme tim
   --autres-medias-Desk:#ddb421;
   --modelisation-3D-Desk:#e0c582;
   --bleu-graph:rgba(31, 84, 145, 0.812);
-=======
->>>>>>> 145c795aeae791b290f13b7b9b7965f8b33e390d
 }
 
 .imagesGeneral {
@@ -710,23 +707,44 @@ body .MaxProjetMain .SectionProjet .Rangee1 .TitreSectionProjet {
 body .MaxProjetMain .SectionProjet .Rangee1 .TitreSectionProjet .Partie1 {
   /* control the shape (can be percentage) */
   height: 30px;
+  position: relative;
   min-width: 10rem;
   margin-right: 1rem;
-  clip-path: polygon(14% 0%, 100% 0%, 86% 100%, 0% 100%);
   background-color: var(--jaune);
   display: flex;
   align-items: center;
+  gap: 1rem;
   justify-content: center;
+  user-select: none;
 }
-body .MaxProjetMain .SectionProjet .Rangee1 .TitreSectionProjet .Partie1 .boutonFiltreProjet {
-  margin-left: 10px;
-  width: 20px;
-  height: 20px;
-  border-radius: 25%;
-  background-color: #fada90;
-  text-align: center;
+body .MaxProjetMain .SectionProjet .Rangee1 .TitreSectionProjet .Partie1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -30px;
+  width: 2rem;
+  height: 100%;
+  background-color: var(--jaune);
+  clip-path: polygon(100% 0, 30% 100%, 0% 100%, 0 0);
 }
-body .MaxProjetMain .SectionProjet .Rangee1 .TitreSectionProjet .Partie1 .boutonFiltreProjet:hover {
+body .MaxProjetMain .SectionProjet .Rangee1 .TitreSectionProjet .Partie1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -32px;
+  width: 2rem;
+  height: 100%;
+  background-color: var(--jaune);
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%, 100% 100%);
+}
+body .MaxProjetMain .SectionProjet .Rangee1 .TitreSectionProjet .Partie1 .boutonMenuProjet {
+  font-size: 1rem;
+  border-color: 1px solid var(--bleu);
+  padding: 2px 5px;
+  border-radius: 5px;
+  box-shadow: -2px -1px 30px 3px white;
+}
+body .MaxProjetMain .SectionProjet .Rangee1 .TitreSectionProjet .Partie1 .boutonMenuProjet:hover {
   cursor: pointer;
 }
 body .MaxProjetMain .SectionProjet .menuDeroulant {
@@ -734,46 +752,67 @@ body .MaxProjetMain .SectionProjet .menuDeroulant {
   height: 0px;
   padding: 0 5rem;
   margin-left: auto;
-  background-color: #bfd3ef;
+  position: absolute;
+  right: 1.5rem;
+  top: 46.5rem;
+  z-index: 5;
   overflow-y: hidden;
+  background-color: rgba(255, 255, 255, 0.674);
+  backdrop-filter: blur(5px);
+  border-radius: 4px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   margin-right: 1rem;
 }
+body .MaxProjetMain .SectionProjet .menuDeroulant .boutonFiltreProjet {
+  margin-left: 10px;
+  height: 20px;
+  padding: 1rem 0;
+  border-radius: 25%;
+  user-select: none;
+  text-align: center;
+}
+body .MaxProjetMain .SectionProjet .menuDeroulant .boutonFiltreProjet:hover {
+  cursor: pointer;
+}
 body .MaxProjetMain .SectionProjet .Rangee2 {
   max-width: 80vw;
-  margin: 0 auto;
+  margin: 2rem auto;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+  z-index: 2;
 }
 body .MaxProjetMain .SectionProjet .Rangee2 .galerieProjets {
   background-color: #bfd3ef;
   height: 40vh;
   flex-grow: 1;
+  position: relative;
 }
 body .MaxProjetMain .SectionProjet .Rangee2 .galerieProjets .textesProjet {
   position: absolute;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  max-width: 20rem;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 body .MaxProjetMain .SectionProjet .Rangee2 .galerieProjets p {
+  height: 100%;
   z-index: 2;
   margin: 0;
   padding: 1rem;
+}
+body .MaxProjetMain .SectionProjet .Rangee2 .galerieProjets .infoProjet {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   background-color: rgba(255, 255, 255, 0.4431372549);
   backdrop-filter: blur(5px);
-  border-radius: 5px;
-  border: 0.5px solid #FFF;
-}
-body .MaxProjetMain .SectionProjet .Rangee2 .galerieProjets .infoProjet p {
-  padding: 0;
-  overflow: hidden;
-  border: 0px solid #FFF;
 }
 body .MaxProjetMain .SectionProjet .Rangee2 .galerieProjets img {
   height: 100%;
