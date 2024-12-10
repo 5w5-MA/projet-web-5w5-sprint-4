@@ -11,8 +11,13 @@ footer {
   position: relative;
   overflow-y: hidden;
 
+
   @media screen and (max-width: 900px) {
     padding: 0;
+  }
+
+  a {
+    user-select: none;
   }
 
   .footerGauche {
@@ -31,7 +36,8 @@ footer {
   }
 
   p {
-    font-size: xx-small;
+    font-size: clamp(0.8rem, 0.2rem + 1.6vw, 1rem);
+    padding: 0.1rem;
   }
 
   .footerDroite {

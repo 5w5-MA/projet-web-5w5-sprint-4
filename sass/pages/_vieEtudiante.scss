@@ -164,7 +164,7 @@
   .decoTitre {
     position: relative;
     background-color: var(--blanc);
-    height: 29px;
+    height: 25px;
     flex-grow: 1;
   }
 
@@ -179,7 +179,7 @@
     z-index: 3;
     background-color: var(--blanc);
 
-    clip-path: polygon(100% 0, 100% 100%, 0% 100%, 50% 0);
+    clip-path: polygon(100% 0, 100% 100%, 0% 100%, 39% 0);
   }
 
   /***********INFORMATIONS ET IMAGES***************/

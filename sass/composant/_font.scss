@@ -1,13 +1,21 @@
-h1 {
-    color: #FFF;
-    font-family: 'lato';
-    font-weight: bold;
-}
-
 body {
     font-family: 'lato';
 }
 
+h1 {
+    color: #FFF;
+    font-weight: bold;
+    font-size: clamp(2rem, 0.2rem + 1.6vw, 2.3rem);
+}
+
+
+h2 {
+    font-size: clamp(1.5rem, 0.2rem + 1.6vw, 1.8rem);
+
+}
+
+
 p {
     font-size: clamp(1rem, 0.2rem + 1.6vw, 1.3rem);
+
 }

@@ -489,7 +489,7 @@ main .infoLangProg h2, main .infoLogiciel h2 {
   .decoTitre {
     position: relative;
     background-color: var(--blanc);
-    height: 29px;
+    height: 25px;
     flex-grow: 1;
   }
   .decoTitre::after {
@@ -501,7 +501,7 @@ main .infoLangProg h2, main .infoLogiciel h2 {
     height: 100%;
     z-index: 3;
     background-color: var(--blanc);
-    clip-path: polygon(100% 0, 100% 100%, 0% 100%, 50% 0);
+    clip-path: polygon(100% 0, 100% 100%, 0% 100%, 39% 0);
   }
   /***********INFORMATIONS ET IMAGES***************/
   .informations {
@@ -619,6 +619,7 @@ body .MaxProjetMain .SectionProjet .Rangee1 .TitreSectionProjet .Partie1 {
   align-items: center;
   gap: 1rem;
   justify-content: center;
+  cursor: pointer;
   user-select: none;
 }
 body .MaxProjetMain .SectionProjet .Rangee1 .TitreSectionProjet .Partie1::before {
@@ -1352,14 +1353,18 @@ template {
   display: none;
 }
 
-h1 {
-  color: #FFF;
-  font-family: "lato";
-  font-weight: bold;
-}
-
 body {
   font-family: "lato";
+}
+
+h1 {
+  color: #FFF;
+  font-weight: bold;
+  font-size: clamp(2rem, 0.2rem + 1.6vw, 2.3rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 0.2rem + 1.6vw, 1.8rem);
 }
 
 p {
@@ -1575,6 +1580,9 @@ footer {
     padding: 0;
   }
 }
+footer a {
+  user-select: none;
+}
 footer .footerGauche {
   display: flex;
   justify-content: space-evenly;
@@ -1589,7 +1597,8 @@ footer .footerBas {
   bottom: -5rem;
 }
 footer p {
-  font-size: xx-small;
+  font-size: clamp(0.8rem, 0.2rem + 1.6vw, 1rem);
+  padding: 0.1rem;
 }
 footer .footerDroite .reseaux .inconsReseaux {
   display: flex;

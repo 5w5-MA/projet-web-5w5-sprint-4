@@ -13,9 +13,11 @@
       <p>3800, rue Sherbrook est</p>
       <p>Montréal, Qc, H1X 2A2</p>
       <p>Maisonneuve@gmail.com</p>
+      <a href="https://www.cmaisonneuve.qc.ca/">Site de Maisonneuve</a>
+
     </div>
     <div class="liens">
-      <h2>Liens</h2>
+      <h2>Fonction</h2>
       <?php wp_nav_menu(array(
         'theme_location' => 'footerMenuLocation',
       )); ?>
@@ -24,9 +26,9 @@
   <section class="footerDroite">
     <div class="reseaux">
       <h2>Suivez-nous</h2>
-        <div class="inconsReseaux">
+      <div class="inconsReseaux">
         <?php get_template_part("componants-php/social"); ?>
-        </div>
+      </div>
     </div>
   </section>
 
