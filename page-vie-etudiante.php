@@ -9,24 +9,17 @@ while (have_posts()) {
 
 
     <body>
-    <div id="bg">
-    <canvas id="canvas1"></canvas>
-    <canvas></canvas>
-    <canvas></canvas>
-</div>
+        <div id="bg">
+            <canvas id="canvas1"></canvas>
+            <canvas></canvas>
+            <canvas></canvas>
+        </div>
         <main class="vieEtudiante">
             <!-- section de titre -->
             <div class="titrePage">
                 <h1><?php the_title(); ?></h1>
                 <div class="imgEnteteDiv">
-                    <div class="imageVieEntete" >
-                    <?php 
-                        // Display the featured image of the post, with a fallback for when no image is set
-                        if (has_post_thumbnail()) {
-                            the_post_thumbnail('full'); // You can change 'full' to another size if needed (like 'medium' or 'large')
-                        } 
-                    ?>
-                    </div>
+
                 </div>
             </div>
             <!-- section du comité étudiant -->
@@ -51,8 +44,8 @@ while (have_posts()) {
                             complète du serveur Discord qui est plus vivant que jamais.</p>
 
                     </div>
-                    <div class="imageVie"><img src="<?php $imgComiteEtudiant= get_field('comite_etudiant');
-                                echo $imgComiteEtudiant['sizes']['imagesVieEtude'] ?>" alt=""></div>
+                    <div class="imageVie"><img src="<?php $imgComiteEtudiant = get_field('comite_etudiant');
+                                                    echo $imgComiteEtudiant['sizes']['imagesVieEtude'] ?>" alt=""></div>
                 </div>
             </div>
             <!-- section des locaux -->
@@ -68,8 +61,8 @@ while (have_posts()) {
                             très puissants.</p>
 
                     </div>
-                    <div class="imageVie"><img src="<?php $imgLesLocaux= get_field('image_les_locaux');
-                                echo $imgLesLocaux['sizes']['imagesVieEtude'] ?>" alt=""></div>
+                    <div class="imageVie"><img src="<?php $imgLesLocaux = get_field('image_les_locaux');
+                                                    echo $imgLesLocaux['sizes']['imagesVieEtude'] ?>" alt=""></div>
                 </div>
 
             </div>
@@ -88,8 +81,8 @@ while (have_posts()) {
                         <p>Ces objets sont vu dans le cadre de vos cours et peuvent être utilisé lors du projet de fin
                             d'études.</p>
                     </div>
-                    <div class="imageVie"><img src="<?php $materielImg= get_field('image_materiel');
-                                echo $materielImg['sizes']['imagesVieEtude'] ?>" alt=""></div>
+                    <div class="imageVie"><img src="<?php $materielImg = get_field('image_materiel');
+                                                    echo $materielImg['sizes']['imagesVieEtude'] ?>" alt=""></div>
                 </div>
             </div>
         </main>
