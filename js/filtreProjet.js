@@ -1,4 +1,4 @@
-let boutonMenu = document.querySelector('.boutonMenuProjet');
+let boutonMenu = document.querySelector('.Partie1');
 let menuDeroulant = document.querySelector('.menuDeroulant');
 let lesBoutons = document.querySelectorAll('.boutonFiltreProjet');
 let enfants = document.querySelectorAll('.Rangee2 .galerieProjets');
