@@ -17,7 +17,7 @@ get_header();
             <p>bienvenu au tim maisonneuve, Lorem ipsum dolor sit, amet consectetur adipisicing els aliquid.</p>
 
             <a href="<?php echo site_url('/liste-de-cours'); ?>">
-                <div class="btn2">cours</div>
+               cours
             </a>
         </div>
 
