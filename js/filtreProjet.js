@@ -21,6 +21,7 @@ boutonMenu.addEventListener('click', () => {
 
 lesBoutons.forEach(element => {
     element.addEventListener('click', () => {
+        menuDeroulant.style.height = '0px';
 
         if (element.innerHTML == 'Tout') {
             selectionMenu.innerHTML = "&#x2193;";
