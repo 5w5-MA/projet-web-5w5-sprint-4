@@ -2535,7 +2535,7 @@ footer .footerDroite .reseaux .inconsReseaux {
     transform: skewX(-55deg);
   }
   .conteneurProfs {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   .carteProf {
     width: 14rem;
