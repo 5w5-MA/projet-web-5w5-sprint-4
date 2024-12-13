@@ -1,8 +1,6 @@
 window.addEventListener("load", () => {
   let main = document.querySelector("main");
 
-  console.log("allo");
-
   if (main.id != "cours") {
     localStorage.setItem("doitReload", "true");
   }
