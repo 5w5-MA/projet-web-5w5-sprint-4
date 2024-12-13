@@ -309,8 +309,8 @@
   }
 
   .listeCours {
-    min-height: 450px;
     margin-top: 100px;
+    margin-bottom: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -318,100 +318,60 @@
     column-gap: 75px;
     row-gap: 50px;
 
-    .coursImg {
-      width: 75px;
-      height: 100px;
-      background-color: var(--bleu);
-    }
-
     div {
       z-index: 1;
     }
 
     .cours1 {
-      width: 300px;
-      height: 200px;
+      width: 100vw;
+      max-width: 1000px;
+      // height: 100px;
       padding-left: 25px;
       padding-right: 25px;
       background-color: var(--blanc);
       display: flex;
       justify-content: space-between;
       align-items: center;
+      color: var(--texte);
+      display: flex;
+      flex-direction: column;
 
-      .infoCours {
+      .teaserCours {
+        width: 100%;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
 
+        input {
+          // display: none;
+        }
+
+        h2 {
+          font-size: 3vw;
+
+          @media screen and (min-width: 1000px) {
+            font-size: 1.7rem;
+          }
+        }
+
         .boutonCours {
-          position: unset;
+          // position: unset;
+
+          top: revert-layer;
+          width: max-content;
         }
       }
-    }
-
-    .cours2 {
-      width: 300px;
-      height: 200px;
-      padding-left: 25px;
-      padding-right: 25px;
-      background-color: var(--blanc);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
 
       .infoCours {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+        display: none;
+        height: 0px;
+        background-color: var(--blanc);
+        padding-top: 10px;
+        padding-bottom: 10px;
 
-        .boutonCours {
-          position: unset;
-        }
-      }
-    }
-
-    .cours3 {
-      width: 300px;
-      height: 200px;
-      padding-left: 25px;
-      padding-right: 25px;
-      background-color: var(--blanc);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      .infoCours {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-
-        .boutonCours {
-          position: unset;
-        }
-      }
-    }
-
-    .cours4 {
-      width: 300px;
-      height: 200px;
-      padding-left: 25px;
-      padding-right: 25px;
-      background-color: var(--blanc);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      .infoCours {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-
-        .boutonCours {
-          position: unset;
+        .contenu {
+          opacity: 0%;
         }
       }
     }
