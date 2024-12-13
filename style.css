@@ -573,15 +573,13 @@ body .MaxProjetMain .SectionArcade {
 }
 body .MaxProjetMain .SectionArcade .ListeArcade {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 40px;
+  gap: 2rem;
   width: 80vw;
-  padding: 5vh 0px;
+  padding-bottom: 2rem;
   margin: 0px auto;
 }
 body .MaxProjetMain .SectionArcade .ListeArcade .jeu {
   margin: 0px auto;
-  width: clamp(350px, 100%, 900px);
   height: clamp(230px, 14vw, 700px);
   background-color: white;
 }
@@ -733,6 +731,14 @@ body .MaxProjetMain .SectionProjet .Rangee2 .galerieProjets img {
 @media screen and (min-width: 430px) {
   body .MaxProjetMain {
     /* ***************** Section Projet ************************** */
+  }
+  body .MaxProjetMain .ListeArcade {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 40px;
+  }
+  body .MaxProjetMain .ListeArcade .jeu {
+    width: clamp(350px, 100%, 900px);
   }
   body .MaxProjetMain .SectionProjet {
     /* *************** Titre section ******************** */
