@@ -13,16 +13,17 @@ body {
             .ListeArcade {
                 //Répartition des cases en version Mobile
                 display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-                gap: 40px;
+
+                gap: 2rem;
 
                 width: 80vw;
-                padding: 5vh 0px;
+                padding-bottom: 2rem;
+
                 margin: 0px auto;
 
                 .jeu {
                     margin: 0px auto;
-                    width: clamp(350px, 100%, 900px);
+
                     height: clamp(230px, 14vw, 700px);
                     background-color: white;
                 }
@@ -220,10 +221,23 @@ body {
     /* ************************* Version Tablette ******************************* */
     @media screen and (min-width: 430px) {
 
+
         .MaxProjetMain {
             /* ***************** Section Projet ************************** */
 
+            .ListeArcade {
+                //Répartition des cases en version Mobile
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+                gap: 40px;
+
+                .jeu {
+                    width: clamp(350px, 100%, 900px);
+                }
+            }
+
             .SectionProjet {
+
 
                 /* *************** Titre section ******************** */
                 .Rangee1 {
@@ -250,13 +264,4 @@ body {
         }
     }
 
-    /* ************************* Version Desktop ******************************* */
-    @media screen and (min-width: 1024px) {
-
-        .MaxProjetMain {
-
-            /* ***************** Section Projet ************************** */
-
-        }
-    }
 }

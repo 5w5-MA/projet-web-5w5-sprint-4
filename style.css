@@ -562,7 +562,6 @@ main .infoLangProg h2, main .infoLogiciel h2 {
 body {
   /* ************************* Version Mobile ******************************* */
   /* ************************* Version Tablette ******************************* */
-  /* ************************* Version Desktop ******************************* */
 }
 body .MaxProjetMain {
   /* ******************** Section Arcade *********************** */
@@ -576,15 +575,13 @@ body .MaxProjetMain .SectionArcade {
 }
 body .MaxProjetMain .SectionArcade .ListeArcade {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 40px;
+  gap: 2rem;
   width: 80vw;
-  padding: 5vh 0px;
+  padding-bottom: 2rem;
   margin: 0px auto;
 }
 body .MaxProjetMain .SectionArcade .ListeArcade .jeu {
   margin: 0px auto;
-  width: clamp(350px, 100%, 900px);
   height: clamp(230px, 14vw, 700px);
   background-color: white;
 }
@@ -737,6 +734,14 @@ body .MaxProjetMain .SectionProjet .Rangee2 .galerieProjets img {
   body .MaxProjetMain {
     /* ***************** Section Projet ************************** */
   }
+  body .MaxProjetMain .ListeArcade {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 40px;
+  }
+  body .MaxProjetMain .ListeArcade .jeu {
+    width: clamp(350px, 100%, 900px);
+  }
   body .MaxProjetMain .SectionProjet {
     /* *************** Titre section ******************** */
   }
@@ -751,11 +756,6 @@ body .MaxProjetMain .SectionProjet .Rangee2 .galerieProjets img {
   }
   body .MaxProjetMain .SectionProjet .Rangee1 .TitreSectionProjet .Partie1 {
     margin-right: 5rem;
-  }
-}
-@media screen and (min-width: 1024px) {
-  body .MaxProjetMain {
-    /* ***************** Section Projet ************************** */
   }
 }
 
@@ -2389,13 +2389,11 @@ footer .footerDroite .reseaux .inconsReseaux {
 
 /*****************************décor de la page**********************/
 #bodyProfs {
-  position: relative;
   z-index: 5;
 }
 
 .pageProfs {
   position: relative;
-  padding-top: 10rem;
   overflow: hidden;
   z-index: 5;
 }
@@ -2435,7 +2433,7 @@ footer .footerDroite .reseaux .inconsReseaux {
 .conteneurProfs {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  margin: 2rem 0;
   justify-items: center;
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
@@ -2453,7 +2451,7 @@ footer .footerDroite .reseaux .inconsReseaux {
   padding: 1rem;
   background-color: var(--gris);
   box-shadow: 1px 1px 15px 1px rgba(54, 54, 54, 0.5647058824);
-  width: 30vw;
+  width: 40vw;
   height: 15rem;
   z-index: 3;
   border-radius: 5px;
@@ -2471,8 +2469,8 @@ footer .footerDroite .reseaux .inconsReseaux {
 .imageProf img {
   object-fit: cover;
   object-position: 50%;
-  width: 10rem;
-  height: 15rem;
+  width: 100%;
+  height: 100%;
   border-radius: 5px;
 }
 
@@ -2494,7 +2492,7 @@ footer .footerDroite .reseaux .inconsReseaux {
     width: 23rem;
   }
   .conteneurProfs {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .carteProf {
     width: 23vw;
