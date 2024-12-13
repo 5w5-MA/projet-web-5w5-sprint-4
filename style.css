@@ -559,7 +559,6 @@ main .infoLangProg h2, main .infoLogiciel h2 {
 body {
   /* ************************* Version Mobile ******************************* */
   /* ************************* Version Tablette ******************************* */
-  /* ************************* Version Desktop ******************************* */
 }
 body .MaxProjetMain {
   /* ******************** Section Arcade *********************** */
@@ -754,11 +753,6 @@ body .MaxProjetMain .SectionProjet .Rangee2 .galerieProjets img {
   }
   body .MaxProjetMain .SectionProjet .Rangee1 .TitreSectionProjet .Partie1 {
     margin-right: 5rem;
-  }
-}
-@media screen and (min-width: 1024px) {
-  body .MaxProjetMain {
-    /* ***************** Section Projet ************************** */
   }
 }
 
