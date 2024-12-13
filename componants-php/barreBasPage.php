@@ -1,4 +1,7 @@
- <div class="barreBasPage">
-     <div class="div1"></div>
-     <div class="div2"></div>
- </div>
+<div class="decorationAccueil">
+        <div class="ligneAccueil">
+            <div class="ligne3"></div>
+            <div class="ligne1"></div>
+            <div class="ligne2"></div>
+        </div>
+    </div>
