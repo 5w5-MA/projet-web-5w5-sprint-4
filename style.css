@@ -30,6 +30,8 @@ Text Domain: theme tim
   --autres-medias-Desk:#ddb421;
   --modelisation-3D-Desk:#e0c582;
   --bleu-graph:rgba(31, 84, 145, 0.812);
+  --ligne-1:#fab41d;
+  --ligne-2:#d48f27;
 }
 
 .imagesGeneral {
@@ -42,6 +44,7 @@ main {
   overflow: hidden;
 }
 main .hautDePage {
+  background-size: cover;
   background-color: black;
   width: 100%;
   height: 100vh;
@@ -1373,21 +1376,6 @@ p {
   font-size: clamp(1rem, 0.2rem + 1.6vw, 1.3rem);
 }
 
-.barreBasPage {
-  display: flex;
-  justify-content: space-between;
-}
-.barreBasPage .div1 {
-  height: 20px;
-  width: 20vw;
-  background-color: var(--jaune);
-}
-.barreBasPage .div2 {
-  height: 20px;
-  width: 70vw;
-  background-color: var(--jaune);
-}
-
 .titreSection {
   position: relative;
   margin: 2rem 0;
@@ -1714,15 +1702,15 @@ footer .footerDroite .reseaux .inconsReseaux {
   top: -1rem;
 }
 .boutton-inscription .cybr-btn {
-  --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 1%));
+  --primary: hsl(40, 85%, calc(60 * 1%));
   --shadow-primary: hsl(var(--shadow-primary-hue), 90%, 50%);
-  --primary-hue: 0;
-  --primary-lightness: 50;
+  --primary-hue: 40;
+  --primary-lightness: 60;
   --color: hsl(0, 0%, 100%);
   --font-size: 1.5rem;
   --shadow-primary-hue: 180;
   --label-size: 9px;
-  --shadow-secondary:hsl(359.66deg 100% 50%);
+  --shadow-secondary: hsl(359.66deg 100% 50%);
   --clip: polygon(0 0, 100% 0, 100% 100%, 95% 100%, 95% 90%, 85% 90%, 85% 100%, 8% 100%, 0 70%);
   --border: 4px;
   --shimmy-distance: 5;
@@ -1889,6 +1877,7 @@ footer .footerDroite .reseaux .inconsReseaux {
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
+  padding-top: 1rem;
 }
 .graphisme .boite {
   border-radius: 20px;
@@ -2028,9 +2017,6 @@ footer .footerDroite .reseaux .inconsReseaux {
   }
 }
 @media screen and (min-width: 767px) {
-  .graphisme {
-    padding-top: 5rem;
-  }
   .graphisme .boite .infoGraph {
     flex-direction: row;
     padding-top: 0px;
@@ -2544,6 +2530,101 @@ footer .footerDroite .reseaux .inconsReseaux {
     width: 12rem;
   }
 }
+.decorationAccueil .ligneAccueil {
+  width: 100vw;
+  margin-bottom: 0.5rem;
+}
+.decorationAccueil .ligneAccueil .ligne3 {
+  height: 0.2rem;
+  width: 10%;
+  background-color: var(--ligne-1);
+  margin-bottom: 0.3rem;
+  position: relative;
+  animation: animationDecoration 6s;
+  box-shadow: 0px 0px 5px 0.3px var(--ligne-1);
+  animation-iteration-count: infinite;
+}
+.decorationAccueil .ligneAccueil .ligne1 {
+  height: 0.5rem;
+  width: 35%;
+  background-color: var(--ligne-1);
+  margin-bottom: 0.5rem;
+  position: relative;
+  animation: animationDecoration 7s;
+  box-shadow: 0px 0px 5px 0.3px var(--ligne-1);
+  animation-iteration-count: infinite;
+}
+.decorationAccueil .ligneAccueil .ligne2 {
+  height: 0.3rem;
+  width: 20%;
+  background-color: var(--ligne-2);
+  position: relative;
+  animation: animationDecoration 6.5s;
+  box-shadow: 0px 0px 5px 0.3px var(--ligne-2);
+  animation-iteration-count: infinite;
+}
+@keyframes animationDecoration {
+  0% {
+    left: -1vw;
+  }
+  50% {
+    left: 90vw;
+  }
+  100% {
+    left: -1vw;
+  }
+}
+
+.decoCarrousel {
+  margin-bottom: 1rem;
+}
+.decoCarrousel .ligneCaroussel1 {
+  height: 0.5rem;
+  width: 45%;
+  background-color: var(--ligne-1);
+  margin-bottom: 0.3rem;
+}
+.decoCarrousel .ligneCaroussel2 {
+  height: 0.3rem;
+  width: 30%;
+  background-color: var(--ligne-2);
+}
+
+.decoCarrousel2 {
+  position: relative;
+  padding-bottom: 2rem;
+}
+.decoCarrousel2 .ligneCaroussel3 {
+  height: 0.5rem;
+  width: 30%;
+  background-color: var(--ligne-1);
+  margin-bottom: 0.3rem;
+  position: absolute;
+  right: 0px;
+  margin-bottom: 0.5rem;
+}
+.decoCarrousel2 .ligneCaroussel4 {
+  height: 0.3rem;
+  width: 40%;
+  background-color: var(--ligne-2);
+  position: absolute;
+  right: 0px;
+  top: 1rem;
+}
+@media screen and (min-width: 767px) {
+  .decoCarrousel2 {
+    padding-bottom: 1rem;
+    top: 3.5rem;
+  }
+}
+@media screen and (min-width: 991px) {
+  .decoCarrousel2 {
+    position: relative;
+    padding-bottom: 0rem;
+    top: 1rem;
+  }
+}
+
 ul {
   margin: 0;
 }/*# sourceMappingURL=style.css.map */

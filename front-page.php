@@ -10,27 +10,28 @@ get_header();
 </div>
 
 <main id="acceuil">
-    <div class="hautDePage">
+<div class="hautDePage" style="background-image: url('<?php 
+            // Get the URL of the featured image
+            if (has_post_thumbnail()) {
+                echo get_the_post_thumbnail_url(null, 'full'); // 'full' can be changed to another size if needed
+            } else {
+                // Fallback URL if no featured image is set
+                echo get_template_directory_uri() . '/path/to/default-image.jpg';
+            }
+        ?>');">
+
+
         <div class="txtMain">
             <h1><?php echo get_bloginfo('name'); ?></h1>
             <h2><?php echo get_bloginfo('description'); ?></h2>
-            <p>bienvenu au tim maisonneuve, Lorem ipsum dolor sit, amet consectetur adipisicing els aliquid.</p>
+            <p><?php the_content(); ?></p>
 
             <a href="<?php echo site_url('/liste-de-cours'); ?>">
                cours
             </a>
         </div>
 
-        <div class="img">
-            <?php
-            // Display the featured image of the post, with a fallback for when no image is set
-            if (has_post_thumbnail()) {
-                the_post_thumbnail('full'); // You can change 'full' to another size if needed (like 'medium' or 'large')
-            }
-            ?>
-
-        </div>
-
+        
 
     </div>
 
@@ -48,6 +49,11 @@ get_header();
 
     </div>
 
+    <!-- decoration -->
+    <div class="decoCarrousel">
+        <div class="ligneCaroussel1"></div>
+        <div class="ligneCaroussel2"></div>
+    </div>
     <!-- carrousel-->
 
     <?php
@@ -67,6 +73,11 @@ get_header();
         </section>
     <?php }; ?>
 
+    <!-- decoration -->
+    <div class="decoCarrousel2">
+        <div class="ligneCaroussel3"></div>
+        <div class="ligneCaroussel4"></div>
+    </div>
 
     <div class="infoLangProg">
         <div class="titreLangProg">
@@ -85,6 +96,9 @@ get_header();
         </div>
     </div>
 
+
+
+    <!-- les pourcentages et graphisme -->
     <div class="graphisme">
 
         <div class="boite">
