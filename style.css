@@ -2403,13 +2403,11 @@ footer .footerDroite .reseaux .inconsReseaux {
 
 /*****************************décor de la page**********************/
 #bodyProfs {
-  position: relative;
   z-index: 5;
 }
 
 .pageProfs {
   position: relative;
-  padding-top: 10rem;
   overflow: hidden;
   z-index: 5;
 }
@@ -2449,7 +2447,7 @@ footer .footerDroite .reseaux .inconsReseaux {
 .conteneurProfs {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  margin: 2rem 0;
   justify-items: center;
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
@@ -2467,7 +2465,7 @@ footer .footerDroite .reseaux .inconsReseaux {
   padding: 1rem;
   background-color: var(--gris);
   box-shadow: 1px 1px 15px 1px rgba(54, 54, 54, 0.5647058824);
-  width: 30vw;
+  width: 40vw;
   height: 15rem;
   z-index: 3;
   border-radius: 5px;
@@ -2485,8 +2483,8 @@ footer .footerDroite .reseaux .inconsReseaux {
 .imageProf img {
   object-fit: cover;
   object-position: 50%;
-  width: 10rem;
-  height: 15rem;
+  width: 100%;
+  height: 100%;
   border-radius: 5px;
 }
 
@@ -2508,7 +2506,7 @@ footer .footerDroite .reseaux .inconsReseaux {
     width: 23rem;
   }
   .conteneurProfs {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .carteProf {
     width: 23vw;
