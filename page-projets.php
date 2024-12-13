@@ -13,9 +13,7 @@
                 <h2>Arcade</h2>
             </div>
         </div>
-        <div class="Partie2"></div>
-        <div class="Partie3"></div>
-        </div>
+
 
         <?php
         $arcadePost = new WP_Query(array(
@@ -27,13 +25,15 @@
             while ($arcadePost->have_posts()) {
                 $arcadePost->the_post();
             ?>
-                <section class="jeu">
-                    <div>
+                <a href="<?php the_field('lienjeu'); ?>" target="_blank">
+                    <div class="jeu">
+
                         <?php
-                        the_title();
+                        the_post_thumbnail('full');
                         ?>
+
                     </div>
-                </section>
+                </a>
             <?php }; ?>
         </section>
 
@@ -49,17 +49,19 @@
                     <div class="Partie1">
                         <h2>Filtre</h2>
                         <div class="boutonMenuProjet"> &#x2193; </div>
+                        <div class="menuDeroulant">
+                            <div class="boutonFiltreProjet">Tout</div>
+                            <div class="boutonFiltreProjet">Design</div>
+                            <div class="boutonFiltreProjet">Programmation</div>
+                            <div class="boutonFiltreProjet">Jeu</div>
+                            <div class="boutonFiltreProjet">Modélisation</div>
+                        </div>
                     </div>
+
                 </div>
             </section>
 
-            <div class="menuDeroulant">
-                <div class="boutonFiltreProjet">Tout</div>
-                <div class="boutonFiltreProjet">Design</div>
-                <div class="boutonFiltreProjet">Programmation</div>
-                <div class="boutonFiltreProjet">Jeu</div>
-                <div class="boutonFiltreProjet">Modélisation</div>
-            </div>
+
 
             <div class="Rangee2">
                 <?php
@@ -74,7 +76,9 @@
                         <div class="textesProjet">
                             <div class="infoProjet">
                                 <p><?php the_title(); ?></p>
-                                <?php the_content(); ?>
+                                <div class="contentProjet">
+                                    <?php the_content(); ?>
+                                </div>
                             </div>
                         </div>
                         <?php if (has_post_thumbnail()) {
@@ -96,7 +100,9 @@
                         <div class="textesProjet">
                             <div class="infoProjet">
                                 <p><?php the_title(); ?></p>
-                                <?php the_content(); ?>
+                                <div class="contentProjet">
+                                    <?php the_content(); ?>
+                                </div>
                             </div>
                         </div>
                         <?php if (has_post_thumbnail()) {
@@ -117,7 +123,9 @@
                         <div class="textesProjet">
                             <div class="infoProjet">
                                 <p><?php the_title(); ?></p>
-                                <?php the_content(); ?>
+                                <div class="contentProjet">
+                                    <?php the_content(); ?>
+                                </div>
                             </div>
                         </div>
                         <?php if (has_post_thumbnail()) {
@@ -138,7 +146,9 @@
                         <div class="textesProjet">
                             <div class="infoProjet">
                                 <p><?php the_title(); ?></p>
-                                <?php the_content(); ?>
+                                <div class="contentProjet">
+                                    <?php the_content(); ?>
+                                </div>
                             </div>
                         </div>
                         <?php if (has_post_thumbnail()) {
@@ -160,7 +170,9 @@
                         <div class="textesProjet">
                             <div class="infoProjet">
                                 <p><?php the_title(); ?></p>
-                                <?php the_content(); ?>
+                                <div class="contentProjet">
+                                    <?php the_content(); ?>
+                                </div>
                             </div>
                         </div>
                         <?php if (has_post_thumbnail()) {

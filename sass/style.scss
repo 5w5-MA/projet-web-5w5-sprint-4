@@ -13,7 +13,7 @@ Text Domain: theme tim
 
 @import "composant/variable";
 
-@import "pages/acceuil";
+@import "pages/accueil";
 
 @import "pages/vieEtudiante";
 
@@ -25,7 +25,6 @@ Text Domain: theme tim
 
 @import "composant/font";
 
-@import "composant/barreBasPage";
 
 @import "composant/formeTitreSections";
 
@@ -33,7 +32,9 @@ Text Domain: theme tim
 
 @import "composant/footer";
 
+///pour les boutons
 @import "composant/bouton";
+@import "composant/boutonInscription";
 
 @import "composant/graphique";
 
@@ -42,6 +43,8 @@ Text Domain: theme tim
 @import "pages/futur";
 
 @import "pages/lesProfs";
+
+@import "composant/decorationAccueil";
 
 ul {
   margin: 0;
