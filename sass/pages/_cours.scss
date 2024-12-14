@@ -344,7 +344,7 @@
         align-items: center;
 
         input {
-          // display: none;
+          display: none;
         }
 
         h2 {
@@ -356,8 +356,6 @@
         }
 
         .boutonCours {
-          // position: unset;
-
           top: revert-layer;
           width: max-content;
         }
@@ -369,9 +367,11 @@
         background-color: var(--blanc);
         padding-top: 10px;
         padding-bottom: 10px;
+        transition: height 0.5s;
 
         .contenu {
           opacity: 0%;
+          transition: opacity 0.5s;
         }
       }
     }

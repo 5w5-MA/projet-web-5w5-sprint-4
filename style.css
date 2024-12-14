@@ -86,7 +86,7 @@ main .hautDePage .txtMain a {
   width: 100%;
   height: 3rem;
   background-color: rgba(19, 69, 130, 0.781);
-  border: 0.5px solid #fff;
+  border: 0.5px solid #FFF;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -117,14 +117,13 @@ main .hautDePage img {
   main .hautDePage .txtMain {
     width: 30rem;
   }
-  main .hautDePage .txtMain a,
-  main .hautDePage .txtMain a::after {
+  main .hautDePage .txtMain a, main .hautDePage .txtMain a::after {
     background: linear-gradient(-45deg, transparent 5%, #102e4e 5%);
     border: 0;
     color: #fff;
     letter-spacing: 3px;
     line-height: 88px;
-    box-shadow: -6px 0px 0px #00e6f6;
+    box-shadow: -6px 0px 0px #00E6F6;
     outline: transparent;
     position: relative;
   }
@@ -143,14 +142,8 @@ main .hautDePage img {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(
-      -45deg,
-      transparent -3%,
-      #00e6f6 -3%,
-      #00e6f6 -5%,
-      #102e4e -5%
-    );
-    text-shadow: -3px -3px 0px #ba0909, 3px 3px 0px #00e6f6;
+    background: linear-gradient(-45deg, transparent -3%, #00E6F6 -3%, #00E6F6 -5%, #102e4e -5%);
+    text-shadow: -3px -3px 0px #ba0909, 3px 3px 0px #00E6F6;
     clip-path: var(--slice-0);
   }
   main .hautDePage .txtMain a:hover::after {
@@ -222,7 +215,7 @@ main .description .titre_APropos h2 {
   font-family: "lato";
 }
 main .description .descriptionTim {
-  background-color: #e8e8e8;
+  background-color: #E8E8E8;
   backdrop-filter: blur(2px);
   width: 95%;
   min-height: 15rem;
@@ -281,7 +274,7 @@ main .infoLangProg .titreLangProg h2 {
   padding-left: 1rem;
 }
 main .infoLangProg .LangProg {
-  background-color: #efefef;
+  background-color: #EFEFEF;
   min-height: 25vh;
   position: relative;
   transition: right 1s ease-in-out; /* Animation fluide */
@@ -353,8 +346,7 @@ main .infoLogiciel .infoLog p {
     font-size: 1.5rem;
   }
 }
-main .infoLangProg h2,
-main .infoLogiciel h2 {
+main .infoLangProg h2, main .infoLogiciel h2 {
   color: var(--texteBlanc);
   font-family: "lato";
 }
@@ -626,12 +618,7 @@ body .MaxProjetMain .SectionProjet .Rangee1 .TitreSectionProjet .Partie1 {
   cursor: pointer;
   user-select: none;
 }
-body
-  .MaxProjetMain
-  .SectionProjet
-  .Rangee1
-  .TitreSectionProjet
-  .Partie1::before {
+body .MaxProjetMain .SectionProjet .Rangee1 .TitreSectionProjet .Partie1::before {
   content: "";
   position: absolute;
   top: 0;
@@ -641,12 +628,7 @@ body
   background-color: var(--jaune);
   clip-path: polygon(95% 0, 30% 100%, 0% 100%, 0 0);
 }
-body
-  .MaxProjetMain
-  .SectionProjet
-  .Rangee1
-  .TitreSectionProjet
-  .Partie1::after {
+body .MaxProjetMain .SectionProjet .Rangee1 .TitreSectionProjet .Partie1::after {
   content: "";
   position: absolute;
   top: 0;
@@ -656,26 +638,14 @@ body
   background-color: var(--jaune);
   clip-path: polygon(100% 0, 30% 100%, 100% 100%, 100% 100%);
 }
-body
-  .MaxProjetMain
-  .SectionProjet
-  .Rangee1
-  .TitreSectionProjet
-  .Partie1
-  .boutonMenuProjet {
+body .MaxProjetMain .SectionProjet .Rangee1 .TitreSectionProjet .Partie1 .boutonMenuProjet {
   font-size: 1rem;
   border-color: 1px solid var(--bleu);
   padding: 2px 5px;
   border-radius: 5px;
   box-shadow: -2px -1px 30px 3px white;
 }
-body
-  .MaxProjetMain
-  .SectionProjet
-  .Rangee1
-  .TitreSectionProjet
-  .Partie1
-  .boutonMenuProjet:hover {
+body .MaxProjetMain .SectionProjet .Rangee1 .TitreSectionProjet .Partie1 .boutonMenuProjet:hover {
   cursor: pointer;
 }
 body .MaxProjetMain .SectionProjet .menuDeroulant {
@@ -742,24 +712,11 @@ body .MaxProjetMain .SectionProjet .Rangee2 .galerieProjets .infoProjet {
   background-color: rgba(255, 255, 255, 0.4431372549);
   backdrop-filter: blur(5px);
 }
-body
-  .MaxProjetMain
-  .SectionProjet
-  .Rangee2
-  .galerieProjets
-  .infoProjet
-  .contentProjet {
+body .MaxProjetMain .SectionProjet .Rangee2 .galerieProjets .infoProjet .contentProjet {
   display: flex;
   flex-direction: column;
 }
-body
-  .MaxProjetMain
-  .SectionProjet
-  .Rangee2
-  .galerieProjets
-  .infoProjet
-  .contentProjet
-  p {
+body .MaxProjetMain .SectionProjet .Rangee2 .galerieProjets .infoProjet .contentProjet p {
   padding: 0 1rem;
 }
 body .MaxProjetMain .SectionProjet .Rangee2 .galerieProjets img {
@@ -973,8 +930,7 @@ body .MaxProjetMain .SectionProjet .Rangee2 .galerieProjets img {
   color: var(--blanc);
 }
 .pageCours .coursMenu .wrapActif {
-  filter: drop-shadow(5px 5px 3px var(--drop-shadow))
-    drop-shadow(-5px -5px 3px var(--drop-shadow));
+  filter: drop-shadow(5px 5px 3px var(--drop-shadow)) drop-shadow(-5px -5px 3px var(--drop-shadow));
 }
 .pageCours .listeCours {
   margin-top: 100px;
@@ -1009,6 +965,9 @@ body .MaxProjetMain .SectionProjet .Rangee2 .galerieProjets img {
   justify-content: space-between;
   align-items: center;
 }
+.pageCours .listeCours .cours1 .teaserCours input {
+  display: none;
+}
 .pageCours .listeCours .cours1 .teaserCours h2 {
   font-size: 3vw;
 }
@@ -1027,9 +986,11 @@ body .MaxProjetMain .SectionProjet .Rangee2 .galerieProjets img {
   background-color: var(--blanc);
   padding-top: 10px;
   padding-bottom: 10px;
+  transition: height 0.5s;
 }
 .pageCours .listeCours .cours1 .infoCours .contenu {
   opacity: 0%;
+  transition: opacity 0.5s;
 }
 
 * {
@@ -1219,9 +1180,9 @@ select {
    * Correct the inability to style clickable types in iOS and Safari.
    */
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 
@@ -1229,9 +1190,9 @@ button,
    * Remove the inner border and padding in Firefox.
    */
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -1240,9 +1201,9 @@ button::-moz-focus-inner,
    * Restore the focus styles unset by the previous rule.
    */
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -1286,8 +1247,8 @@ textarea {
    * 1. Add the correct box sizing in IE 10.
    * 2. Remove the padding in IE 10.
    */
-[type="checkbox"],
-[type="radio"] {
+[type=checkbox],
+[type=radio] {
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
 }
@@ -1295,8 +1256,8 @@ textarea {
 /**
    * Correct the cursor style of increment and decrement buttons in Chrome.
    */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -1304,7 +1265,7 @@ textarea {
    * 1. Correct the odd appearance in Chrome and Safari.
    * 2. Correct the outline style in Safari.
    */
-[type="search"] {
+[type=search] {
   -webkit-appearance: textfield; /* 1 */
   outline-offset: -2px; /* 2 */
 }
@@ -1312,7 +1273,7 @@ textarea {
 /**
    * Remove the inner padding in Chrome and Safari on macOS.
    */
-[type="search"]::-webkit-search-decoration {
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -1362,7 +1323,7 @@ body {
 }
 
 h1 {
-  color: #fff;
+  color: #FFF;
   font-weight: bold;
   font-size: clamp(2rem, 0.2rem + 1.6vw, 2.3rem);
 }
@@ -1711,96 +1672,16 @@ footer .footerDroite .reseaux .inconsReseaux {
   --shadow-primary-hue: 180;
   --label-size: 9px;
   --shadow-secondary: hsl(359.66deg 100% 50%);
-  --clip: polygon(
-    0 0,
-    100% 0,
-    100% 100%,
-    95% 100%,
-    95% 90%,
-    85% 90%,
-    85% 100%,
-    8% 100%,
-    0 70%
-  );
+  --clip: polygon(0 0, 100% 0, 100% 100%, 95% 100%, 95% 90%, 85% 90%, 85% 100%, 8% 100%, 0 70%);
   --border: 4px;
   --shimmy-distance: 5;
-  --clip-one: polygon(
-    0 2%,
-    100% 2%,
-    100% 95%,
-    95% 95%,
-    95% 90%,
-    85% 90%,
-    85% 95%,
-    8% 95%,
-    0 70%
-  );
-  --clip-two: polygon(
-    0 78%,
-    100% 78%,
-    100% 100%,
-    95% 100%,
-    95% 90%,
-    85% 90%,
-    85% 100%,
-    8% 100%,
-    0 78%
-  );
-  --clip-three: polygon(
-    0 44%,
-    100% 44%,
-    100% 54%,
-    95% 54%,
-    95% 54%,
-    85% 54%,
-    85% 54%,
-    8% 54%,
-    0 54%
-  );
-  --clip-four: polygon(
-    0 0,
-    100% 0,
-    100% 0,
-    95% 0,
-    95% 0,
-    85% 0,
-    85% 0,
-    8% 0,
-    0 0
-  );
-  --clip-five: polygon(
-    0 0,
-    100% 0,
-    100% 0,
-    95% 0,
-    95% 0,
-    85% 0,
-    85% 0,
-    8% 0,
-    0 0
-  );
-  --clip-six: polygon(
-    0 40%,
-    100% 40%,
-    100% 85%,
-    95% 85%,
-    95% 85%,
-    85% 85%,
-    85% 85%,
-    8% 85%,
-    0 70%
-  );
-  --clip-seven: polygon(
-    0 63%,
-    100% 63%,
-    100% 80%,
-    95% 80%,
-    95% 80%,
-    85% 80%,
-    85% 80%,
-    8% 80%,
-    0 70%
-  );
+  --clip-one: polygon(0 2%, 100% 2%, 100% 95%, 95% 95%, 95% 90%, 85% 90%, 85% 95%, 8% 95%, 0 70%);
+  --clip-two: polygon(0 78%, 100% 78%, 100% 100%, 95% 100%, 95% 90%, 85% 90%, 85% 100%, 8% 100%, 0 78%);
+  --clip-three: polygon(0 44%, 100% 44%, 100% 54%, 95% 54%, 95% 54%, 85% 54%, 85% 54%, 8% 54%, 0 54%);
+  --clip-four: polygon(0 0, 100% 0, 100% 0, 95% 0, 95% 0, 85% 0, 85% 0, 8% 0, 0 0);
+  --clip-five: polygon(0 0, 100% 0, 100% 0, 95% 0, 95% 0, 85% 0, 85% 0, 8% 0, 0 0);
+  --clip-six: polygon(0 40%, 100% 40%, 100% 85%, 95% 85%, 95% 85%, 85% 85%, 85% 85%, 8% 85%, 0 70%);
+  --clip-seven: polygon(0 63%, 100% 63%, 100% 80%, 95% 80%, 95% 80%, 85% 80%, 85% 80%, 8% 80%, 0 70%);
   font-family: "Blender Pro Bold", sans-serif;
   color: var(--color);
   cursor: pointer;
@@ -1818,18 +1699,10 @@ footer .footerDroite .reseaux .inconsReseaux {
   transition: background 0.2s;
 }
 .boutton-inscription .cybr-btn:hover {
-  --primary: hsl(
-    var(--primary-hue),
-    85%,
-    calc(var(--primary-lightness, 50) * 0.8%)
-  );
+  --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 0.8%));
 }
 .boutton-inscription .cybr-btn:active {
-  --primary: hsl(
-    var(--primary-hue),
-    85%,
-    calc(var(--primary-lightness, 50) * 0.6%)
-  );
+  --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 0.6%));
 }
 .boutton-inscription .cybr-btn:after,
 .boutton-inscription .cybr-btn:before {
@@ -1890,8 +1763,7 @@ footer .footerDroite .reseaux .inconsReseaux {
   0% {
     clip-path: var(--clip-one);
   }
-  2%,
-  8% {
+  2%, 8% {
     clip-path: var(--clip-two);
     transform: translate(calc(var(--shimmy-distance) * -1%), 0);
   }
@@ -1911,8 +1783,7 @@ footer .footerDroite .reseaux .inconsReseaux {
     clip-path: var(--clip-three);
     transform: translate(0, 0);
   }
-  14%,
-  21% {
+  14%, 21% {
     clip-path: var(--clip-four);
     transform: translate(calc(var(--shimmy-distance) * 1%), 0);
   }
@@ -1924,8 +1795,7 @@ footer .footerDroite .reseaux .inconsReseaux {
     clip-path: var(--clip-five);
     transform: translate(calc(var(--shimmy-distance) * -1%), 0);
   }
-  35%,
-  45% {
+  35%, 45% {
     clip-path: var(--clip-six);
     transform: translate(calc(var(--shimmy-distance) * -1%));
   }
@@ -1945,9 +1815,7 @@ footer .footerDroite .reseaux .inconsReseaux {
     clip-path: var(--clip-seven);
     transform: translate(0, 0);
   }
-  31%,
-  61%,
-  100% {
+  31%, 61%, 100% {
     clip-path: var(--clip-four);
   }
 }
@@ -1977,10 +1845,7 @@ footer .footerDroite .reseaux .inconsReseaux {
   width: 60px; /* Largeur initiale */
   height: 60px; /* Hauteur initiale */
   background: #f0f0f0;
-  box-shadow: 0px 0px 0px rgba(204, 204, 204, 0.3),
-    0px 0px 0px rgba(255, 255, 255, 0.3),
-    4px 4px 8px rgba(204, 204, 204, 0.4) inset,
-    -4px -4px 8px rgba(255, 255, 255, 0.5) inset;
+  box-shadow: 0px 0px 0px rgba(204, 204, 204, 0.3), 0px 0px 0px rgba(255, 255, 255, 0.3), 4px 4px 8px rgba(204, 204, 204, 0.4) inset, -4px -4px 8px rgba(255, 255, 255, 0.5) inset;
   transition: none; /* Pas de transition au début */
   font-family: "lato";
   display: flex;
@@ -2009,13 +1874,7 @@ footer .footerDroite .reseaux .inconsReseaux {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background: conic-gradient(
-    var(--web) 0deg 108deg,
-    var(--jeu) 108deg 216deg,
-    var(--design) 216deg 306deg,
-    var(--autres-medias) 306deg 342deg,
-    var(--modelisation-3D) 342deg 360deg
-  );
+  background: conic-gradient(var(--web) 0deg 108deg, var(--jeu) 108deg 216deg, var(--design) 216deg 306deg, var(--autres-medias) 306deg 342deg, var(--modelisation-3D) 342deg 360deg);
   position: relative;
   animation: chartAnimation 4s ease-in-out forwards;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -2042,21 +1901,10 @@ footer .footerDroite .reseaux .inconsReseaux {
 }
 @keyframes chartAnimation {
   0% {
-    background: conic-gradient(
-      #ffffff 0deg 0deg,
-      #ffffff 0deg 0deg,
-      #ffffff 0deg 0deg,
-      #ffffff 0deg 0deg
-    );
+    background: conic-gradient(#ffffff 0deg 0deg, #ffffff 0deg 0deg, #ffffff 0deg 0deg, #ffffff 0deg 0deg);
   }
   100% {
-    background: conic-gradient(
-      var(--web) 0deg 108deg,
-      var(--jeu) 108deg 216deg,
-      var(--design) 216deg 306deg,
-      var(--autres-medias) 306deg 342deg,
-      var(--modelisation-3D) 342deg 360deg
-    );
+    background: conic-gradient(var(--web) 0deg 108deg, var(--jeu) 108deg 216deg, var(--design) 216deg 306deg, var(--autres-medias) 306deg 342deg, var(--modelisation-3D) 342deg 360deg);
   }
 }
 .graphisme .boite .titreBoiteOuverte,
@@ -2105,40 +1953,28 @@ footer .footerDroite .reseaux .inconsReseaux {
     width: 60px; /* Largeur initiale */
     height: 60px; /* Hauteur initiale */
     background: #f0f0f0;
-    box-shadow: 0px 0px 0px rgba(204, 204, 204, 0.3),
-      0px 0px 0px rgba(255, 255, 255, 0.3),
-      4px 4px 8px rgba(204, 204, 204, 0.4) inset,
-      -4px -4px 8px rgba(255, 255, 255, 0.5) inset;
+    box-shadow: 0px 0px 0px rgba(204, 204, 204, 0.3), 0px 0px 0px rgba(255, 255, 255, 0.3), 4px 4px 8px rgba(204, 204, 204, 0.4) inset, -4px -4px 8px rgba(255, 255, 255, 0.5) inset;
   }
   25% {
     border-radius: 15px;
     width: 60px; /* aucune augmentation */
     height: 400px; /* Augmentation importante de la hauteur */
     background: #f8f8f8;
-    box-shadow: 4px 4px 8px rgba(204, 204, 204, 0.4),
-      4px 4px 8px rgba(255, 255, 255, 0.4),
-      0px 0px 0px rgba(204, 204, 204, 0.2) inset,
-      0px 0px 0px rgba(255, 255, 255, 0.2) inset;
+    box-shadow: 4px 4px 8px rgba(204, 204, 204, 0.4), 4px 4px 8px rgba(255, 255, 255, 0.4), 0px 0px 0px rgba(204, 204, 204, 0.2) inset, 0px 0px 0px rgba(255, 255, 255, 0.2) inset;
   }
   50% {
     border-radius: 2px;
     width: 300px; /* Largeur intermédiaire */
     height: 400px; /* Hauteur intermédiaire */
     background: #f8f8f8;
-    box-shadow: 4px 4px 8px rgba(204, 204, 204, 0.4),
-      4px 4px 8px rgba(255, 255, 255, 0.4),
-      0px 0px 0px rgba(204, 204, 204, 0.2) inset,
-      0px 0px 0px rgba(255, 255, 255, 0.2) inset;
+    box-shadow: 4px 4px 8px rgba(204, 204, 204, 0.4), 4px 4px 8px rgba(255, 255, 255, 0.4), 0px 0px 0px rgba(204, 204, 204, 0.2) inset, 0px 0px 0px rgba(255, 255, 255, 0.2) inset;
   }
   100% {
     border-radius: 0px;
     width: 300px; /* Largeur finale */
     height: 400px; /* Hauteur légèrement plus grande */
     background: #fafafa;
-    box-shadow: 12px 12px 16px rgba(204, 204, 204, 0.3),
-      -8px -8px 16px rgba(255, 255, 255, 0.4),
-      1px 1px 3px rgba(204, 204, 204, 0.1) inset,
-      -1px -1px 3px rgba(255, 255, 255, 0.2) inset;
+    box-shadow: 12px 12px 16px rgba(204, 204, 204, 0.3), -8px -8px 16px rgba(255, 255, 255, 0.4), 1px 1px 3px rgba(204, 204, 204, 0.1) inset, -1px -1px 3px rgba(255, 255, 255, 0.2) inset;
   }
 }
 @media screen and (min-width: 767px) {
@@ -2162,40 +1998,28 @@ footer .footerDroite .reseaux .inconsReseaux {
       width: 60px; /* Largeur initiale */
       height: 60px; /* Hauteur initiale */
       background: #f0f0f0;
-      box-shadow: 0px 0px 0px rgba(204, 204, 204, 0.3),
-        0px 0px 0px rgba(255, 255, 255, 0.3),
-        4px 4px 8px rgba(204, 204, 204, 0.4) inset,
-        -4px -4px 8px rgba(255, 255, 255, 0.5) inset;
+      box-shadow: 0px 0px 0px rgba(204, 204, 204, 0.3), 0px 0px 0px rgba(255, 255, 255, 0.3), 4px 4px 8px rgba(204, 204, 204, 0.4) inset, -4px -4px 8px rgba(255, 255, 255, 0.5) inset;
     }
     25% {
       border-radius: 15px;
       width: 60px; /* aucune augmentation */
       height: 450px; /* Augmentation importante de la hauteur */
       background: rgba(255, 255, 255, 0.8941176471);
-      box-shadow: 4px 4px 8px rgba(204, 204, 204, 0.4),
-        4px 4px 8px rgba(255, 255, 255, 0.4),
-        0px 0px 0px rgba(204, 204, 204, 0.2) inset,
-        0px 0px 0px rgba(255, 255, 255, 0.2) inset;
+      box-shadow: 4px 4px 8px rgba(204, 204, 204, 0.4), 4px 4px 8px rgba(255, 255, 255, 0.4), 0px 0px 0px rgba(204, 204, 204, 0.2) inset, 0px 0px 0px rgba(255, 255, 255, 0.2) inset;
     }
     50% {
       border-radius: 5px;
       width: 700px; /* Largeur intermédiaire */
       height: 450px; /* Hauteur intermédiaire */
       background: rgba(248, 248, 248, 0.7137254902);
-      box-shadow: 4px 4px 8px rgba(204, 204, 204, 0.4),
-        4px 4px 8px rgba(255, 255, 255, 0.4),
-        0px 0px 0px rgba(204, 204, 204, 0.2) inset,
-        0px 0px 0px rgba(255, 255, 255, 0.2) inset;
+      box-shadow: 4px 4px 8px rgba(204, 204, 204, 0.4), 4px 4px 8px rgba(255, 255, 255, 0.4), 0px 0px 0px rgba(204, 204, 204, 0.2) inset, 0px 0px 0px rgba(255, 255, 255, 0.2) inset;
     }
     100% {
       border-radius: 0px;
       width: 700px; /* Largeur finale */
       height: 450px; /* Hauteur légèrement plus grande */
       background: rgba(248, 248, 248, 0.8156862745);
-      box-shadow: 12px 12px 16px rgba(204, 204, 204, 0.3),
-        -8px -8px 16px rgba(255, 255, 255, 0.4),
-        1px 1px 3px rgba(204, 204, 204, 0.1) inset,
-        -1px -1px 3px rgba(255, 255, 255, 0.2) inset;
+      box-shadow: 12px 12px 16px rgba(204, 204, 204, 0.3), -8px -8px 16px rgba(255, 255, 255, 0.4), 1px 1px 3px rgba(204, 204, 204, 0.1) inset, -1px -1px 3px rgba(255, 255, 255, 0.2) inset;
     }
   }
 }
@@ -2213,31 +2037,14 @@ footer .footerDroite .reseaux .inconsReseaux {
     padding-bottom: 5rem;
   }
   .graphisme .boite .infoGraph .donut-chart {
-    background: conic-gradient(
-      var(--webDesk) 0deg 108deg,
-      var(--jeuDesk) 108deg 216deg,
-      var(--designDesk) 216deg 306deg,
-      var(--autres-medias-Desk) 306deg 342deg,
-      var(--modelisation-3D-Desk) 342deg 360deg
-    );
+    background: conic-gradient(var(--webDesk) 0deg 108deg, var(--jeuDesk) 108deg 216deg, var(--designDesk) 216deg 306deg, var(--autres-medias-Desk) 306deg 342deg, var(--modelisation-3D-Desk) 342deg 360deg);
   }
   @keyframes chartAnimation {
     0% {
-      background: conic-gradient(
-        #ffffff 0deg 0deg,
-        #ffffff 0deg 0deg,
-        #ffffff 0deg 0deg,
-        #ffffff 0deg 0deg
-      );
+      background: conic-gradient(#ffffff 0deg 0deg, #ffffff 0deg 0deg, #ffffff 0deg 0deg, #ffffff 0deg 0deg);
     }
     100% {
-      background: conic-gradient(
-        var(--webDesk) 0deg 108deg,
-        var(--jeuDesk) 108deg 216deg,
-        var(--designDesk) 216deg 306deg,
-        var(--autres-medias-Desk) 306deg 342deg,
-        var(--modelisation-3D-Desk) 342deg 360deg
-      );
+      background: conic-gradient(var(--webDesk) 0deg 108deg, var(--jeuDesk) 108deg 216deg, var(--designDesk) 216deg 306deg, var(--autres-medias-Desk) 306deg 342deg, var(--modelisation-3D-Desk) 342deg 360deg);
     }
   }
   .graphisme .boite .titreBoiteOuverte ul li:nth-child(1),
@@ -2287,7 +2094,7 @@ footer .footerDroite .reseaux .inconsReseaux {
       width: 100vw; /* Largeur finale */
       height: 500px; /* Hauteur légèrement plus grande */
       background: var(--bleu-graph);
-      box-shadow: 0px 0px 15px 3px #fff;
+      box-shadow: 0px 0px 15px 3px #FFF;
     }
   }
 }
@@ -2476,8 +2283,7 @@ footer .footerDroite .reseaux .inconsReseaux {
   .mainFutur .options .option3 {
     width: 400px;
   }
-  .mainFutur .container {
-    /* Ajoute un conteneur englobant */
+  .mainFutur .container { /* Ajoute un conteneur englobant */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2610,7 +2416,7 @@ footer .footerDroite .reseaux .inconsReseaux {
   height: 15rem;
   z-index: 3;
   border-radius: 5px;
-  border: 0.5px solid #fff;
+  border: 0.5px solid #FFF;
 }
 .carteProf p {
   padding-top: 1rem;
@@ -2782,4 +2588,4 @@ footer .footerDroite .reseaux .inconsReseaux {
 
 ul {
   margin: 0;
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

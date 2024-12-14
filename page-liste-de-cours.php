@@ -80,7 +80,7 @@ get_header(); ?>
             <div class="cours1">
                 <div class="teaserCours">
                     <h2 class="nomCours"><?php the_title() ?></h2>
-                    <input type="checkbox" name="<?= $txtNbrPost; ?>" id="<?= $txtNbrPost; ?>">
+                    <input type="checkbox" class="chkCours" name="<?= $txtNbrPost; ?>" id="<?= $txtNbrPost; ?>">
                     <label for="<?= $txtNbrPost; ?>" class="boutonCours">
                         <div class="btn1"></div>
                         <div class="btn2">En savoir plus</div>
@@ -90,8 +90,8 @@ get_header(); ?>
                         <div class="btn6"></div>
                     </label>
                 </div>
-                <div class="infoCours">
-                    <div class="contenu">
+                <div class="infoCours" id="<?= "infoCours" . $nbrPost; ?>">
+                    <div class="contenu" id="<?= "contenu" . $nbrPost; ?>">
                         <?php the_content() ?>
                     </div>
                 </div>
@@ -103,39 +103,6 @@ get_header(); ?>
         // Rétablir la requête principale
         wp_reset_postdata();
         ?>
-
-        <div class="cours1">
-            <div class="teaserCours">
-                <h2 class="nomCours"><?php the_title() ?></h2>
-                <div class="boutonCours">
-                    <div class="btn1"></div>
-                    <div class="btn2">En savoir plus</div>
-                    <div class="btn3"></div>
-                    <div class="btn4"></div>
-                    <div class="btn5"></div>
-                    <div class="btn6"></div>
-                </div>
-            </div>
-        </div>
     </section>
 </main>
-<?php
-$nbrPost2 = 0;
-?>
-<script>
-    let tableauChkSavoirPlus = [];
-
-    <?php
-    while ($query->have_posts()) {
-        $nbrPost2++;
-        $txtNbrPost2 = "chkCours" . $nbrPost2;
-    ?>
-        let chkSavoirPlus = {
-            chk: document.getElementById("<?= $$txtNbrPost2; ?>")
-        }
-
-        tableauChkSavoirPlus.push(chkSavoirPlus);
-        console.log(tableauChkSavoirPlus);
-    <?php } ?>
-</script>
 <?php get_footer(); ?>
