@@ -239,9 +239,9 @@ main{
     @media  screen and (min-width: 991px) {
       .titre_APropos{
         padding-left: 3rem;
-        background-color: rgb(247 236 236 / 85%);
+        background-color: var(--jaune);
         h2{
-          color: #7c7575;
+          color: var(--texteBlanc);
         }
       }
       .descriptionTim{
@@ -249,7 +249,7 @@ main{
         padding-left: 3rem;
         clip-path: none;
         p{
-          color: #e9e9e9;
+          color: var(--texteGris);
           word-spacing: 0.3rem;
         }
       }
