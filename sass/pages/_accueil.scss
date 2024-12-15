@@ -54,7 +54,7 @@ main{
         font-weight: 300;
         width: 100%;
         height: 3rem;
-        background-color: rgba(19, 69, 130, 0.781);
+        background-color:var(--boutonn-Accueil);
         border: 0.5px solid #FFF;
         display: flex;
         justify-content: center;
@@ -95,7 +95,7 @@ main{
         width: 30rem;
           
           a, a::after {
-            background: linear-gradient(-45deg, transparent 5%, #102e4e 5%);
+            background: linear-gradient(-45deg, transparent 5%, var(--boutonn-Accueil) 5%);
             border: 0;
             color: #fff;
             letter-spacing: 3px;
@@ -247,6 +247,7 @@ main{
       .descriptionTim{
         background-color: transparent;
         padding-left: 3rem;
+        clip-path: none;
         p{
           color: #e9e9e9;
           word-spacing: 0.3rem;

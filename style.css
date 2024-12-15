@@ -19,6 +19,7 @@ Text Domain: theme tim
   --gris: rgba(198, 198, 198, 0.907);
   --drop-shadow: rgba(255, 255, 255, 0.25);
   --texteBlanc: #fff;
+  --boutonn-Accueil:#102e4e;
   --web:#4265a2 ;
   --jeu:#264281 ;
   --design:#6e82aa;
@@ -91,7 +92,7 @@ main .hautDePage .txtMain a {
   font-weight: 300;
   width: 100%;
   height: 3rem;
-  background-color: rgba(19, 69, 130, 0.781);
+  background-color: var(--boutonn-Accueil);
   border: 0.5px solid #FFF;
   display: flex;
   justify-content: center;
@@ -124,7 +125,7 @@ main .hautDePage img {
     width: 30rem;
   }
   main .hautDePage .txtMain a, main .hautDePage .txtMain a::after {
-    background: linear-gradient(-45deg, transparent 5%, #102e4e 5%);
+    background: linear-gradient(-45deg, transparent 5%, var(--boutonn-Accueil) 5%);
     border: 0;
     color: #fff;
     letter-spacing: 3px;
@@ -259,6 +260,7 @@ main .description .descriptionTim p {
   main .description .descriptionTim {
     background-color: transparent;
     padding-left: 3rem;
+    clip-path: none;
   }
   main .description .descriptionTim p {
     color: #e9e9e9;
