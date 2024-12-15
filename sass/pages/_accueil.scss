@@ -187,7 +187,7 @@ main{
     
 
     .titre_APropos{
-      background-color: rgb(141, 125, 125);
+      background-color:var(--jaune);
       width: 50%;
       height: 2rem;
       padding-left: 1rem;
@@ -203,7 +203,7 @@ main{
      
     }
     .descriptionTim{
-      background-color:#E8E8E8;
+      background-color:var(--gris-accueil);
       backdrop-filter: blur(2px);
       width: 95%;
       min-height: 15rem;
@@ -262,7 +262,7 @@ main{
     width: 100%;
     
     .titreLangProg{
-      background-color:rgb(141 125 125);
+      background-color:var(--gris-titre);
       clip-path: inherit; 
       width: 70%;
       clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
@@ -274,7 +274,7 @@ main{
     }
 
     .LangProg{
-      background-color:#EFEFEF;
+      background-color:var(--gris-accueil);
       min-height: 25vh;
       position: relative;
      
@@ -318,7 +318,7 @@ main{
     align-items: flex-end;
   
     .titreInfoLogiciel {
-      background-color: rgb(141, 125, 125);
+      background-color: var(--gris-titre);
       width: 80%;
       display: flex;
       justify-content: flex-end;
@@ -329,8 +329,9 @@ main{
     }
   
     .infoLog {
+      width: 100vw;
       min-height: 25vh;
-      background-color: #efefef;
+      background-color: var(--gris-accueil);
       position: relative;
       transition: left 1s ease-in-out; // Animation fluide pour "left"
       p{

@@ -19,28 +19,9 @@ Text Domain: theme tim
   --gris: rgba(198, 198, 198, 0.907);
   --drop-shadow: rgba(255, 255, 255, 0.25);
   --texteBlanc: #fff;
-<<<<<<< HEAD
+  --gris-accueil:#E8E8E8;
+  --gris-titre: rgba(141, 125, 125);
   --boutonn-Accueil:#102e4e;
-  --web:#4265a2 ;
-  --jeu:#264281 ;
-  --design:#6e82aa;
-  --autres-medias:#4478a9;
-  --modelisation-3D:#7b93a8;
-  --webDesk:#c16c23 ;
-  --jeuDesk:#bd871b ;
-  --designDesk:#d49d2f;
-  --autres-medias-Desk:#ddb421;
-  --modelisation-3D-Desk:#e0c582;
-  --bleu-graph:rgba(31, 84, 145, 0.812);
-  --ligne-1:#fab41d;
-  --ligne-2:#d48f27;
-}
-
-.imagesGeneral {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-=======
   --web: #4265a2;
   --jeu: #264281;
   --design: #6e82aa;
@@ -54,7 +35,6 @@ Text Domain: theme tim
   --bleu-graph: rgba(31, 84, 145, 0.812);
   --ligne-1: #fab41d;
   --ligne-2: #d48f27;
->>>>>>> 2e05e8db80114f18315da8706299f0619da09cab
 }
 
 main {
@@ -225,7 +205,7 @@ main .description {
   color: var(--texteBlanc);
 }
 main .description .titre_APropos {
-  background-color: rgb(141, 125, 125);
+  background-color: var(--jaune);
   width: 50%;
   height: 2rem;
   padding-left: 1rem;
@@ -238,7 +218,7 @@ main .description .titre_APropos h2 {
   font-family: "lato";
 }
 main .description .descriptionTim {
-  background-color: #E8E8E8;
+  background-color: var(--gris-accueil);
   backdrop-filter: blur(2px);
   width: 95%;
   min-height: 15rem;
@@ -287,7 +267,7 @@ main .infoLangProg {
   width: 100%;
 }
 main .infoLangProg .titreLangProg {
-  background-color: rgb(141, 125, 125);
+  background-color: var(--gris-titre);
   clip-path: inherit;
   width: 70%;
   clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
@@ -298,7 +278,7 @@ main .infoLangProg .titreLangProg h2 {
   padding-left: 1rem;
 }
 main .infoLangProg .LangProg {
-  background-color: #EFEFEF;
+  background-color: var(--gris-accueil);
   min-height: 25vh;
   position: relative;
   transition: right 1s ease-in-out; /* Animation fluide */
@@ -335,7 +315,7 @@ main .infoLogiciel {
   align-items: flex-end;
 }
 main .infoLogiciel .titreInfoLogiciel {
-  background-color: rgb(141, 125, 125);
+  background-color: var(--gris-titre);
   width: 80%;
   display: flex;
   justify-content: flex-end;
@@ -344,8 +324,9 @@ main .infoLogiciel .titreInfoLogiciel {
   align-items: center;
 }
 main .infoLogiciel .infoLog {
+  width: 100vw;
   min-height: 25vh;
-  background-color: #efefef;
+  background-color: var(--gris-accueil);
   position: relative;
   transition: left 1s ease-in-out;
 }

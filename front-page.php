@@ -35,19 +35,29 @@ get_header();
 
     </div>
 
-    <div class="description">
+    <?php
+        $accueilPost = new WP_Query(array(
+            'category_name' => 'accueil'
+        )); ?>
 
-        <div class="titre_APropos">
-            <h2>Title</h2>
-        </div>
+            <div class="description">
+            <?php
+            while ($accueilPost->have_posts()) {
+                $accueilPost->the_post();
+            ?>
+                <div class="titre_APropos">
+                    <h2><?php the_title(); ?></h2>
+                </div>
 
-        <div class="descriptionTim">
+                <div class="descriptionTim">
 
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi dolorem, commodi quas dignissimos voluptatem obcaecati eos expedita nulla earum nobis, tenetur ut nostrum quia cupiditate accusamus pariatur neque illum minus.</p>
+                    <?php the_content(); ?>
 
-        </div>
+                </div>
 
-    </div>
+            </div>
+            <?php }; ?>
+        
 
     <!-- decoration -->
     <div class="decoCarrousel">
@@ -79,23 +89,48 @@ get_header();
         <div class="ligneCaroussel4"></div>
     </div>
 
-    <div class="infoLangProg">
-        <div class="titreLangProg">
-            <h2>titre</h2>
-        </div>
-        <div class="LangProg">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi rem officia repellendus id! Quae possimus corporis optio totam libero molestiae, animi aliquid provident beatae eligendi. Laboriosam ducimus at hic est!</p>
-        </div>
-    </div>
-    <div class="infoLogiciel">
-        <div class="titreInfoLogiciel">
-            <h2>titre</h2>
-        </div>
-        <div class="infoLog">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi rem officia repellendus id! Quae possimus corporis optio totam libero molestiae, animi aliquid provident beatae eligendi. Laboriosam ducimus at hic est!</p>
-        </div>
-    </div>
 
+    <!-- description des langues de programmation -->
+    <?php
+        $langProgPost = new WP_Query(array(
+            'category_name' => 'langProg'
+        )); ?>
+    
+        <div class="infoLangProg">
+            <?php
+            while ($langProgPost->have_posts()) {
+                $langProgPost->the_post();
+            ?>
+            <div class="titreLangProg">
+                <h2><?php the_title(); ?></h2>
+            </div>
+            <div class="LangProg">
+                <p><?php the_content(); ?></p>
+            </div>
+        </div>
+    <?php }; ?>
+
+
+    <!-- descriptionn des logiciels utiliser au  tim -->
+
+    <?php
+        $logicielPost = new WP_Query(array(
+            'category_name' => 'logiciel'
+        )); ?>
+
+            <div class="infoLogiciel">
+            <?php
+            while ($logicielPost->have_posts()) {
+                $logicielPost->the_post();
+            ?>
+                <div class="titreInfoLogiciel">
+                    <h2><?php the_title(); ?></h2>
+                </div>
+                <div class="infoLog">
+                    <p><?php the_content(); ?></p>
+                </div>
+            </div>
+    <?php }; ?>
 
 
     <!-- les pourcentages et graphisme -->
