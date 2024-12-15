@@ -7,33 +7,35 @@
   --drop-shadow: rgba(255, 255, 255, 0.25);
   --texteBlanc: #fff;
 
+<<<<<<< HEAD
 ///
 --boutonn-Accueil:#102e4e;
+=======
+>>>>>>> 2e05e8db80114f18315da8706299f0619da09cab
   ///diagram///
-  --web:#4265a2 ;
-  --jeu:#264281 ;
-  --design:#6e82aa;;
-  --autres-medias:#4478a9;
-  --modelisation-3D:#7b93a8;
+  --web: #4265a2;
+  --jeu: #264281;
+  --design: #6e82aa;
+  --autres-medias: #4478a9;
+  --modelisation-3D: #7b93a8;
 
   /////diagram version desktop///
-  --webDesk:#c16c23 ;
-  --jeuDesk:#bd871b ;
-  --designDesk:#d49d2f;;
-  --autres-medias-Desk:#ddb421;
-  --modelisation-3D-Desk:#e0c582;
+  --webDesk: #c16c23;
+  --jeuDesk: #bd871b;
+  --designDesk: #d49d2f;
+  --autres-medias-Desk: #ddb421;
+  --modelisation-3D-Desk: #e0c582;
 
   ////graphique///
-  --bleu-graph:rgba(31, 84, 145, 0.812);;
+  --bleu-graph: rgba(31, 84, 145, 0.812);
 
   ///  decoration Ligne///
-  --ligne-1:#fab41d;
-  --ligne-2:#d48f27;
-
+  --ligne-1: #fab41d;
+  --ligne-2: #d48f27;
 }
 
-.imagesGeneral {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-}
+// .imagesGeneral {
+//   object-fit: cover;
+//   height: 100%;
+//   width: 100%;
+// }

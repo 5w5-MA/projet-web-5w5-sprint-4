@@ -15,8 +15,6 @@ boutonMenu.addEventListener('click', () => {
     } else {
         menuVisible = false;
         menuDeroulant.style.height = '0px';
-
-
     }
 
 })
@@ -24,18 +22,13 @@ boutonMenu.addEventListener('click', () => {
 lesBoutons.forEach(element => {
     element.addEventListener('click', () => {
         menuDeroulant.style.height = '0px';
-        console.log(menuDeroulant);
-        console.log(menuDeroulant.style.height);
-        menuVisible = false;
-
 
         if (element.innerHTML == 'Tout') {
             selectionMenu.innerHTML = "&#x2193;";
             enfants.forEach(enfant => {
                 enfant.style.display = 'flex';
             })
-            menuDeroulant.style.height = '0px';
-            menuVisible = false;
+
         }
         else {
             selectionMenu.innerHTML = element.innerHTML;
@@ -49,8 +42,7 @@ lesBoutons.forEach(element => {
                 else {
                     enfant.style.display = 'flex';
                 }
-                menuDeroulant.style.height = '0px';
-                menuVisible = false;
+
             })
         }
     })

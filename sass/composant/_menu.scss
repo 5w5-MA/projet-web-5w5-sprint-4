@@ -1,5 +1,5 @@
 header {
-  color: #ffffff;
+  color: var(--blanc);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -74,7 +74,7 @@ header {
 
           a {
             text-decoration: none;
-            color: white;
+            color: var(--blanc);
             font-size: larger;
           }
 

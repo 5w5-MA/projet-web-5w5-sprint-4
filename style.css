@@ -19,6 +19,7 @@ Text Domain: theme tim
   --gris: rgba(198, 198, 198, 0.907);
   --drop-shadow: rgba(255, 255, 255, 0.25);
   --texteBlanc: #fff;
+<<<<<<< HEAD
   --boutonn-Accueil:#102e4e;
   --web:#4265a2 ;
   --jeu:#264281 ;
@@ -39,6 +40,21 @@ Text Domain: theme tim
   object-fit: cover;
   height: 100%;
   width: 100%;
+=======
+  --web: #4265a2;
+  --jeu: #264281;
+  --design: #6e82aa;
+  --autres-medias: #4478a9;
+  --modelisation-3D: #7b93a8;
+  --webDesk: #c16c23;
+  --jeuDesk: #bd871b;
+  --designDesk: #d49d2f;
+  --autres-medias-Desk: #ddb421;
+  --modelisation-3D-Desk: #e0c582;
+  --bleu-graph: rgba(31, 84, 145, 0.812);
+  --ligne-1: #fab41d;
+  --ligne-2: #d48f27;
+>>>>>>> 2e05e8db80114f18315da8706299f0619da09cab
 }
 
 main {
@@ -732,7 +748,7 @@ body .MaxProjetMain .SectionProjet .Rangee2 .galerieProjets img {
   width: 100%;
   object-fit: cover;
 }
-@media screen and (min-width: 430px) {
+@media screen and (min-width: 767px) {
   body .MaxProjetMain {
     /* ***************** Section Projet ************************** */
   }
@@ -941,8 +957,8 @@ body .MaxProjetMain .SectionProjet .Rangee2 .galerieProjets img {
   filter: drop-shadow(5px 5px 3px var(--drop-shadow)) drop-shadow(-5px -5px 3px var(--drop-shadow));
 }
 .pageCours .listeCours {
-  min-height: 450px;
   margin-top: 100px;
+  margin-bottom: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -950,89 +966,55 @@ body .MaxProjetMain .SectionProjet .Rangee2 .galerieProjets img {
   column-gap: 75px;
   row-gap: 50px;
 }
-.pageCours .listeCours .coursImg {
-  width: 75px;
-  height: 100px;
-  background-color: var(--bleu);
-}
 .pageCours .listeCours div {
   z-index: 1;
 }
 .pageCours .listeCours .cours1 {
-  width: 300px;
-  height: 200px;
+  width: 100vw;
+  max-width: 1000px;
   padding-left: 25px;
   padding-right: 25px;
   background-color: var(--blanc);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: var(--texte);
+  display: flex;
+  flex-direction: column;
+}
+.pageCours .listeCours .cours1 .teaserCours {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.pageCours .listeCours .cours1 .teaserCours input {
+  display: none;
+}
+.pageCours .listeCours .cours1 .teaserCours h2 {
+  font-size: 3vw;
+}
+@media screen and (min-width: 1000px) {
+  .pageCours .listeCours .cours1 .teaserCours h2 {
+    font-size: 1.7rem;
+  }
+}
+.pageCours .listeCours .cours1 .teaserCours .boutonCours {
+  top: revert-layer;
+  width: max-content;
 }
 .pageCours .listeCours .cours1 .infoCours {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-.pageCours .listeCours .cours1 .infoCours .boutonCours {
-  position: unset;
-}
-.pageCours .listeCours .cours2 {
-  width: 300px;
-  height: 200px;
-  padding-left: 25px;
-  padding-right: 25px;
+  display: none;
+  height: 0px;
   background-color: var(--blanc);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: height 0.5s;
 }
-.pageCours .listeCours .cours2 .infoCours {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-.pageCours .listeCours .cours2 .infoCours .boutonCours {
-  position: unset;
-}
-.pageCours .listeCours .cours3 {
-  width: 300px;
-  height: 200px;
-  padding-left: 25px;
-  padding-right: 25px;
-  background-color: var(--blanc);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.pageCours .listeCours .cours3 .infoCours {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-.pageCours .listeCours .cours3 .infoCours .boutonCours {
-  position: unset;
-}
-.pageCours .listeCours .cours4 {
-  width: 300px;
-  height: 200px;
-  padding-left: 25px;
-  padding-right: 25px;
-  background-color: var(--blanc);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.pageCours .listeCours .cours4 .infoCours {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-.pageCours .listeCours .cours4 .infoCours .boutonCours {
-  position: unset;
+.pageCours .listeCours .cours1 .infoCours .contenu {
+  opacity: 0%;
+  transition: opacity 0.5s;
 }
 
 * {
@@ -1407,7 +1389,7 @@ p {
 }
 
 header {
-  color: #ffffff;
+  color: var(--blanc);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1457,7 +1439,7 @@ header .menuCache .optionMenu .menu-menuprincipal-container ul {
 }
 header .menuCache .optionMenu .menu-menuprincipal-container ul a {
   text-decoration: none;
-  color: white;
+  color: var(--blanc);
   font-size: larger;
 }
 @media screen and (max-width: 900px) {
@@ -1563,6 +1545,7 @@ footer {
   padding-left: 50px;
   padding-right: 100px;
   padding-bottom: 10vh;
+  padding-top: 20px;
   flex-wrap: wrap;
   position: relative;
   overflow-y: hidden;
@@ -2478,7 +2461,7 @@ footer .footerDroite .reseaux .inconsReseaux {
 
 /*******************************MÉDIA QUERRY**************************/
 /****************MÉDIA QUERRY TABLETTE*****************/
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 767px) {
   .pageProfs::before {
     top: 0;
     right: -8rem;
@@ -2506,7 +2489,7 @@ footer .footerDroite .reseaux .inconsReseaux {
   }
 }
 /****************MÉDIA QUERRY ordinateur*****************/
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 991px) {
   .pageProfs::before {
     top: 0;
     right: -8rem;
@@ -2523,7 +2506,7 @@ footer .footerDroite .reseaux .inconsReseaux {
     transform: skewX(-55deg);
   }
   .conteneurProfs {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   .carteProf {
     width: 14rem;

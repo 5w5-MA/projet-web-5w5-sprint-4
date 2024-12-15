@@ -1,8 +1,6 @@
 window.addEventListener("load", () => {
   let main = document.querySelector("main");
 
-  console.log("allo");
-
   if (main.id != "cours") {
     localStorage.setItem("doitReload", "true");
   }
@@ -110,8 +108,6 @@ let lesForms = [
 
 document.addEventListener("change", (evt) => {
   let event = evt.target;
-
-  console.log(event.id);
 
   for (let i = 0; i < btns.length; i++) {
     let checkbox = btns[i].chk;
@@ -258,4 +254,62 @@ window.addEventListener("load", () => {
     }, 0);
     localStorage.setItem("doitReload", "false");
   }
+});
+
+const tableauChkSavoirPlus = document.querySelectorAll(".chkCours");
+
+function animateHeight(element) {
+  const currentHeight = element.scrollHeight + "px";
+  element.style.height = "0px";
+  element.offsetHeight;
+  element.style.transition = "height 0.5s";
+  element.style.height = currentHeight;
+}
+
+function collapseHeight(element) {
+  element.style.transition = "height 0.5s";
+  element.style.height = "0px";
+  element.addEventListener(
+    "transitionend",
+    () => {
+      element.style.display = "none";
+    },
+    {
+      once: true,
+    }
+  );
+}
+
+function toggleCheckboxEffects(chk) {
+  const index = Array.from(tableauChkSavoirPlus).indexOf(chk) + 1;
+  const divInfo = document.getElementById("infoCours" + index);
+  const divContenu = document.getElementById("contenu" + index);
+
+  if (chk.checked) {
+    divInfo.style.display = "block";
+    animateHeight(divInfo);
+
+    divContenu.style.transition = "opacity 0.5s";
+    divContenu.style.opacity = "1";
+  } else {
+    collapseHeight(divInfo);
+
+    divContenu.style.transition = "opacity 0.5s";
+    divContenu.style.opacity = "0";
+  }
+}
+
+tableauChkSavoirPlus.forEach((chk) => {
+  chk.addEventListener("change", function () {
+    // Décocher toutes les autres checkboxes sauf celle en cours
+    tableauChkSavoirPlus.forEach((cb) => {
+      if (cb !== this && cb.checked) {
+        cb.checked = false;
+        toggleCheckboxEffects(cb); // Applique l'animation même si la checkbox est cochée par JS
+      }
+    });
+
+    // Appliquer les effets uniquement à la checkbox en cours
+    toggleCheckboxEffects(this);
+  });
 });
