@@ -31,6 +31,16 @@ Les pages:
   
   Vie Étudiante
   
+SPRINT 4:
 
-  
+Finaliser le site et améliorer les pages:
+
+    Accueil
+
+    Liste de cours
+
+    Projets
+
+
+Changer l'apparrence des pages pour les rendre plus belles et plus intuitives pour l'utilisateur
   
