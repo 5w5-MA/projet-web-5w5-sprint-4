@@ -43,4 +43,6 @@ Finaliser le site et améliorer les pages:
 
 
 Changer l'apparrence des pages pour les rendre plus belles et plus intuitives pour l'utilisateur
+
+S'assurer de répondre à tous les critères d'évaluation
   
